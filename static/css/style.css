@@ -3,10 +3,18 @@
     box-sizing: border-box;
 
     font-family: Special Elite;
+
+    text-align: center;
 }
 
 
 /* Colors */
 .main-bg {
     background-color: rgba(255, 222, 222);
+}
+
+/* icons */
+.icon {
+    width: 2.5rem;
+    height: fit-content;
 }
