@@ -17,6 +17,10 @@ Members can sign in, have their say and rate the qualities of each film.
     - [Typography](#typography)
     - [Images and Icons](#images-and-icons)
     - [Wireframes](#wireframes)
+      - [Navigation Bar](#navigation-bar)
+      - [Home Page](#home-page)
+      - [Film Detail](#film-detail)
+      - [Member Area](#member-area)
     - [Languages Used](#languages-used)
     - [Model Structure](#model-structure)
   - [Agile Methodology](#agile-methodology)
@@ -47,15 +51,35 @@ Wes Anderson sticks with a clear design theme throughout his films and usualy ha
 
 ### Colour Scheme
 
-### Typography  
+### Typography
+
+![Special-Elite](/documentation/design/special-elite-font.png)
 
 ### Images and Icons
 
 ### Wireframes
 
+#### Navigation Bar
+
+![Navigation-Bar-Wireframe](/documentation/design/navigation-bar.png)
+
+#### Home Page
+
+![Home-Page-Wireframe](/documentation/design/home.png)
+
+#### Film Detail
+
+![Film-Detail-Wireframe](/documentation/design/film-detail.png)
+
+#### Member Area
+
+![Member-Area-Wireframe](/documentation/design/member-area.png)
+
 ### Languages Used
 
 ### Model Structure
+
+![Model-Diagram](/documentation/design/works-of-wes-anderson-database-diagram.png)
 
 ## Agile Methodology
 
