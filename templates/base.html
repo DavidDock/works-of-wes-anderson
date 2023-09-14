@@ -58,6 +58,7 @@
     
             <div class="collapse navbar-collapse justify-content-end bg-white" id="navbarNavAltMarkup">
                 <div class="navbar-nav d-flex align-items-start">
+                    <!-- highlighting active learnt from: https://valerymelou.com/blog/2020-05-04-how-to-highlight-active-links-in-your-django-website -->
                     {% url 'home' as url %}
                     <a class="nav-link {% if request.path == url %}active{% endif %}" aria-current="page" href=""><img class="icon pb-2" src="{% static 'images/home.png' %}" alt="Home icon">
                         Home</span></a>
