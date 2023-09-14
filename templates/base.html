@@ -99,21 +99,12 @@
     </footer>
 
     {% block script %} {% load static %}
+    
     <!-- script for jquery and script.js -->
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
         crossorigin="anonymous"></script>
     <script src="{% static 'js/script.js' %}"></script>
 
-    <!-- script for navbar toggle -->
-    <script>
-        $(".toggle").click(function () {
-                if ($(this).attr("src") === "{% static 'images/envelope.png' %}") {
-                    $(this).attr("src", "{% static 'images/envelope-open.png' %}");
-                } else if ($(this).attr("src") === "{% static 'images/envelope-open.png' %}") {
-                    $(this).attr("src", "{% static 'images/envelope.png' %}");
-                };
-            });
-    </script>
     {% endblock script %}
   </body>
 </html>
