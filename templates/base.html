@@ -45,14 +45,14 @@
     <nav class="navbar bg-white navbar-expand-lg border-bottom border-secondary py-3">
         <div class="container-fluid">
     
-            <a class="navbar-brand d-flex align-items-center" href="#"><img class="icon-logo" src="logo">
+            <a class="navbar-brand d-flex align-items-center" href="#"><img class="icon-logo" src="{% static 'images/logo.png' %}" alt="Logo icon of film camera">
                 <h1 class="fs-6">Works of Wes Anderson</h1>
             </a>
     
             <button class="navbar-toggler px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="d-flex flex-column align-items-center">
-                    <img class="toggle icon" src="envelope">
+                    <img class="toggle icon" src="{% static 'images/envelope.png' %}" alt="Envelope icon">
                     <span class="menu">Menu</span>
                 </div>
             </button>
@@ -60,12 +60,12 @@
             <div class="collapse navbar-collapse justify-content-end bg-white" id="navbarNavAltMarkup">
                 <div class="navbar-nav d-flex align-items-start">
     
-                    <a class="nav-link" aria-current="page" href=""><img class="icon pb-2" src="home">
+                    <a class="nav-link" aria-current="page" href=""><img class="icon pb-2" src="{% static 'images/home.png' %}" alt="Home icon">
                         Home</span></a>
     
                     <div class="dropdown my-auto">
                         <button type="button" class="dropdown-toggle py-2" data-bs-toggle="dropdown">
-                            <img class="icon pb-2" src="movies"> Movies</a>
+                            <img class="icon pb-2" src="{% static 'images/movies.png' %}" alt="Movie reel icon"> Movies</a>
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Astroid City</a></li>
@@ -74,13 +74,13 @@
                         </ul>
                     </div>
     
-                    <a class="nav-link" href="#"><img class="icon pb-2" src="member"> Member Area</a>
+                    <a class="nav-link" href="#"><img class="icon pb-2" src="{% static 'images/member.png' %}" alt="Wes Anderson society of crossed keys member icon"> Member Area</a>
     
-                    <a class="nav-link" href="#"><img class="icon pb-2" src="logout"> Logout</a>
+                    <a class="nav-link" href="#"><img class="icon pb-2" src="{% static 'images/logout.png' %}" alt="Logout icon"> Logout</a>
     
-                    <a class="nav-link" href="#"><img class="icon pb-2" src="login"> Login</a>
+                    <a class="nav-link" href="#"><img class="icon pb-2" src="{% static 'images/login.png' %}" alt="Login icon"> Login</a>
     
-                    <a class="nav-link" href="#"><img class="icon pb-2" src="register"> Register</a>
+                    <a class="nav-link" href="#"><img class="icon pb-2" src="{% static 'images/register.png' %}" alt="Register icon"> Register</a>
     
                 </div>
             </div>
