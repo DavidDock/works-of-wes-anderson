@@ -7,6 +7,9 @@
     text-align: center;
 }
 
+body {
+    height: 100vh;
+}
 
 /* Colors */
 .main-bg {
@@ -16,5 +19,15 @@
 /* icons */
 .icon {
     width: 2.5rem;
+    height: fit-content;
+}
+
+.icon-nav {
+    width: 2rem;
+    height: fit-content;
+}
+
+.icon-logo {
+    width: 4rem;
     height: fit-content;
 }

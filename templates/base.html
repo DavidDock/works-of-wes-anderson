@@ -2,45 +2,59 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Works Of Wes Anderson - {% block title %}{% endblock title %}</title>
     <!-- Meta tags -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="An appreciation site for Wes Anderson films">
-    <meta name="keywords" content="wes anderson, films, movies">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An appreciation site for Wes Anderson films"
+    />
+    <meta name="keywords" content="wes anderson, films, movies" />
 
     <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- css stylesheet -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
 
-<body class="main-bg">
+  <body class="d-flex flex-column main-bg">
     <!-- Nav -->
 
     <!-- Main Content -->
-    <main class="container">
-        {% block content %}
-        {% endblock content %}
-    </main>
+    <main class="container-fluid">{% block content %} {% endblock content %}</main>
 
     <!-- Footer -->
-    
-    {% block script %}
-    {% endblock script %}
-</body>
+    <footer class="container-fluid d-flex bg-white justify-content-around border-top border-secondary py-4 mt-auto">
+        <img class="icon" src="{% static 'images/backpack.png' %}" alt="A small icon from Moonrise Kingdom">
+        <p class="mt-4"><small>Made for educational purposes only</small>
+        </p>
+        <img class="icon" src="{% static 'images/bandit.png' %}" alt="A small icon from Fantastic Mr Fox">
+    </footer>
 
+    {% block script %} {% load static %}
+    <script src="{% static 'js/script.js' %}"></script>
+    {% endblock script %}
+  </body>
 </html>
