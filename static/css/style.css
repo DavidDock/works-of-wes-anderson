@@ -25,6 +25,11 @@ body {
 }
 
 /* nav bar */
+
+.logo-text {
+    font-size: 1rem;
+}
+
 .nav-link {
     color: black;
 }
@@ -53,7 +58,22 @@ a {
 }
 
 .dropdown-toggle {
-    padding: 0;
+    padding: 0 0.5rem;
     border: none;
     background-color: white;
+}
+
+/*media query max 340px*/
+@media (max-width: 340px) {
+    .logo-text {
+        font-size: 0.7rem;
+    }
+
+    .icon-logo {
+        width: 3rem;
+    }
+    
+    .icon {
+        width: 2rem;
+    }
 }
