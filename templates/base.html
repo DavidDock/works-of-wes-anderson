@@ -40,7 +40,52 @@
   </head>
 
   <body class="d-flex flex-column main-bg">
+    
     <!-- Nav -->
+    <nav class="navbar bg-white navbar-expand-lg border-bottom border-secondary py-3">
+        <div class="container-fluid">
+    
+            <a class="navbar-brand d-flex align-items-center" href="#"><img class="icon-logo" src="logo">
+                <h1 class="fs-6">Works of Wes Anderson</h1>
+            </a>
+    
+            <button class="navbar-toggler px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="d-flex flex-column align-items-center">
+                    <img class="toggle icon" src="envelope">
+                    <span class="menu">Menu</span>
+                </div>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end bg-white" id="navbarNavAltMarkup">
+                <div class="navbar-nav d-flex align-items-start">
+    
+                    <a class="nav-link" aria-current="page" href=""><img class="icon pb-2" src="home">
+                        Home</span></a>
+    
+                    <div class="dropdown my-auto">
+                        <button type="button" class="dropdown-toggle py-2" data-bs-toggle="dropdown">
+                            <img class="icon pb-2" src="movies"> Movies</a>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Astroid City</a></li>
+                            <li><a class="dropdown-item" href="#">The French Dispatch</a></li>
+                            <li><a class="dropdown-item" href="#">Isle of Dogs</a></li>
+                        </ul>
+                    </div>
+    
+                    <a class="nav-link" href="#"><img class="icon pb-2" src="member"> Member Area</a>
+    
+                    <a class="nav-link" href="#"><img class="icon pb-2" src="logout"> Logout</a>
+    
+                    <a class="nav-link" href="#"><img class="icon pb-2" src="login"> Login</a>
+    
+                    <a class="nav-link" href="#"><img class="icon pb-2" src="register"> Register</a>
+    
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Main Content -->
     <main class="container-fluid">{% block content %} {% endblock content %}</main>

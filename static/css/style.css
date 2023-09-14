@@ -22,12 +22,41 @@ body {
     height: fit-content;
 }
 
-.icon-nav {
-    width: 2rem;
-    height: fit-content;
-}
-
 .icon-logo {
     width: 4rem;
     height: fit-content;
+}
+
+/* nav bar */
+.nav-link {
+    color: black;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.active,
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: black;
+    text-decoration: underline;
+    text-shadow: 0 5px 18px black;
+}
+
+a {
+    color: black;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0;
+}
+
+.menu {
+    font-size: 0.7rem;
+    padding-top: 0.25rem;
+}
+
+.dropdown-toggle {
+    padding: 0;
+    border: none;
+    background-color: white;
 }
