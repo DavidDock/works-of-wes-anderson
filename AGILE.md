@@ -1,0 +1,55 @@
+# Overview
+
+Agile methodology was used throughout the deveploment for this project and I found it extremly helpful to keep track of my project and not get overwhelmed.  
+The project was broken down into Epics and User Stories and the MoSCoW method was used to determine relevent features needed for the scope of this project.  
+I implemented 10 day iterations so the the Epics and User Stories could be revised and re-prioritised once an iteration was complete.  
+Issues were created in GitHub for each Epic and User Story with Tasks to complete and MoSCoW labels on each one. A Kanban board was also created to keep track of these Issues throughout each iteration. A Milestone for the MVP was also created and linked to relevant Issues.
+
+# Epics and User Stories
+
+I created a table detailing each User Story, which Epic it was related to along with Acceptance criteria, Tasks and Story Points. An Issue was then created on GitHub with this information.  
+I would review these Epics and User Stories after each iteration and add or edit if necessary.  
+I measured Story Points by 2 equalling a about a days work, these were very difficult to estimate and some took longer than my initial estimate and some were completed quicker, again I reviewed these after each iteration.  
+User Story table can be seen below:  
+The project's issues can be found [Here](https://github.com/DavidDock/works-of-wes-anderson/issues)  
+
+# Iterations and Kanban Board  
+
+My working week is not always the same but I tried to stick to 10 day iterations allowing for 20 Story Points in each cycle.  
+I allocated Issues to my Kanban board for each iteration. I then completed the MoSCow prioritisation for these issues. I made sure must have issues made up no more than 60%, could have and should have about 20% each.  
+The project's Kanban board can be found [Here](https://github.com/users/DavidDock/projects/2)  
+
+## Iteration 1  
+
+Below is the Kanban board at the start of the iteration:  
+![Iteration-One](/documentation/agile/iteration-one.png)  
+The User Stories were added and prioritised as follows:
+
+- User Story: Design Website Structure - Must Have. Story points: 4
+- User Story: Design Choices - Must Have. Story points: 2
+- User Story: Development Environment - Must Have. Story points: 2
+- User Story: Deploy Site - Must Have. Story points: 2
+- User Story: Base Template - Must Have. Story points: 2
+- User Story: Site Admin - Should Have. Story points: 1
+- User Story: Home Page - Should Have. Story Points: 2
+- User Story: Initial Navigation Bar - Could Have. Story Points: 6  
+  
+Below is the Kanban board at the end of the iteration:  
+
+![Iteration-One-End](/documentation/agile/iteration-one-end.png)  
+
+During this iteration I managed to complete all issues, I feel I over estimated the story points on some of the issues and I also managed to allocate more time to work on the project than expected.  
+During this iteration I added Issues for a 'could have' Epic - A quiz feature and two 'should have' User Stories - error pages and a favicon.  
+
+## Iteration 2  
+
+Below is the Kanban board at the start of the iteration:  
+![Iteration-Two](/documentation/agile/iteration-two.png)  
+The User Stories were added and prioritised as follows:
+
+- User Story: Add Film Information - Must Have. Story points: 4
+- User Story: View Films on About Page - Must Have. Story points: 2
+- User Story: Film Detail Page - Must Have. Story points: 6
+- User Story: Critic Comments - Should Have. Story points: 4
+- User Story: Member Registration - Could Have. Story points: 2
+- User Story: Log In and Out - Could Have. Story Points: 2
