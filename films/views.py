@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Film
 
 
 def home(request, *args, **kwargs):
