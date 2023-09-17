@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import Film, CriticComment, MemberComment
 
-# Register your models here.
+admin.site.register(Film)
+
+admin.site.register(CriticComment)
+
+admin.site.register(MemberComment)
