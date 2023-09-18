@@ -63,7 +63,19 @@ a {
     background-color: white;
 }
 
+/*poster link*/
+
+.fit {
+    width: fit-content;
+}
+
+.poster-link:hover,
+.poster-link:focus {
+    opacity: 0.7;
+}
+
 /*media query max 340px*/
+
 @media (max-width: 340px) {
     .logo-text {
         font-size: 0.85rem;
