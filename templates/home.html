@@ -1,38 +1,56 @@
 {% extends 'base.html' %}
-
 {% load static %}
-{% block title %}Home{% endblock title %}
+{% block title %} Home {% endblock title %}
 {% block content %}
 
 <!-- About section -->
-<div class="row  my-5">
-
-    <section class="col-10 col-md-8 mx-auto bg-white rounded pt-4">
-        <!-- Heading -->
-        <div class="d-flex justify-content-around">
-            <img class="icon mx-2" src="{% static 'images/backpack.png' %}" alt="A small icon from Moonrise Kingdom film">
-            <h2 class="text-decoration-underline">'About'</h2>
-            <img class="icon mx-2" src="{% static 'images/bandit.png' %}" alt="A small icon from Fantastic Mr Fox film">
-        </div>
-        <!-- Content -->
-        <p class="p-4 text-center">The 'Works of Wes Anderson' is a place to celebrate
-             this amazingly unique filmmaker.<br>
-            You can find details of each of his feature films along with positive
-             comments by critics.<br>
-            Become a member to share your opinion and rate each of the film's qualities.<br>
-            We hope this website reminds you how wonderful Wes Anderson is.
-        </p>
-    </section>
-
+<div class="row my-5">
+  <section class="col-10 col-md-8 mx-auto bg-white rounded pt-4">
+    <!-- Heading -->
+    <div class="d-flex justify-content-around">
+      <img
+        class="icon mx-2"
+        src="{% static 'images/backpack.png' %}"
+        alt="A small icon from Moonrise Kingdom film"
+      />
+      <h2 class="text-decoration-underline">'About'</h2>
+      <img
+        class="icon mx-2"
+        src="{% static 'images/bandit.png' %}"
+        alt="A small icon from Fantastic Mr Fox film"
+      />
+    </div>
+    <!-- Content -->
+    <p class="p-4 text-center">
+      The 'Works of Wes Anderson' is a place to celebrate this amazingly unique
+      filmmaker.<br />
+      You can find details of each of his feature films along with positive
+      comments by critics.<br />
+      Become a member to share your opinion and rate each of the film's
+      qualities.<br />
+      We hope this website reminds you how wonderful Wes Anderson is.
+    </p>
+  </section>
 </div>
 
 <!-- Film poster links -->
-<h3 class="text-decoration-underline bg-white rounded p-2 mx-auto fit text-center fs-5">'Press Poster For Film Details'</h3>
-<div class="row container align-items-center mx-auto g-0 mt-4 mb-5 bg-white p-2 rounded">
-
-    {% for film in films %}
-    <a class="col-6 col-md-4 col-lg-3 poster-link" href="#"><img src="{{ film.poster.url }}" alt="Poster for {{ film.title }}" width="100" class="w-100 p-2"></a>
-    {% endfor %}
+<h3
+  class="text-decoration-underline bg-white rounded p-2 mx-auto fit text-center fs-5"
+>
+  'Press Poster For Film Details'
+</h3>
+<div
+  class="row container align-items-center mx-auto g-0 mt-4 mb-5 bg-white p-2 rounded"
+>
+  {% for film in films %}
+  <a class="col-6 col-md-4 col-lg-3 poster-link" href="#"
+    ><img
+      src="{{ film.poster.url }}"
+      alt="Poster for {{ film.title }}"
+      width="100"
+      class="w-100 p-2"
+  /></a>
+  {% endfor %}
 </div>
 
 {% endblock content %}

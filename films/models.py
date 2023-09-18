@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+import cloudinary.uploader
+from io import BytesIO
+
 # Film Model
 
 
@@ -22,6 +25,13 @@ class Film(models.Model):
 
     def __str__(self):
         return self.title
+
+    def save(self, *args, **kwargs):
+        data = BytesIO(self.poster.read())
+        upload = cloudinary.uploader.upload(data, secure=True)
+        self.poster = upload['secure_url']
+
+        super().save(*args, **kwargs)
 
 
 class CriticComment(models.Model):
