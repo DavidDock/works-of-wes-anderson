@@ -31,8 +31,7 @@
 <div class="row container align-items-center mx-auto g-0 mt-4 mb-5 bg-white p-2 rounded">
 
     {% for film in films %}
-    <a class="col-6 col-md-4 col-lg-3 poster-link" href="#"><img class="w-100 p-2"
-            src="{{ film.poster.url }}"></a>
+    <a class="col-6 col-md-4 col-lg-3 poster-link" href="#"><img src="{{ film.poster.url }}" alt="Poster for {{ film.title }}" width="100" class="w-100 p-2"></a>
     {% endfor %}
 </div>
 {% endblock content %}
