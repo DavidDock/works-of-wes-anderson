@@ -27,8 +27,8 @@ class Film(models.Model):
 class CriticComment(models.Model):
     film = models.ForeignKey(Film, on_delete=models.CASCADE,
                              related_name="critic_comments")
-    critic = models.CharField(max_length=80)
-    content = models.TextField()
+    critic = models.CharField(max_length=50)
+    content = models.TextField(max_length=300)
 
     def __str__(self):
         return f"Comment {self.content} by {self.critic}"
@@ -41,7 +41,7 @@ class MemberComment(models.Model):
     film = models.ForeignKey(Film, on_delete=models.CASCADE,
                              related_name="member_comments")
     name = models.CharField(max_length=80)
-    content = models.TextField()
+    content = models.TextField(max_length=400)
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
