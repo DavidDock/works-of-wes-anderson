@@ -26,9 +26,7 @@ class Film(models.Model):
     def __str__(self):
         return self.title
 
-        
-        """
-    def save(self, *args, **kwargs):
+    """ def save(self, *args, **kwargs):
 
         data = BytesIO(self.poster.read())
         upload = cloudinary.uploader.upload(data, secure=True)
