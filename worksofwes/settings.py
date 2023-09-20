@@ -15,6 +15,7 @@ import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
+import cloudinary
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -51,6 +52,11 @@ INSTALLED_APPS = [
     'cloudinary',
     'films',
 ]
+
+# Add cloudinary config to ensure hhtps instead of http
+cloudinary.config(
+    secure=True,
+)
 
 SITE_ID = 1
 

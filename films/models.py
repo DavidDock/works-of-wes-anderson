@@ -26,8 +26,10 @@ class Film(models.Model):
     def __str__(self):
         return self.title
 
-    def save(self, *args, **kwargs):
         
+        """
+    def save(self, *args, **kwargs):
+
         data = BytesIO(self.poster.read())
         upload = cloudinary.uploader.upload(data, secure=True)
         self.poster = upload['secure_url']
@@ -38,7 +40,7 @@ class Film(models.Model):
         uploadicon_two = cloudinary.uploader.upload(icondata_two, secure=True)
         self.second_icon = uploadicon_two['secure_url']
 
-        super().save(*args, **kwargs)
+        super().save(*args, **kwargs) """
 
 
 class CriticComment(models.Model):
