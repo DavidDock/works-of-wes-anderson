@@ -64,13 +64,13 @@
                         Home</span></a>
     
                     <div class="dropdown my-auto">
-                        <button type="button" class="dropdown-toggle py-2 text-left" data-bs-toggle="dropdown">
+                        <button type="button" class="dropdown-toggle p-0 text-left" data-bs-toggle="dropdown">
                             <img class="icon pb-2" src="{% static 'images/movies.png' %}" alt="Movie reel icon"> Movies</a>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Astroid City</a></li>
-                            <li><a class="dropdown-item" href="#">The French Dispatch</a></li>
-                            <li><a class="dropdown-item" href="#">Isle of Dogs</a></li>
+                            {% for film in films %}
+                            <li><a class="dropdown-item" href="#"><img class="icon pe-2" src="{{ film.first_icon.url }}" alt="Icon of {{ film.title }}">{{ film.title }}</a></li>
+                            {% endfor %}
                         </ul>
                     </div>
     
