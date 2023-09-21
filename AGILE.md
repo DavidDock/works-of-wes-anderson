@@ -10,7 +10,9 @@ Issues were created in GitHub for each Epic and User Story with Tasks to complet
 I created a table detailing each User Story, which Epic it was related to along with Acceptance criteria, Tasks and Story Points. An Issue was then created on GitHub with this information.  
 I would review these Epics and User Stories after each iteration and add or edit if necessary.  
 I measured Story Points by 2 equalling a about a days work, these were very difficult to estimate and some took longer than my initial estimate and some were completed quicker, again I reviewed these after each iteration.  
-User Story table can be seen below:  
+User Story table can be seen below:
+![User-Story-Table-1](/documentation/agile/works-of-wes-anderson-user-1.png)
+![User-Story-Table-2](/documentation/agile/works-of-wes-anderson-user-2.jpg)
 The project's issues can be found [Here](https://github.com/DavidDock/works-of-wes-anderson/issues)  
 
 # Iterations and Kanban Board  
@@ -20,6 +22,9 @@ I allocated Issues to my Kanban board for each iteration. I then completed the M
 The project's Kanban board can be found [Here](https://github.com/users/DavidDock/projects/2)  
 
 ## Iteration 1  
+
+Start: 8/8/23
+End: 17/9/23
 
 Below is the Kanban board at the start of the iteration:  
 ![Iteration-One](/documentation/agile/iteration-one.png)  
@@ -42,6 +47,9 @@ During this iteration I managed to complete all issues, I feel I over estimated 
 During this iteration I added Issues for a 'could have' Epic - A quiz feature and two 'should have' User Stories - error pages and a favicon.  
 
 ## Iteration 2  
+
+Start: 18/8/23
+End: 24/9/23
 
 Below is the Kanban board at the start of the iteration:  
 ![Iteration-Two](/documentation/agile/iteration-two.png)  
