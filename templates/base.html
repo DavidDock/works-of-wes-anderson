@@ -62,11 +62,18 @@
                         </button>
                         <ul class="dropdown-menu">
                             {% for film in films %}
-                            <li><a class="dropdown-item" href="#"><img class="icon pe-2" src="{{ film.first_icon.url }}"
-                                        alt="Icon of {{ film.title }}">{{ film.title }}</a></li>
+                            <li>
+                                {% if "placeholder" in film.first_icon.url %}
+                                <a class="dropdown-item" href="#"><img class="icon pe-2" src="{% static 'images/movies.png' %}"
+                                        alt="Icon of a movie reel">{{ film.title }}</a>
+                                {% else %}
+                                <a class="dropdown-item" href="#"><img class="icon pe-2" src="{{ film.first_icon.url }}"
+                                        alt="Icon of {{ film.title }}">{{ film.title }}</a>
+                                {% endif %}
+                            </li>
                             {% endfor %}
                         </ul>
-                    </div>
+                        </div>
 
                     <a class="nav-link" href="#"><img class="icon pb-2" src="{% static 'images/member.png' %}"
                             alt="Wes Anderson society of crossed keys member icon"> Member Area</a>
