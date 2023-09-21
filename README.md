@@ -143,6 +143,12 @@ Visit the deployed site: [Works-Of-Wes-Anderson](https://works-of-wes-anderson-b
 
 ### Clone Repository
 
+- Go to the [Works-Of-Wes-Anderson-GitHub-Repository](https://github.com/DavidDock/works-of-wes-anderson) repository
+- Under the repository click on "go to" then under the "local" tab copy the HTTPS clone URL
+- In your local development environment go to the terminal
+- Change the current working directory to the location you want the cloned directory to be made
+- Type "git clone" and then paste the clone URL and press enter
+
 ## Testing
 
 Please refer to [TESTING.MD](TESTING.md)  
