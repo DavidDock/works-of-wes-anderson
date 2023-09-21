@@ -1,8 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Film
 
 
-def home(request, *args, **kwargs):
+def Home(request, *args, **kwargs):
     """
     Renders the Home page
     """
@@ -12,4 +12,21 @@ def home(request, *args, **kwargs):
         "home.html",
         {
         },
+    )
+
+
+def FilmDetail(request, slug, *args, **kwargs):
+    """
+    Renders the Film Detail Page
+    """
+
+    queryset = Film.objects.all()
+    film = get_object_or_404(queryset, slug=slug)
+
+    return render(
+        request,
+        "film_detail.html",
+        {
+            "film": film
+        }
     )
