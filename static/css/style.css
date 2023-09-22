@@ -44,6 +44,12 @@ body {
     text-shadow: 0 5px 18px black;
 }
 
+.dropdown-item.active {
+    color: black;
+    text-decoration: underline;
+    background-color: white;
+}
+
 a {
     color: black;
 }

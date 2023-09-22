@@ -52,32 +52,35 @@
                 <div class="navbar-nav d-flex align-items-start">
                     <!-- highlighting active learnt from: https://valerymelou.com/blog/2020-05-04-how-to-highlight-active-links-in-your-django-website -->
                     {% url 'home' as url %}
-                    <a class="nav-link {% if request.path == url %}active{% endif %}" aria-current="page" href="{% url 'home' %}"><img
-                            class="icon pb-2" src="{% static 'images/home.png' %}" alt="Home icon" width="10" height="10">
+                    <a class="nav-link {% if request.path == url %}active{% endif %}" aria-current="page"
+                        href="{% url 'home' %}"><img class="icon pb-2" src="{% static 'images/home.png' %}"
+                            alt="Home icon" width="10" height="10">
                         Home</span></a>
 
                     <div class="dropdown my-auto">
                         <button type="button" class="dropdown-toggle p-0 text-left" data-bs-toggle="dropdown">
-                            <img class="icon pb-2" src="{% static 'images/movies.png' %}" alt="Movie reel icon" width="10" height="10">
+                            <img class="icon pb-2" src="{% static 'images/movies.png' %}" alt="Movie reel icon"
+                                width="10" height="10">
                             Movies</a>
                         </button>
                         <ul class="dropdown-menu">
-                            {% for film in films %}
+                            {% for movie in films %}
                             <li>
-                                {% if "placeholder" in film.first_icon.url %}
-                                <a class="dropdown-item" href="{% url 'film_detail' film.slug %}"><img class="icon pe-2" src="{% static 'images/movies.png' %}"
-                                        alt="Icon of a movie reel" width="10" height="10">{{ film.title }}</a>
-                                {% else %}
-                                <a class="dropdown-item" href="{% url 'film_detail' film.slug %}"><img class="icon pe-2" src="{{ film.first_icon.url }}"
-                                        alt="Icon of {{ film.title }}" width="10" height="10">{{ film.title }}</a>
-                                {% endif %}
+                                <a class="dropdown-item {% if movie == film %}active{% endif %}" href="{% url 'film_detail' movie.slug %}">
+                                    {% if "placeholder" in movie.first_icon.url %}
+                                    <img class="icon pe-2" src="{% static 'images/movies.png' %}" alt="Icon of a movie reel" width="10" height="10">
+                                    {% else %}
+                                    <img class="icon pe-2" src="{{ movie.first_icon.url }}" alt="Icon of {{ movie.title }}" width="10" height="10">
+                                    {% endif %}
+                                    {{ movie.title }}</a>
                             </li>
                             {% endfor %}
                         </ul>
-                        </div>
+                    </div>
 
                     <a class="nav-link" href="#"><img class="icon pb-2" src="{% static 'images/member.png' %}"
-                            alt="Wes Anderson society of crossed keys member icon" width="10" height="10"> Member Area</a>
+                            alt="Wes Anderson society of crossed keys member icon" width="10" height="10"> Member
+                        Area</a>
 
                     <a class="nav-link" href="#"><img class="icon pb-2" src="{% static 'images/logout.png' %}"
                             alt="Logout icon" width="10" height="10"> Logout</a>
