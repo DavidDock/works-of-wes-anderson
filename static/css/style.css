@@ -24,6 +24,24 @@ body {
     height: fit-content;
 }
 
+.budapest-1 {
+    background: rgba(120, 66, 131);
+}
+
+.budapest-2 {
+    background: rgba(229, 0, 12);
+}
+
+.scroll-container-budapest::-webkit-scrollbar-track {
+    background: rgba(120, 66, 131);
+    border-radius: 5px;
+}
+
+.scroll-container-budapest::-webkit-scrollbar-thumb {
+    background: rgba(229, 0, 12);
+    border-radius: 5px;
+}
+
 /* nav bar */
 
 .logo-text {
@@ -80,7 +98,153 @@ a {
     opacity: 0.7;
 }
 
-/*media query max 340px*/
+/* general */
+
+.hidden {
+    visibility: hidden;
+}
+
+.head {
+    padding: 1rem 1rem 0 1rem;
+    width: fit-content;
+}
+
+.br {
+    border-radius: 5px;
+}
+
+.invert-button:hover,
+.invert-button:focus {
+    filter: invert();
+}
+
+/* css for film detail */
+
+/* poster container */
+
+.film-image-container {
+    display: grid;
+    min-height: 50vh;
+}
+
+.film-img {
+    width: 75%;
+    margin-top: 10%;
+}
+
+.film-poster-container {
+    grid-column: 1;
+    grid-row: 1;
+    flex-direction: column;
+    position: relative;
+}
+
+/* film info container */
+
+.film-info {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 0;
+}
+
+.blurb {
+    overflow: scroll;
+}
+
+.close-cont {
+    display: inline-block;
+    margin: 1rem;
+    margin-right: auto;
+}
+
+.close {
+    font-size: 1.5rem;
+    padding: 0 0.25rem;
+}
+
+.trailer {
+    padding: 0.5rem;
+    margin: 5%;
+    width: fit-content;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+/* scroll container */
+
+.scroll-container {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 75%;
+    padding: 0 1rem 1rem 1rem;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    width: 100%;
+    margin: 0 auto
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 0.5rem;
+}
+
+.scroll-container figure {
+    display: grid;
+    grid-template-rows: min-content;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+}
+
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1rem;
+}
+
+.snaps-inline>* {
+    scroll-snap-align: start;
+}
+
+blockquote {
+    padding: 0.5rem;
+    background-color: white;
+    width: fit-content;
+    border-radius: 5px;
+
+}
+
+blockquote::before {
+    content: "“";
+}
+
+blockquote::after {
+    content: "”";
+}
+
+figurecaption {
+    background-color: white;
+    padding: 0.5rem;
+    width: fit-content;
+}
+
+@media (min-width: 991.98px) {
+    .film-container {
+        padding: 0 2rem;
+    }
+}
+
+/*media queries*/
 
 @media (max-width: 340px) {
     .logo-text {
@@ -97,5 +261,11 @@ a {
 
     .footer-text {
         font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .film-container {
+        padding: 0 2rem;
     }
 }
