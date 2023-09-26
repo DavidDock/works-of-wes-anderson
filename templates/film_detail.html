@@ -7,12 +7,12 @@
 <div class="container-fluid mx-auto">
     <div class="row film-container align-items-center p-1 mx-auto my-5">
         <div class="col-lg-4 col-sm-8 col-md-6 mx-auto film-image-container py-lg-2 pt-4">
-            <div class="film-poster-container d-flex align-items-center justify-content-center budapest-1 br flippers">
+            <div class="film-poster-container d-flex align-items-center justify-content-center budapest-1 br flippers" aria-lable="Press to see more film details">
 
                 <img class="icon bg-white bottom-left m-2 rounded" src="{{ film.first_icon.url }}"
-                    alt="Icon of {{ film.title }}" width="10" height="10">
+                    alt="First icon of {{ film.title }}" width="10" height="10">
                 <img class="icon bg-white bottom-right m-2 rounded" src="{{ film.second_icon.url }}"
-                    alt="Icon of {{ film.title }}" width="10" height="10">
+                    alt="Second icon of {{ film.title }}" width="10" height="10">
                 <img src="{{ film.poster.url }}" alt="Poster for {{ film.title }}" width="100" height="100"
                     class="h-auto p-2 film-img rounded m-2 m-md-4">
 
@@ -27,9 +27,11 @@
 
                 <p class="blurb h-auto w-75 bg-white text-center m-auto budapest-1 p-2 p-sm-4 rounded">{{ film.sypnosis }}
                 </p>
-
-                <button class="trailer bg-white p-1 rounded border-0" data-bs-toggle="modal"
-                    data-bs-target="#videoModal">VIEW TRAILER</button>
+                <div class="d-flex p-1 m-0 align-items-center justify-content-center">
+                    <button class="trailer bg-white p-1 rounded border-0" data-bs-toggle="modal" aria-label="Press to open trailer window"
+                        data-bs-target="#videoModal">TRAILER</button>
+                    <a class="wiki bg-white p-1 rounded border-0 text-decoration-none h-auto" href="{{ film.info_link }}" aria-label="Press to go to wikipedia link (opens in new tab)" target="blank">WIKIPEDIA</a>
+                </div>
             </div>
         </div>
         <div class="col-lg-8 py-2">

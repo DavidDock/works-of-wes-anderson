@@ -58,7 +58,9 @@ body {
 .navbar-brand:hover,
 .navbar-brand:focus,
 .trailer:hover,
-.trailer:focus {
+.trailer:focus,
+.wiki:hover,
+.wiki:focus {
     color: black;
     text-decoration: underline;
     text-shadow: 0 5px 18px black;
