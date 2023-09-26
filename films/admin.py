@@ -10,6 +10,11 @@ class FilmAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
 
-admin.site.register(CriticComment)
+@admin.register(CriticComment)
+class CriticCommentAdmin(admin.ModelAdmin):
+
+    list_display = ('film', 'critic')
+    search_fields = ['film']
+
 
 admin.site.register(MemberComment)
