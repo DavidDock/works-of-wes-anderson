@@ -24,6 +24,24 @@ body {
     height: fit-content;
 }
 
+.default-1 {
+    background: rgb(164, 194, 97);
+}
+
+.default-2 {
+    background: rgb(251, 221, 87);
+}
+
+.scroll-container-default::-webkit-scrollbar-track {
+    background: rgb(164, 194, 97);
+    border-radius: 5px;
+}
+
+.scroll-container-default::-webkit-scrollbar-thumb {
+    background: rgb(251, 221, 87);
+    border-radius: 5px;
+}
+
 .budapest-1 {
     background: rgba(120, 66, 131);
 }
