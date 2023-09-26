@@ -7,7 +7,7 @@
 <div class="container-fluid mx-auto">
     <div class="row film-container align-items-center p-1 mx-auto my-5">
         <div class="col-lg-4 col-sm-8 col-md-6 mx-auto film-image-container py-lg-2 pt-4">
-            <div class="film-poster-container d-flex align-items-center default-1 justify-content-center {{ film.color_class }}-1 rounded flippers" aria-lable="Press to see more film details">
+            <button class="btn film-poster-container d-flex align-items-center default-1 justify-content-center {{ film.color_class }}-1 rounded flippers" aria-label="Press to see more film details">
 
                 <img class="icon bg-white bottom-left m-2 rounded" {% if "placeholder" in film.first_icon.url %}
                     src="{% static 'images/backpack.png' %}" alt="Icon of a backpack " width="10" height="10" {% endif %}
@@ -19,7 +19,7 @@
                     class="h-auto p-2 film-img rounded m-2 m-md-4">
 
                 <p class="sypnosis-button p-1 mt-3 bg-white text-center rounded">PRESS FOR SYNOPSIS</p>
-            </div>
+            </button>
 
             <div
                 class="film-info d-flex justify-content-around align-items-center default-2 rounded flex-column hidden {{ film.color_class }}-2">
