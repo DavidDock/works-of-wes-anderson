@@ -56,7 +56,9 @@ body {
 .nav-link:focus,
 .active,
 .navbar-brand:hover,
-.navbar-brand:focus {
+.navbar-brand:focus,
+.trailer:hover,
+.trailer:focus {
     color: black;
     text-decoration: underline;
     text-shadow: 0 5px 18px black;
@@ -128,8 +130,7 @@ a {
 }
 
 .film-img {
-    width: 75%;
-    margin-top: 10%;
+    width: 90%;
 }
 
 .film-poster-container {

@@ -6,15 +6,15 @@
 <!-- Whole film container -->
 <div class="container-fluid mx-auto">
     <div class="row film-container align-items-center p-1 mx-auto my-5">
-        <div class="col-lg-4 col-md-8 mx-auto film-image-container py-lg-2 pt-4">
-            <div class="film-poster-container d-flex align-items-center justify-content-between budapest-1 br flippers">
+        <div class="col-lg-4 col-sm-8 col-md-6 mx-auto film-image-container py-lg-2 pt-4">
+            <div class="film-poster-container d-flex align-items-center justify-content-center budapest-1 br flippers">
 
                 <img class="icon bg-white bottom-left m-2 rounded" src="{{ film.first_icon.url }}"
                     alt="Icon of {{ film.title }}" width="10" height="10">
                 <img class="icon bg-white bottom-right m-2 rounded" src="{{ film.second_icon.url }}"
                     alt="Icon of {{ film.title }}" width="10" height="10">
                 <img src="{{ film.poster.url }}" alt="Poster for {{ film.title }}" width="100" height="100"
-                    class="h-auto p-2 film-img rounded">
+                    class="h-auto p-2 film-img rounded m-2 m-md-4">
 
                 <p class="sypnosis-button p-1 mt-3 bg-white text-center rounded">PRESS FOR SYNOPSIS</p>
             </div>
@@ -25,10 +25,10 @@
                     <button class="close m-0 btn">X</button>
                 </div>
 
-                <p class="blurb h-50 w-75 bg-white m-auto budapest-1 p-2 rounded">{{ film.sypnosis }}
+                <p class="blurb h-auto w-75 bg-white text-center m-auto budapest-1 p-2 p-sm-4 rounded">{{ film.sypnosis }}
                 </p>
 
-                <button class="trailer bg-white p-1 rounded border-0 invert-button" data-bs-toggle="modal"
+                <button class="trailer bg-white p-1 rounded border-0" data-bs-toggle="modal"
                     data-bs-target="#videoModal">VIEW TRAILER</button>
             </div>
         </div>
@@ -38,7 +38,7 @@
                     <div class="d-flex bg-white rounded head mx-auto my-4"><img class="icon pb-lg-2"
                             src="{% static 'images/typewriter.png' %}" alt="Icon of a typewriter" width="10"
                             height="10">
-                        <h2 class="ps-2 pe-2 text-decoration-underline fs-4"> WHAT THE CRITICS SAY</h2><img class="icon pb-2"
+                        <h2 class="ps-2 pe-2 text-center text-decoration-underline fs-5"> WHAT THE CRITICS SAY</h2><img class="icon pb-2"
                             src="{% static 'images/typewriter.png' %}" alt="Icon of a typewriter" width="10"
                             height="10">
                     </div>
@@ -68,7 +68,7 @@
                 <div>
                     <div class="d-flex bg-white rounded head mx-auto my-4"><img class="icon pb-lg-2"
                             src="{% static 'images/writing.png' %}" alt="Icon of a letter" width="10" height="10">
-                        <h2 class="ps-2 pe-2 fs-4 text-decoration-underline"> WHAT THE MEMBERS SAY</h2><img class="icon pb-lg-2"
+                        <h2 class="ps-2 pe-2 fs-5 text-center text-decoration-underline"> WHAT THE MEMBERS SAY</h2><img class="icon pb-lg-2"
                             src="{% static 'images/writing.png' %}" alt="Icon of a letter" width="10" height="10">
                     </div>
 
