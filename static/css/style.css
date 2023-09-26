@@ -46,6 +46,60 @@ body {
     border-radius: 5px;
 }
 
+.asteroid-1 {
+    background: rgba(189, 159, 109);
+}
+
+.asteroid-2 {
+    background: rgba(83, 211, 198);
+}
+
+.scroll-container-asteroid::-webkit-scrollbar-track {
+    background: rgba(189, 159, 109);
+    border-radius: 5px;
+}
+
+.scroll-container-asteroid::-webkit-scrollbar-thumb {
+    background: rgba(83, 211, 198);
+    border-radius: 5px;
+}
+
+.french-dispatch-1 {
+    background: rgba(243, 221, 88);
+}
+
+.french-dispatch-2 {
+    background: rgba(161, 201, 194);
+}
+
+.scroll-container-french-dispatch::-webkit-scrollbar-track {
+    background: rgba(243, 221, 88);
+    border-radius: 5px;
+}
+
+.scroll-container-french-dispatch::-webkit-scrollbar-thumb {
+    background: rgba(161, 201, 194);
+    border-radius: 5px;
+}
+
+.isle-of-dogs-1 {
+    background: rgba(234, 40, 38);
+}
+
+.isle-of-dogs-2 {
+    background: rgba(237, 237, 237);
+}
+
+.scroll-container-isle-of-dogs::-webkit-scrollbar-track {
+    background: rgba(234, 40, 38);
+    border-radius: 5px;
+}
+
+.scroll-container-isle-of-dogs::-webkit-scrollbar-thumb {
+    background: rgba(237, 237, 237);
+    border-radius: 5px;
+}
+
 .budapest-1 {
     background: rgba(120, 66, 131);
 }
@@ -61,6 +115,132 @@ body {
 
 .scroll-container-budapest::-webkit-scrollbar-thumb {
     background: rgba(229, 0, 12);
+    border-radius: 5px;
+}
+
+.moonrise-1 {
+    background: rgba(255, 230, 79);
+}
+
+.moonrise-2 {
+    background: rgba(195, 188, 97);
+}
+
+.scroll-container-moonrise::-webkit-scrollbar-track {
+    background: rgba(255, 230, 79);
+    border-radius: 5px;
+}
+
+.scroll-container-moonrise::-webkit-scrollbar-thumb {
+    background: rgba(195, 188, 97);
+    border-radius: 5px;
+}
+
+.fantastic-1 {
+    background: rgba(155, 50, 20);
+}
+
+.fatastic-2 {
+    background: rgba(226, 157, 60);
+}
+
+.scroll-container-fantastic::-webkit-scrollbar-track {
+    background: rgba(155, 50, 20);
+    border-radius: 5px;
+}
+
+.scroll-container-fantastic::-webkit-scrollbar-thumb {
+    background: rgba(226, 157, 60);
+    border-radius: 5px;
+}
+
+.darjeeling-1 {
+    background: rgba(254, 219, 77);
+}
+
+.darjeeling-2 {
+    background: rgba(120, 152, 189);
+}
+
+.scroll-container-darjeeling::-webkit-scrollbar-track {
+    background: rgba(254, 219, 77);
+    border-radius: 5px;
+}
+
+.scroll-container-darjeeling::-webkit-scrollbar-thumb {
+    background: rgba(120, 152, 189);
+    border-radius: 5px;
+}
+
+.aquatic-1 {
+    background: rgba(242, 79, 38);
+}
+
+.aquatic-2 {
+    background: rgba(155, 277, 249);
+}
+
+.scroll-container-aquatic::-webkit-scrollbar-track {
+    background: rgba(242, 79, 38);
+    border-radius: 5px;
+}
+
+.scroll-container-aquatic::-webkit-scrollbar-thumb {
+    background: rgba(161, 201, 194);
+    border-radius: 5px;
+}
+
+.tenenbaums-1 {
+    background: rgba(199, 121, 18);
+}
+
+.tenenbaums-2 {
+    background: rgba(210, 25, 30);
+}
+
+.scroll-container-tenenbaums::-webkit-scrollbar-track {
+    background: rgba(199, 121, 18);
+    border-radius: 5px;
+}
+
+.scroll-container-tenenbaums::-webkit-scrollbar-thumb {
+    background: rgba(210, 25, 30);
+    border-radius: 5px;
+}
+
+.rushmore-1 {
+    background: rgba(36, 34, 55);
+}
+
+.rushmore-2 {
+    background: rgba(237, 37, 24);
+}
+
+.scroll-container-rushmore::-webkit-scrollbar-track {
+    background: rgba(36, 34, 55);
+    border-radius: 5px;
+}
+
+.scroll-container-rushmore::-webkit-scrollbar-thumb {
+    background: rgba(237, 37, 24);
+    border-radius: 5px;
+}
+
+.bottle-rocket-1 {
+    background: rgba(251, 221, 87);
+}
+
+.bottle-rocket-2 {
+    background: rgba(164, 194, 97);
+}
+
+.scroll-container-bottle-rocket::-webkit-scrollbar-track {
+    background: rgba(251, 221, 87);
+    border-radius: 5px;
+}
+
+.scroll-container-bottle-rocket::-webkit-scrollbar-thumb {
+    background: rgba(164, 194, 97);
     border-radius: 5px;
 }
 
@@ -166,10 +346,6 @@ a {
     grid-column: 1;
     grid-row: 1;
     z-index: 0;
-}
-
-.blurb {
-    overflow: scroll;
 }
 
 .close-cont {
