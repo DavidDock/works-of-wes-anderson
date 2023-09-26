@@ -49,24 +49,16 @@
             
                         <div
                             class="scroll-container-default scroll-container-{{ film.color_class }} scroll-container rounded snaps-inline">
-            
+                            {% for comment in critic_comments %}
                             <figure>
                                 <figurecaption class="rounded">
-                                    DADDY
+                                    {{ comment.critic }}
                                 </figurecaption class="rounded">
                                 <blockquote>
-                                    gggggggghhhh hbbb bbhggggg bbjj bbhgg bbfty bjuyb g vvggtfffg bhggyggy hhh
+                                    {{ comment.content }}
                                 </blockquote>
                             </figure>
-            
-                            <figure>
-                                <figurecaption class="rounded">
-                                    KIT
-                                </figurecaption class="rounded">
-                                <blockquote>
-                                    ghh hbbb bbhgg bb bh jp la ll mgg bbjj bbhgg bbfty bjuyb g vvffg bhggyggy hhh
-                                </blockquote>
-                            </figure>
+                            {% endfor %}
             
                         </div>
                     </div>

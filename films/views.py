@@ -22,11 +22,13 @@ def FilmDetail(request, slug, *args, **kwargs):
 
     queryset = Film.objects.all()
     film = get_object_or_404(queryset, slug=slug)
+    critic_comments = film.critic_comments.all()
 
     return render(
         request,
         "film_detail.html",
         {
-            "film": film
+            "film": film,
+            "critic_comments": critic_comments
         }
     )
