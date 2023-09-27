@@ -48,8 +48,8 @@ During this iteration I added Issues for a 'could have' Epic - A quiz feature an
 
 ## Iteration 2  
 
-Start: 18/8/23
-End: 24/9/23
+Start: 18/9/23
+End: 27/9/23
 
 Below is the Kanban board at the start of the iteration:  
 ![Iteration-Two](/documentation/agile/iteration-two.png)  
@@ -61,3 +61,26 @@ The User Stories were added and prioritised as follows:
 - User Story: Critic Comments - Should Have. Story points: 4
 - User Story: Member Registration - Could Have. Story points: 2
 - User Story: Log In and Out - Could Have. Story Points: 2
+
+Below is the Kanban board at the end of the iteration:  
+
+![Iteration-One-End](/documentation/agile/iteration-two-end.png)  
+
+During this iteration I did not managed to complete all the could have issues, I did not complete "Member Registration" and "Log In and Out". I took longer than expected on some of the issues this time around. In particular I struggled with a bug regarding cloudinary convig settings which took a long time to solve.  
+
+## Iteration 3  
+
+Start: 28/8/23
+End: 7/10/23
+
+Below is the Kanban board at the start of the iteration:  
+![Iteration-Three](/documentation/agile/iteration-three.png)  
+The User Stories were added and prioritised as follows:
+
+- User Story: Member Registration - Must Have. Story points: 2
+- User Story: Log In and Out - Must Have. Story points: 2
+- User Story: View Member Comments - Must Have. Story points: 4
+- User Story: Member Area Page - Must Have. Story points: 2
+- User Story: Member Can Add A Comment - Should Have. Story points: 4
+- User Story: Member Can Edit Comments - Should Have. Story points: 4
+- User Story: Member Can Delete Comments - Could Have. Story Points: 4
