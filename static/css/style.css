@@ -307,12 +307,16 @@ a {
 
 .nav-link:hover,
 .nav-link:focus,
+.normal-link:hover,
+.normal-link:focus,
 .active,
 .navbar-brand:hover,
 .navbar-brand:focus,
 .trailer:hover,
 .trailer:focus,
 .wiki:hover,
+.sign-button:hover,
+.sign-button:focus,
 .wiki:focus {
     color: black;
     text-decoration: underline;
@@ -322,6 +326,10 @@ a {
 .invert-button:hover,
 .invert-button:focus {
     filter: invert();
+}
+
+.fit-content {
+    width: fit-content;
 }
 
 /* css for film detail */
