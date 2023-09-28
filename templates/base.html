@@ -77,20 +77,21 @@
                             {% endfor %}
                         </ul>
                     </div>
-
+                    {% if user.is_authenticated %}
                     <a class="nav-link" href="#"><img class="icon pb-2" src="{% static 'images/member.png' %}"
                             alt="Wes Anderson society of crossed keys member icon" width="10" height="10"> Member
                         Area</a>
 
-                    <a class="nav-link" href="#"><img class="icon pb-2" src="{% static 'images/logout.png' %}"
+                    <a class="nav-link" href="{% url 'account_logout' %}"><img class="icon pb-2" src="{% static 'images/logout.png' %}"
                             alt="Logout icon" width="10" height="10"> Logout</a>
-
-                    <a class="nav-link" href="#"><img class="icon pb-2" src="{% static 'images/login.png' %}"
+                    {% else %}
+                    <a class="nav-link" href="{% url 'account_login' %}"><img class="icon pb-2" src="{% static 'images/login.png' %}"
                             alt="Login icon" width="10" height="10"> Login</a>
 
-                    <a class="nav-link" href="#"><img class="icon pb-2" src="{% static 'images/register.png' %}"
+                    <a class="nav-link" href="{% url 'account_signup' %}"><img class="icon pb-2" src="{% static 'images/register.png' %}"
                             alt="Register icon" width="10" height="10"> Register</a>
-
+                    {% endif %}
+                
                 </div>
             </div>
         </div>
