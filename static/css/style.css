@@ -450,12 +450,15 @@ figurecaption {
     display: block;
 }
 
-.login input:nth-child(2) {
+#id_remember {
     display: inline-block;
 }
 
 .signup ul {
     list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 /*media queries*/

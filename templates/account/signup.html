@@ -7,7 +7,7 @@
 {% block head_title %}{% trans "Register" %}{% endblock head_title %}
 
 {% block content %}
-<div class="container col-8 fit-content my-5 text-center">
+<div class="container col-8 fit-content my-5">
 
     <div class="py-1 px-1 d-flex rounded bg-white fit-content mb-5 mx-auto">
         <img class="icon mx-2" src="{% static 'images/register.png' %}" alt="A small icon of some keys" width="10"
@@ -27,7 +27,7 @@
         <button class="sign-button bg-white p-1 rounded border border-dark" type="submit">{% trans "Register" %}</button>
     </form>
 
-    <p>{% blocktrans %}Already have an account? Then please <a class="normal-link" href="{{ login_url }}">Log
+    <p class="text-center">{% blocktrans %}Registered? Then please <a class="normal-link href="{{ login_url }}">Log
             In</a>.{%endblocktrans %}</p>
 
 </div>
