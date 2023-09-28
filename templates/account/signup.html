@@ -7,9 +7,9 @@
 {% block head_title %}{% trans "Register" %}{% endblock head_title %}
 
 {% block content %}
-<div class="container col-8 fit-content my-5 d-flex flex-column align-items-center">
+<div class="container col-8 fit-content my-5">
 
-    <div class="py-1 px-1 d-flex rounded bg-white fit-content mb-4">
+    <div class="py-1 px-1 d-flex rounded bg-white fit-content mb-5 mx-auto">
         <img class="icon mx-2" src="{% static 'images/register.png' %}" alt="A small icon of some keys" width="10"
             height="10" />
         <h2 class="m-0 text-decoration-underline">{% trans '"Register"' %}</h2>
@@ -17,7 +17,7 @@
             height="10" />
     </div>
 
-    <form class="signup my-4 d-flex flex-column align-items-center" id="signup_form" method="post"
+    <form class="signup my-4" id="signup_form" method="post"
         action="{% url 'account_signup' %}">
         {% csrf_token %}
         {{ form.as_p }}
