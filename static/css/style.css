@@ -443,6 +443,21 @@ figurecaption {
     width: fit-content;
 }
 
+/* login and register page */
+
+.login input,
+.signup input {
+    display: block;
+}
+
+.login input:nth-child(2) {
+    display: inline-block;
+}
+
+.signup ul {
+    list-style-type: none;
+}
+
 /*media queries*/
 
 @media (max-width: 340px) {
