@@ -81,15 +81,15 @@
                     <a class="nav-link" href="#"><img class="icon pb-2" src="{% static 'images/member.png' %}"
                             alt="Wes Anderson society of crossed keys member icon" width="10" height="10"> Member
                         Area</a>
-
-                    <a class="nav-link" href="{% url 'account_logout' %}"><img class="icon pb-2" src="{% static 'images/logout.png' %}"
+                    {% url 'account_logout' as url %}
+                    <a class="nav-link {% if request.path == url %}active{% endif %}" href="{% url 'account_logout' %}"><img class="icon pb-2" src="{% static 'images/logout.png' %}"
                             alt="Logout icon" width="10" height="10"> Logout</a>
                     {% else %}
                     {% url 'account_login' as url %}
                     <a class="nav-link {% if request.path == url %}active{% endif %}" href="{% url 'account_login' %}"><img class="icon pb-2" src="{% static 'images/login.png' %}"
                             alt="Login icon" width="10" height="10"> Login</a>
-
-                    <a class="nav-link" href="{% url 'account_signup' %}"><img class="icon pb-2" src="{% static 'images/register.png' %}"
+                    {% url 'account_signup' as url %}
+                    <a class="nav-link {% if request.path == url %}active{% endif %}" href="{% url 'account_signup' %}"><img class="icon pb-2" src="{% static 'images/register.png' %}"
                             alt="Register icon" width="10" height="10"> Register</a>
                     {% endif %}
                 
