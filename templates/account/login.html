@@ -8,18 +8,18 @@
 {% block head_title %}{% trans "Login" %}{% endblock head_title %}
 
 {% block content %}
-<div class="container col-8 fit-content my-4">
-    <div class="py-1 px-1 d-flex rounded bg-white fit-content my-4">
+<div class="container col-8 fit-content my-5 d-flex flex-column align-items-center">
+    <div class="py-1 px-1 d-flex rounded bg-white fit-content mb-4">
         <img class="icon mx-2" src="{% static 'images/login.png' %}" alt="A small icon of some keys" width="10" height="10" />
-        <h2 class="m-0">{% trans "Login" %}</h2>
+        <h2 class="m-0 text-decoration-underline">{% trans '"Login"' %}</h2>
         <img class="icon mx-2" src="{% static 'images/login.png' %}" alt="A small icon of some keys" width="10"
             height="10" />
     </div>
-    <p>{% blocktrans %}If you have not registered yet, then please
-        <a class="normal-link" href="{{ signup_url }}">Register</a> first.{% endblocktrans %}
+    <p class="text-center m-0">{% blocktrans %}If you are not a member, then register
+        <a class="normal-link" href="{{ signup_url }}">here</a> first.{% endblocktrans %}
     </p>
 
-    <form class="login my-4" method="POST" action="{% url 'account_login' %}">
+    <form class="login my-4 d-flex flex-column align-items-center" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form.as_p }}
         {% if redirect_field_value %}
