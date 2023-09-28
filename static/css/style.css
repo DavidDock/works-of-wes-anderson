@@ -443,6 +443,13 @@ figurecaption {
     width: fit-content;
 }
 
+/* register page */
+
+.signup ul {
+    text-align: center;
+    list-style: none;
+}
+
 /*media queries*/
 
 @media (max-width: 340px) {
