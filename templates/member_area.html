@@ -2,4 +2,9 @@
 {% load static %}
 {% block title %} Member-Area {% endblock title %}
 {% block content %}
+
+{% for comment in all_comments %}
+<p>{{ comment.content }}</p>
+{% endfor %}
+
 {% endblock content %}

@@ -39,17 +39,22 @@ def FilmDetail(request, slug, *args, **kwargs):
 
 
 """
-login_required learnt from https://docs.djangoproject.com/en/4.2/topics/auth/default/
+login_required learnt from
+https://docs.djangoproject.com/en/4.2/topics/auth/default/
 """
+
+
 @login_required
 def MemberArea(request, *args, **kwargs):
     """
     Renders the Member Area page
     """
+    all_comments = request.user.member_comments.all()
 
     return render(
         request,
         "member_area.html",
         {
+            "all_comments": all_comments,
         },
     )
