@@ -3,8 +3,38 @@
 {% block title %} Member-Area {% endblock title %}
 {% block content %}
 
-{% for comment in all_comments %}
-<p>{{ comment.content }}</p>
+
+<!-- About section -->
+<div class="row my-5">
+    <section class="col-10 col-md-8 col-lg-6 mx-auto bg-white rounded pt-4">
+        <!-- Heading -->
+        <div class="d-flex justify-content-around">
+            <img class="icon mx-2" src="{% static 'images/member.png' %}"
+                alt="A small icon of a cross keys member medal" width="10" height="10" />
+            <h2 class="text-decoration-underline">'About'</h2>
+            <img class="icon mx-2" src="{% static 'images/member.png' %}" alt="Another icon of a cross keys member medal"
+                width="10" height="10" />
+        </div>
+        <!-- Content -->
+        <p class="p-4 text-center">
+            Welcolme {{ user.username }}, this is your area where you can keep track of your comments and scores. <br />
+            This site is celebrating Wes Anderson's work so tell us what you love about each film or maybe a favorite part. <br />
+        </p>
+    </section>
+</div>
+
+<!-- Each Film -->
+{% for movie in films %}
+
+    <h2>{{ movie.title }}</h2>
+    {% for comment in all_comments %}
+        {% if comment.film == movie %}
+            <p>{{ comment.content }}</p>
+            {% else %}
+            <p>No comments made yet</p>
+        {% endif %}
+    {% endfor %}
+    
 {% endfor %}
 
 {% endblock content %}
