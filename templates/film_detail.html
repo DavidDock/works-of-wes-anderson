@@ -12,7 +12,7 @@
                 <img class="icon bg-white bottom-left m-2 rounded" {% if "placeholder" in film.first_icon.url %}
                     src="{% static 'images/backpack.png' %}" alt="Icon of a backpack " width="10" height="10" {% endif %}
                     src="{{ film.first_icon.url }}" alt="First icon of {{ film.title }}" width="10" height="10">
-                <img class="icon bg-white bottom-right m-2 rounded" {% if "placeholder" in film.first_icon.url %}
+                <img class="icon bg-white bottom-right m-2 rounded" {% if "placeholder" in film.second_icon.url %}
                     src="{% static 'images/bandit.png' %}" alt="Icon of a bandit hat " width="10" height="10" {% endif %}
                     src="{{ film.second_icon.url }}" alt="Second icon of {{ film.title }}" width="10" height="10">
                 <img src="{{ film.poster.url }}" alt="Poster for {{ film.title }}" width="100" height="100"
