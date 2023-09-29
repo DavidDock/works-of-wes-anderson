@@ -25,14 +25,14 @@
 </div>
 
 <!-- Each Film -->
+{% for movie in films %}
 <div class="container my-4 d-flex flex-column align-items-center">
-    {% for movie in films %}
     <!-- Heading -->
     <div class="py-1 px-1 d-flex rounded bg-white fit-content mb-4">
         <img class="icon mx-2" {% if "placeholder" in movie.first_icon.url %} src="{% static 'images/bandit.png' %}"
             alt="Icon of a bandit hat " width="10" height="10" {% endif %} src="{{ movie.first_icon.url }}"
             alt="First icon of {{ movie.title }}" width="10" height="10" />
-        <h2 class="m-0 text-decoration-underline">{{ movie.title }}</h2>
+        <h2 class="m-0 text-decoration-underline text-center">{{ movie.title }}</h2>
         <img class="icon mx-2" {% if "placeholder" in movie.second_icon.url %} src="{% static 'images/backpack.png' %}"
             alt="Icon of a backpack " width="10" height="10" {% endif %} src="{{ movie.second_icon.url }}"
             alt="Second icon of {{ movie.title }}" width="10" height="10" />
@@ -48,7 +48,7 @@
     {% endfor %}
 
     <!-- comments -->
-    <div class="scroll-container br scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline">
+    <div class="scroll-container rounded justify-content-center scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline">
         {% for comment in all_comments %}
         {% if comment.film == movie %}
         <figure class="{{ movie.color_class }}-1">
