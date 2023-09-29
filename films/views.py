@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from .models import Film
 
 
@@ -34,4 +35,18 @@ def FilmDetail(request, slug, *args, **kwargs):
             "critic_comments": critic_comments,
             "member_comments": member_comments
         }
+    )
+
+
+@login_required
+def MemberArea(request, *args, **kwargs):
+    """
+    Renders the Member Area page
+    """
+
+    return render(
+        request,
+        "member_area.html",
+        {
+        },
     )

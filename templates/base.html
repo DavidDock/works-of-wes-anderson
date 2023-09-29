@@ -78,7 +78,7 @@
                         </ul>
                     </div>
                     {% if user.is_authenticated %}
-                    <a class="nav-link" href="#"><img class="icon pb-2" src="{% static 'images/member.png' %}"
+                    <a class="nav-link" href="{% url 'member_area' %}"><img class="icon pb-2" src="{% static 'images/member.png' %}"
                             alt="Wes Anderson society of crossed keys member icon" width="10" height="10"> Member
                         Area</a>
                     {% url 'account_logout' as url %}
