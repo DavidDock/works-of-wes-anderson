@@ -39,7 +39,7 @@
     </div>
 
     <!-- comments -->
-    <div class="scroll-container rounded scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline">
+    <div id="full-width-snap" class="scroll-container rounded scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline">
         {% for comment in all_comments %}
         {% if comment.film == movie %}
         <figure class="{{ movie.color_class }}-1">

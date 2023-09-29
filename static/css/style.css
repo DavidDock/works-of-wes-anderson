@@ -446,6 +446,11 @@ figurecaption {
     width: fit-content;
 }
 
+#full-width-snap {
+    grid-auto-columns: 100%;
+    width: 100%
+}
+
 /* login and register page */
 
 .login input,
@@ -481,6 +486,12 @@ figurecaption {
 
     .footer-text {
         font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #full-width-snap {
+        width: 75%;
     }
 }
 
