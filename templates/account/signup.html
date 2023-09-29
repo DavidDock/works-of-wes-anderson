@@ -9,13 +9,16 @@
 {% block content %}
 <div class="container col-8 fit-content my-5">
 
-    <div class="py-1 px-1 d-flex rounded bg-white fit-content mb-5 mx-auto">
+    <div class="py-1 px-1 d-flex rounded bg-white fit-content mb-4 mx-auto">
         <img class="icon mx-2" src="{% static 'images/register.png' %}" alt="A small icon of some keys" width="10"
             height="10" />
         <h2 class="m-0 text-decoration-underline">{% trans '"Register"' %}</h2>
         <img class="icon mx-2" src="{% static 'images/register.png' %}" alt="A small icon of some keys" width="10"
             height="10" />
     </div>
+
+    <p class="text-center m-0">{% blocktrans %}Registered? Then please <a class="normal-link href=" {{ login_url }}">Log
+            In</a>.{%endblocktrans %}</p>
 
     <form class="signup my-4 d-flex flex-column align-items-center" id="signup_form" method="post"
         action="{% url 'account_signup' %}">
@@ -26,9 +29,6 @@
         {% endif %}
         <button class="sign-button bg-white p-1 rounded border border-dark" type="submit">{% trans "Register" %}</button>
     </form>
-
-    <p class="text-center">{% blocktrans %}Registered? Then please <a class="normal-link href="{{ login_url }}">Log
-            In</a>.{%endblocktrans %}</p>
 
 </div>
 {% endblock content %}
