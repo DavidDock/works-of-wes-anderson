@@ -37,18 +37,9 @@
             alt="Icon of a backpack " width="10" height="10" {% endif %} src="{{ movie.second_icon.url }}"
             alt="Second icon of {{ movie.title }}" width="10" height="10" />
     </div>
-    <!-- if no comments -->
-    {% if not all_comments %}
-    <p class="text-decoration-underline p-2 bg-white rounded">"No comments made yet"</p>
-    {% endif %}
-    {% for comment in all_comments %}
-    {% if not comment.film == movie %}
-    <p class="text-decoration-underline p-2 bg-white rounded">"No comments made yet"</p>
-    {% endif %}
-    {% endfor %}
 
     <!-- comments -->
-    <div class="scroll-container rounded justify-content-center scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline">
+    <div class="scroll-container rounded scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline">
         {% for comment in all_comments %}
         {% if comment.film == movie %}
         <figure class="{{ movie.color_class }}-1">
