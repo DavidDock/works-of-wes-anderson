@@ -488,4 +488,8 @@ figurecaption {
     .film-container {
         padding: 0 2rem;
     }
+
+    .scroll-container {
+        grid-auto-columns: 55%;
+    }
 }
