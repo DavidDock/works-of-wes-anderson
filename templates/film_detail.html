@@ -38,7 +38,9 @@
             </div>
             </div>
             <div class="col-lg-8 py-2">
+                <!-- critic and member comment container -->
                 <div class="row">
+                    <!-- Critic comments container -->
                     <div>
                         <div class="d-flex bg-white rounded head mx-auto my-4"><img class="icon pb-lg-2"
                                 src="{% static 'images/typewriter.png' %}" alt="Icon of a typewriter" width="10" height="10">
@@ -72,6 +74,7 @@
             
                         </div>
                     </div>
+                    <!-- member comments container -->
                     <div>
                         <div class="d-flex bg-white rounded head mx-auto my-4"><img class="icon pb-lg-2"
                                 src="{% static 'images/writing.png' %}" alt="Icon of a letter" width="10" height="10">
@@ -81,25 +84,29 @@
                         </div>
             
                         <div
-                            class="scroll-container br scroll-container-default scroll-container-{{ film.color_class }} snaps-inline">
-            
+                            class="scroll-container br scroll-container-default scroll-container-{{ film.color_class }} {% if not member_comments %}justify-content-center{% endif %} snaps-inline">
+                            {% if not member_comments %}
                             <figure>
-                                <figurecaption>
-                                    Eric
-                                </figurecaption>
+                                <figurecaption class="rounded">
+                                    Member
+                                </figurecaption class="rounded">
                                 <blockquote>
-                                    hh hbbb bbhggggg bbjj bbhgg bbfty bjuyb g vvggthyyy de dd bhggyggy hhh
+                                    No member comments posted yet
                                 </blockquote>
                             </figure>
-            
+                            {% endif %}
+
+                            {% for comment in member_comments %}
                             <figure>
-                                <figurecaption>
-                                    Mick
-                                </figurecaption>
+                                <figurecaption class="rounded">
+                                    {{ comment.name }}
+                                </figurecaption class="rounded">
                                 <blockquote>
-                                    ga ss fc vv jjh hbbb bbhggggg bbjj bbhgg bbfty bjuyb g vvggtfffg bhggyggy hhh
+                                    {{ comment.content }}
                                 </blockquote>
                             </figure>
+                            {% endfor %}
+
                         </div>
                     </div>
                 </div>

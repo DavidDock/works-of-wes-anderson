@@ -23,12 +23,14 @@ def FilmDetail(request, slug, *args, **kwargs):
     queryset = Film.objects.all()
     film = get_object_or_404(queryset, slug=slug)
     critic_comments = film.critic_comments.all()
+    member_comments = film.member_comments.filter(approved=True).order_by("-created_on")
 
     return render(
         request,
         "film_detail.html",
         {
             "film": film,
-            "critic_comments": critic_comments
+            "critic_comments": critic_comments,
+            "member_comments": member_comments
         }
     )
