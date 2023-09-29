@@ -17,4 +17,12 @@ class CriticCommentAdmin(admin.ModelAdmin):
     search_fields = ['film']
 
 
-admin.site.register(MemberComment)
+@admin.register(MemberComment)
+class MemberCommentAdmin(admin.ModelAdmin):
+    list_display = ('name', 'content', 'film', 'created_on', 'approved')
+    list_filter = ('approved', 'created_on')
+    search_fields = ('name', 'film')
+    actions = ['approve_comments']
+
+    def approve_comments(self, request, queryset):
+        queryset.update(approved=True)
