@@ -449,7 +449,6 @@ figurecaption {
 #full-width-snap {
     grid-auto-columns: 100%;
     width: 100%;
-    min-height: calc(1.5em + (0.75rem + 2px));
 }
 
 /* login and register page */
