@@ -144,7 +144,7 @@ body {
     background: rgba(155, 50, 20);
 }
 
-.fatastic-2 {
+.fantastic-2 {
     background: rgba(226, 157, 60);
 }
 
@@ -448,7 +448,8 @@ figurecaption {
 
 #full-width-snap {
     grid-auto-columns: 100%;
-    width: 100%
+    width: 100%;
+    min-height: calc(1.5em + (0.75rem + 2px));
 }
 
 /* login and register page */
