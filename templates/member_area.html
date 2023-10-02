@@ -43,10 +43,16 @@
         {% for comment in all_comments %}
         {% if comment.film == movie %}
         <figure class="{{ movie.color_class }}-1">
+            {% if not comment.approved %}
+            <figurecaption class="rounded text-muted">
+                Pending Approval
+            </figurecaption class="rounded">
+            {% else %}
             <figurecaption class="rounded">
                 {{ comment.name }}
             </figurecaption class="rounded">
-            <blockquote>
+            {% endif %}   
+            <blockquote class="{% if not comment.approved %} text-muted {% endif %}">
                 {{ comment.content }}
             </blockquote>
         </figure>
