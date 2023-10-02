@@ -51,7 +51,7 @@
         <!-- comment form for each film -->
         <div class="col-lg-6 p-0 m-0">
             
-            <form method="post" class="my-4 comment-form">
+            <form method="post" action="add_comment/{{ movie.slug }}" class="my-4 mx-2 comment-form">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
                 <button type="submit" class="mt-2 sign-button bg-white p-1 rounded border border-dark">Submit</button>

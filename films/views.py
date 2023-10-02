@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 from .models import Film
 from .forms import CommentForm
 
@@ -60,3 +61,28 @@ def MemberArea(request, *args, **kwargs):
             "comment_form": CommentForm()
         },
     )
+
+def AddComment(request, slug, *args, **kwargs):
+    """
+    Adds comment
+    """
+
+    if request.method == "POST":
+
+        queryset = Film.objects.all()
+        film = get_object_or_404(queryset, slug=slug)
+        user = request.user
+
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment_form.instance.user = user
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.film = film
+            comment.save()
+        else:
+            comment_form = CommentForm()    
+    else :
+        comment_form = CommentForm()
+
+    return HttpResponseRedirect(reverse('member_area'))     
