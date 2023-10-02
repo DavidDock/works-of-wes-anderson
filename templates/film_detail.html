@@ -86,7 +86,7 @@
                         </div>
             
                         <div
-                            class="scroll-container br scroll-container-default scroll-container-{{ film.color_class }} {% if not member_comments %}justify-content-center{% endif %} snaps-inline">
+                            class="scroll-container br scroll-container-default scroll-container-{{ film.color_class }} {% if not member_comments %}justify-content-center{% endif %} {% if member_comments|length == 1 %}justify-content-center{% endif %} snaps-inline">
                             {% if not member_comments %}
                             <figure class="dark-grey">
                                 <figurecaption class="rounded">
