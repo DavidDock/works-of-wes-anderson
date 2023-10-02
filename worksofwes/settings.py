@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary_storage',
     'cloudinary',
+    'crispy_forms',
     'films',
 ]
 
@@ -65,6 +66,8 @@ LOGOUT_REDIRECT_URL = '/'
 cloudinary.config(
     secure=True,
 )
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Film
+from .forms import CommentForm
 
 
 def Home(request, *args, **kwargs):
@@ -56,5 +57,6 @@ def MemberArea(request, *args, **kwargs):
         "member_area.html",
         {
             "all_comments": all_comments,
+            "comment_form": CommentForm()
         },
     )
