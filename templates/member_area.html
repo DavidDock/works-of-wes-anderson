@@ -63,6 +63,15 @@
         <div class="col-lg-6 p-0 m-0">
             <div id="full-width-snap"
                 class="scroll-container rounded scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline">
+                <figure class="{{ movie.color_class }}-2">
+                    <figurecaption class="rounded">
+                        Works Of Wes Anderson
+                    </figurecaption class="rounded">
+                    <blockquote>
+                        This is where your comments will be displayed. After approval they will be able to be seen in <a class="normal-link" href="{% url 'film_detail' movie.slug %}"> {{ movie.title}} </a>'s
+                        detail page
+                    </blockquote>
+                </figure>
                 {% for comment in all_comments %}
                 {% if comment.film == movie %}
                 <figure class="{{ movie.color_class }}-1">
@@ -81,15 +90,6 @@
                 </figure>
                 {% endif %}
                 {% endfor %}
-                <figure class="{{ movie.color_class }}-2">
-                    <figurecaption class="rounded">
-                        Works Of Wes Anderson
-                    </figurecaption class="rounded">
-                    <blockquote>
-                        This is where your comments will be displayed. After approval they will be able to be seen in {{ movie.title}}'s
-                        detail page
-                    </blockquote>
-                </figure>
             </div>
         </div>
 
