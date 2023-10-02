@@ -39,20 +39,35 @@
             alt="Second icon of {{ movie.title }}" width="10" height="10" />
     </div>
 
+    <!-- comment form for each film -->
+    
+    <div class="d-flex bg-white rounded head mx-auto my-4"><img class="icon pb-lg-2" src="{% static 'images/writing.png' %}"
+            alt="Icon of a letter" width="10" height="10">
+        <h3 class="ps-2 pe-2 fs-5 text-center text-decoration-underline"> Add a comment for {{ movie.title }}</h3><img class="icon pb-lg-2"
+            src="{% static 'images/writing.png' %}" alt="Icon of a letter" width="10" height="10">
+    </div>
+
+    <form method="post" class="m-4 comment-form">
+        {{ comment_form | crispy }}
+        {% csrf_token %}
+        <button type="submit" class="mt-2 sign-button bg-white p-1 rounded border border-dark">Submit</button>
+    </form>
+
     <!-- comments -->
-    <div id="full-width-snap" class="scroll-container rounded scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline">
+    <div id="full-width-snap"
+        class="scroll-container rounded scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline">
         {% for comment in all_comments %}
         {% if comment.film == movie %}
         <figure class="{{ movie.color_class }}-1">
             {% if not comment.approved %}
             <figurecaption class="rounded text-muted">
-                Pending Approval
+                **Pending Approval**
             </figurecaption class="rounded">
             {% else %}
             <figurecaption class="rounded">
                 {{ comment.name }}
             </figurecaption class="rounded">
-            {% endif %}   
+            {% endif %}
             <blockquote class="{% if not comment.approved %} text-muted {% endif %}">
                 {{ comment.content }}
             </blockquote>
@@ -60,13 +75,6 @@
         {% endif %}
         {% endfor %}
     </div>
-
-    <!-- comment form for each film -->
-    <form method="post" style="">
-        {{ comment_form | crispy }}
-        {% csrf_token %}
-        <button type="submit" class="">Submit</button>
-    </form>
 
     {% endfor %}
 </div>
