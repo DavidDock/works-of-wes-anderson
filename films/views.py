@@ -106,6 +106,6 @@ def delete_comment(request, slug, comment_id, *args, **kwargs):
         messages.add_message(request, messages.SUCCESS, 'Comment deleted')
     else:
         messages.add_message(request, messages.ERROR,
-                             'You can not delete someone else comment')
+                             "You can not delete someone else's comment")
 
     return HttpResponseRedirect(reverse('member_area'))
