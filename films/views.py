@@ -5,7 +5,7 @@ from .models import Film
 from .forms import CommentForm
 
 
-def Home(request, *args, **kwargs):
+def home(request, *args, **kwargs):
     """
     Renders the Home page
     """
@@ -18,7 +18,7 @@ def Home(request, *args, **kwargs):
     )
 
 
-def FilmDetail(request, slug, *args, **kwargs):
+def film_detail(request, slug, *args, **kwargs):
     """
     Renders the Film Detail Page
     """
@@ -47,7 +47,7 @@ https://docs.djangoproject.com/en/4.2/topics/auth/default/
 
 
 @login_required
-def MemberArea(request, *args, **kwargs):
+def member_area(request, *args, **kwargs):
     """
     Renders the Member Area page
     """
@@ -62,7 +62,8 @@ def MemberArea(request, *args, **kwargs):
         },
     )
 
-def AddComment(request, slug, *args, **kwargs):
+
+def add_comment(request, slug, *args, **kwargs):
     """
     Adds comment
     """
@@ -81,8 +82,8 @@ def AddComment(request, slug, *args, **kwargs):
             comment.film = film
             comment.save()
         else:
-            comment_form = CommentForm()    
-    else :
+            comment_form = CommentForm()
+    else:
         comment_form = CommentForm()
 
-    return HttpResponseRedirect(reverse('member_area'))     
+    return HttpResponseRedirect(reverse('member_area'))
