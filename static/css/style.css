@@ -301,6 +301,15 @@ a {
     outline: none;
 }
 
+.show,
+.show:active,
+.show:focus,
+.show:hover {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
 /*poster link on about page */
 
 .poster-link:hover,
