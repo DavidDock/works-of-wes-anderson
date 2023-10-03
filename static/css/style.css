@@ -297,6 +297,7 @@ a {
 .show:focus,
 .show:active {
     border: none;
+    outline: none;
 }
 
 /*poster link on about page */
