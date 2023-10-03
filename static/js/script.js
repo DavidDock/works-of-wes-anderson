@@ -1,5 +1,11 @@
 var commentTextAreas = document.getElementsByTagName("textarea");
 
+// clear all text areas //
+
+for (let x of commentTextAreas) {
+    x.value = "";
+};
+
 // messages taken from CI walkthrough//
 
 setTimeout(function () {
