@@ -294,7 +294,8 @@ a {
     background-color: white;
 }
 
-.dropdown-toggle:active {
+.dropdown-toggle:active,
+.dropdown-item.focus {
     border: none;
 }
 
