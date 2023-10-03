@@ -38,32 +38,15 @@
             alt="Icon of a backpack " width="10" height="10" {% endif %} src="{{ movie.second_icon.url }}"
             alt="Second icon of {{ movie.title }}" width="10" height="10" />
     </div>
-
-    <div class="d-flex bg-white rounded head mx-auto my-4"><img class="icon pb-lg-2" src="{% static 'images/writing.png' %}"
-            alt="Icon of a letter" width="10" height="10">
-        <h3 class="ps-2 pe-2 fs-6 text-center text-decoration-underline"> Add and edit your comments</h3><img
-            class="icon pb-lg-2" src="{% static 'images/writing.png' %}" alt="Icon of a letter" width="10" height="10">
-    </div>
     
     <!-- comments and form -->
     <div class="container-fluid row align-items-center w-100 p-0 m-0">
-
-        <!-- comment form for each film -->
-        <div class="col-lg-6 p-0 m-0">
-            
-            <form method="post" action="add_comment/{{ movie.slug }}" class="my-4 mx-2 comment-form">
-                {{ comment_form | crispy }}
-                {% csrf_token %}
-                <button type="submit" class="mt-2 sign-button bg-white p-1 rounded border border-dark">Submit</button>
-            </form>
-        
-        </div>
 
         <!-- comments -->
         <div class="col-lg-6 p-0 m-0">
             <div id="full-width-snap"
                 class="scroll-container rounded scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline">
-                <figure class="{{ movie.color_class }}-2">
+                <figure class="default-2 {{ movie.color_class }}-2">
                     <figurecaption class="rounded">
                         Works Of Wes Anderson
                     </figurecaption class="rounded">
@@ -74,7 +57,7 @@
                 </figure>
                 {% for comment in all_comments %}
                 {% if comment.film == movie %}
-                <figure class="{{ movie.color_class }}-1">
+                <figure class="default-1 {{ movie.color_class }}-1">
                     {% if not comment.approved %}
                     <figurecaption class="rounded text-muted">
                         **Pending Approval**
@@ -91,6 +74,17 @@
                 {% endif %}
                 {% endfor %}
             </div>
+        </div>
+
+        <!-- comment form for each film -->
+        <div class="col-lg-6 p-0 m-0">
+        
+            <form method="post" action="add_comment/{{ movie.slug }}" class="my-4 mx-2 comment-form">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="mt-2 sign-button bg-white p-1 rounded border border-dark">Submit</button>
+            </form>
+        
         </div>
 
     </div>
