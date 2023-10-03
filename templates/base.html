@@ -44,7 +44,7 @@
                 <div class="d-flex flex-column align-items-center">
                     <img class="toggle icon" src="{% static 'images/envelope.png' %}" alt="Envelope icon" width="10"
                         height="10">
-                    <span class="menu">Menu</span>
+                    <span class="menu text-dark">Menu</span>
                 </div>
             </button>
 
@@ -58,10 +58,10 @@
                         Home</span></a>
 
                     <div class="dropdown my-auto">
-                        <button type="button" class="dropdown-toggle p-0 text-left" data-bs-toggle="dropdown">
+                        <button type="button" class="dropdown-toggle p-0 text-left text-dark" data-bs-toggle="dropdown">
                             <img class="icon pb-2" src="{% static 'images/movies.png' %}" alt="Movie reel icon"
                                 width="10" height="10">
-                            Movies</a>
+                            Movies
                         </button>
                         <ul class="dropdown-menu">
                             {% for movie in films %}
