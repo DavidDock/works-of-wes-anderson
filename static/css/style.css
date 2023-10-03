@@ -295,8 +295,8 @@ a {
 }
 
 .dropdown-toggle:active,
-.dropdown-item:focus,
-.dropdown-item:hover {
+.dropdown-toggle:focus,
+.dropdown-toggle:hover {
     border: none;
     outline: none;
 }

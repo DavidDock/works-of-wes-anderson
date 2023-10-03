@@ -92,7 +92,7 @@
             <form method="post" action="add_comment/{{ movie.slug }}" class="my-4 mx-2 comment-form">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
-                <button type="submit" class="mt-2 sign-button bg-white p-1 rounded border border-dark">Submit</button>
+                <button type="submit" class="mt-2 sign-button bg-white p-1 rounded border border-dark text-dark">Submit</button>
             </form>
         
         </div>
