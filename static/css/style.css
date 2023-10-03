@@ -285,10 +285,6 @@ a {
 
 /*poster link on about page */
 
-.fit {
-    width: fit-content;
-}
-
 .poster-link:hover,
 .poster-link:focus {
     opacity: 0.7;
@@ -327,6 +323,11 @@ a {
     text-shadow: 0 5px 18px black;
 }
 
+.icon-button:hover,
+.icon-button:focus {
+    box-shadow: 0 5px 18px black;
+}
+
 .invert-button:hover,
 .invert-button:focus {
     filter: invert();
@@ -334,6 +335,10 @@ a {
 
 .fit-content {
     width: fit-content;
+}
+
+.fit-content-height {
+    height: fit-content;
 }
 
 /* css for film detail */

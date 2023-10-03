@@ -70,6 +70,16 @@
                     <blockquote class="{% if not comment.approved %} text-muted {% endif %}">
                         {{ comment.content }}
                     </blockquote>
+
+                    <!-- delete and edit buttons -->
+                    <div class="d-flex">
+                        <button class="fit-content fit-content-height icon-button border-0 rounded p-0" aria-label="Delete comment">
+                            <img class="icon" src="{% static 'images/bin.png' %}" alt="Rubbish Bin" width="10" height="10">
+                        </button>
+                        <button class="fit-content fit-content-height ms-4 icon-button border-0 rounded p-0" aria-label="Edit comment">
+                            <img class="icon" src="{% static 'images/pencil.png' %}" alt="Pencil" width="10" height="10">
+                        </button>
+                    </div>
                 </figure>
                 {% endif %}
                 {% endfor %}
