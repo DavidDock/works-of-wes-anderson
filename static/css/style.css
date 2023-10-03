@@ -294,20 +294,8 @@ a {
     background-color: white;
 }
 
-.dropdown-toggle:active,
-.dropdown-toggle:focus,
-.dropdown-toggle:hover {
+.show {
     border: none;
-    outline: none;
-}
-
-.show,
-.show:active,
-.show:focus,
-.show:hover {
-    border: none;
-    outline: none;
-    box-shadow: none;
 }
 
 /*poster link on about page */
