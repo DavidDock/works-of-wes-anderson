@@ -298,6 +298,7 @@ a {
 .dropdown-item:focus,
 .dropdown-item:hover {
     border: none;
+    outline: none;
 }
 
 /*poster link on about page */
