@@ -272,6 +272,7 @@ input[type='submit'] {
     color: black;
     text-decoration: underline;
     background-color: white;
+
 }
 
 a {
@@ -291,6 +292,10 @@ a {
     padding: 0 0.5rem;
     border: none;
     background-color: white;
+}
+
+.dropdown-toggle:active {
+    border: none;
 }
 
 /*poster link on about page */
