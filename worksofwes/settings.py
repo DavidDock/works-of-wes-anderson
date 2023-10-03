@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+from django.contrib.messages import constants as messages
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
@@ -61,6 +62,14 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'darjeeling-2',
+    messages.INFO: 'darjeeling-2',
+    messages.SUCCESS: 'default-1',
+    messages.WARNING: 'isle-of-dogs-1',
+    messages.ERROR: 'isle-of-dogs-1',
+}
 
 # Add cloudinary config to ensure hhtps instead of http
 cloudinary.config(

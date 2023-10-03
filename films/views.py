@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from .models import Film
 from .forms import CommentForm
+from django.contrib import messages
 
 
 def home(request, *args, **kwargs):
@@ -63,6 +64,7 @@ def member_area(request, *args, **kwargs):
     )
 
 
+@login_required
 def add_comment(request, slug, *args, **kwargs):
     """
     Adds comment
@@ -81,6 +83,7 @@ def add_comment(request, slug, *args, **kwargs):
             comment = comment_form.save(commit=False)
             comment.film = film
             comment.save()
+            messages.success(request, "Your comment has been sent for approval")
         else:
             comment_form = CommentForm()
     else:
