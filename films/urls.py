@@ -7,5 +7,6 @@ urlpatterns = [
     path('member-area/', views.member_area, name='member_area'),
     path('member-area/add_comment/<slug:slug>',
          views.add_comment, name='add_comment'),
-
+    path('member-area/delete_comment/<slug:slug>/<int:comment_id>',
+         views.delete_comment, name='delete_comment'),
 ]

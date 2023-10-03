@@ -326,6 +326,7 @@ a {
 .icon-button:hover,
 .icon-button:focus {
     box-shadow: 0 5px 18px black;
+    cursor: pointer;
 }
 
 .invert-button:hover,

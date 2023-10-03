@@ -90,3 +90,22 @@ def add_comment(request, slug, *args, **kwargs):
         comment_form = CommentForm()
 
     return HttpResponseRedirect(reverse('member_area'))
+
+
+@login_required
+def delete_comment(request, slug, comment_id, *args, **kwargs):
+    """
+    view to delete comment
+    """
+    queryset = Film.objects.all()
+    film = get_object_or_404(queryset, slug=slug)
+    comment = film.member_comments.filter(id=comment_id).first()
+
+    if comment.name == request.user.username:
+        comment.delete()
+        messages.add_message(request, messages.SUCCESS, 'Comment deleted')
+    else:
+        messages.add_message(request, messages.ERROR,
+                             'You can not delete someone else comment')
+
+    return HttpResponseRedirect(reverse('member_area'))
