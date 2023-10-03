@@ -8,6 +8,16 @@ body {
     height: 100vh;
 }
 
+textarea,
+input.text,
+input[type='text'],
+input[type='button'],
+input[type='submit'] {
+    -webkit-appearance: none;
+}
+
+
+
 /* icons and images*/
 .icon {
     width: 2.5rem;
