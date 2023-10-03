@@ -294,9 +294,7 @@ a {
     background-color: white;
 }
 
-.show:focus,
-.show:active {
-    border: none;
+.show {
     outline: none;
 }
 
