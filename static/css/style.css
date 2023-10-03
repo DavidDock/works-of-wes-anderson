@@ -428,6 +428,10 @@ a {
     border-radius: 5px;
 }
 
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
 .scroll-container {
     display: grid;
     gap: 1rem;
