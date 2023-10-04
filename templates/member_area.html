@@ -50,7 +50,7 @@
                     <figurecaption class="rounded d-flex mx-auto">
                         <img class="small-icon mx-2" src="{% static 'images/arrows.png' %}" alt="Arrows"
                             width="10" height="10" />
-                        <p class="pt-1 text-center m-0">Scroll for comments</p>
+                        <p class="pt-1 text-center m-0 text-decoration-underline">Scroll for comments</p>
                         <img class="small-icon mx-2" src="{% static 'images/arrows.png' %}" alt="Another icon of arrows"
                             width="10" height="10" />
                     </figurecaption>
@@ -87,14 +87,14 @@
                 {% endif %}
                 {% endfor %}
                 <figure class="default-1 {{ movie.color_class }}-1">
-                    <figurecaption class="rounded">
-                       Works Of Wes Anderson
+                    <figurecaption class="rounded mx-auto text-decoration-underline">
+                       "Notes"
                     </figurecaption class="rounded">
-                    <blockquote>
+                    <p class="info-comment">
                         After approval your comments will be able to be seen in <a class="normal-link"
                             href="{% url 'film_detail' movie.slug %}"> {{movie.title}} </a>'s
                         detail page. Thank you for contributing to the website.
-                    </blockquote>
+                    </p>
                 </figure>
             </div>
         </div>
