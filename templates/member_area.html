@@ -47,13 +47,17 @@
             <div id="full-width-snap"
                 class="scroll-container rounded scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline">
                 <figure class="default-2 {{ movie.color_class }}-2">
-                    <figurecaption class="rounded">
-                        Works Of Wes Anderson
-                    </figurecaption class="rounded">
-                    <blockquote>
+                    <figurecaption class="rounded d-flex mx-auto">
+                        <img class="icon mx-2" src="{% static 'images/arrows.png' %}" alt="Arrows"
+                            width="10" height="10" />
+                        <p class="pt-2">Scroll for comments</p>
+                        <img class="icon mx-2" src="{% static 'images/arrows.png' %}" alt="Another icon of arrows"
+                            width="10" height="10" />
+                    </figurecaption>
+                    <p class="info-comment">
                         This is where your comments will be displayed. After approval they will be able to be seen in <a class="normal-link" href="{% url 'film_detail' movie.slug %}"> {{ movie.title}} </a>'s
                         detail page
-                    </blockquote>
+                    </p>
                 </figure>
                 {% for comment in all_comments %}
                 {% if comment.film == movie %}
@@ -83,6 +87,14 @@
                 </figure>
                 {% endif %}
                 {% endfor %}
+                <figure class="default-1 {{ movie.color_class }}-1">
+                    <figurecaption class="rounded">
+                       Works Of Wes Anderson
+                    </figurecaption class="rounded">
+                    <blockquote>
+                        Thank you for contributing to the website. You can add more comments in the ajacent text area.
+                    </blockquote>
+                </figure>
             </div>
         </div>
 

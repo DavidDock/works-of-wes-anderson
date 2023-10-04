@@ -473,6 +473,14 @@ blockquote {
 
 }
 
+.info-comment {
+    padding: 0.5rem;
+    background-color: white;
+    width: fit-content;
+    border-radius: 5px;
+
+}
+
 blockquote::before {
     content: "“";
 }
@@ -488,8 +496,8 @@ figurecaption {
 }
 
 #full-width-snap {
-    grid-auto-columns: 100%;
-    width: 100%;
+    grid-auto-columns: 95%;
+    width: 95%;
 }
 
 /* login and register page */
