@@ -58,6 +58,7 @@
                         This is where your comments will be displayed. You can add as many comments as you like in the adjacent input area.
                     </p>
                 </figure>
+                <!-- for each movie comment -->
                 {% for comment in all_comments %}
                 {% if comment.film == movie %}
                 <figure class="default-1 {{ movie.color_class }}-1">
@@ -76,9 +77,10 @@
 
                     <!-- delete and edit buttons -->
                     <div class="d-flex">
-                        <a class="fit-content fit-content-height icon-button bg-white border-0 rounded p-0" href="delete_comment/{{ movie.slug }}/{{ comment.id }}" aria-label="Delete comment">
+                        <button comment_id="{{ comment.id }}" movie_slug="{{ movie.slug }}" class="btn-delete fit-content fit-content-height icon-button bg-white border-0 rounded p-0"
+                            aria-label="Press to open delete confirm window">
                             <img class="icon" src="{% static 'images/bin.png' %}" alt="Rubbish Bin" width="10" height="10">
-                        </a>
+                        </button>
                         <button class="fit-content fit-content-height ms-4 icon-button border-0 rounded p-0" aria-label="Edit comment">
                             <img class="icon" src="{% static 'images/pencil.png' %}" alt="Pencil" width="10" height="10">
                         </button>
@@ -114,4 +116,22 @@
 </div>
 {% endfor %}
 
+<!-- Delete confirm modal learnt from CI blog walkthrough-->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete your comment? This cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="me-2 btn border border-dark normal-link" data-bs-dismiss="modal">Close</button>
+                <a id="deleteConfirm" href="#" class="me-2 btn border border-dark normal-link btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}

@@ -1,3 +1,4 @@
+const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 var commentTextAreas = document.getElementsByTagName("textarea");
 
 // clear all text areas //
@@ -40,4 +41,15 @@ $(".button-close").click(function() {
   let iFrame = $("#iframe");
   let videoSRC = $("#iframe").attr("src");
   iFrame.attr('src', videoSRC);
+});
+
+// script for closing trailer modal and stopping trailer playing //
+// Taken and adapted from CI blog walkthrough //
+
+$(".btn-delete").click(function () {
+    var deleteConfirm = document.getElementById("deleteConfirm");
+    let commentId = $(this).attr("comment_id");
+    let movieSlug = $(this).attr("movie_slug");
+    deleteConfirm.href = `delete_comment/${movieSlug}/${commentId}`;
+    deleteModal.show();
 });

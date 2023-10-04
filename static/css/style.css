@@ -351,7 +351,9 @@ a {
 }
 
 .icon-button:hover,
-.icon-button:focus {
+.icon-button:focus,
+#deleteConfirm:hover,
+#deleteConfirm:focus {
     box-shadow: 0 5px 18px black;
     cursor: pointer;
 }
@@ -533,6 +535,12 @@ figurecaption {
 .textarea.form-control:focus {
     outline: none;
     box-shadow: 0 5px 18px black;
+    }
+
+/* modal style */
+
+#deleteConfirm {
+    background-color: rgba(120, 66, 131);
     }
 
 /*media queries*/
