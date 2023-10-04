@@ -35,6 +35,11 @@ input[type='submit'] {
     height: fit-content;
 }
 
+.small-icon {
+    width: 1.5rem;
+    height: fit-content;
+}
+
 .film-img {
     width: 90%;
 }
