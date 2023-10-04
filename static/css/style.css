@@ -477,8 +477,7 @@ blockquote {
     padding: 0.5rem;
     background-color: white;
     width: fit-content;
-    border-radius: 5px;
-
+    border-radius: 5px
 }
 
 blockquote::before {
