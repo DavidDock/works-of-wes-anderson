@@ -277,6 +277,7 @@ input[type='submit'] {
 
 .nav-link {
     color: black;
+    margin-right: 1rem;
 }
 
 .dropdown-item.active {
