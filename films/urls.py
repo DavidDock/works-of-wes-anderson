@@ -9,4 +9,6 @@ urlpatterns = [
          views.add_comment, name='add_comment'),
     path('member-area/delete_comment/<slug:slug>/<int:comment_id>',
          views.delete_comment, name='delete_comment'),
+    path('member-area/edit_comment/<slug:slug>/<int:comment_id>',
+         views.edit_comment, name='edit_comment'),
 ]

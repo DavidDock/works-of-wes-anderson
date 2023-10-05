@@ -109,3 +109,29 @@ def delete_comment(request, slug, comment_id, *args, **kwargs):
                              "You can not delete someone else's comment")
 
     return HttpResponseRedirect(reverse('member_area'))
+
+
+@login_required
+def edit_comment(request, slug, comment_id, *args, **kwargs):
+    """
+    Edits comment
+    """
+
+    if request.method == "POST":
+
+        queryset = Film.objects.all()
+        film = get_object_or_404(queryset, slug=slug)
+        comment = film.member_comments.filter(id=comment_id).first()
+
+        comment_form = CommentForm(data=request.POST, instance=comment)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.film = film
+            comment.approved = False
+            comment.save()
+            messages.success(
+                request, "Your comment has been updated and sent for approval")
+        else:
+            messages.add(request, message.ERROR, 'Error updating your comment, sorry.')
+
+    return HttpResponseRedirect(reverse('member_area'))
