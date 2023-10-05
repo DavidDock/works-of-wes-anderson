@@ -31,4 +31,5 @@ $(".btn-edit").click(function () {
     subCom.innerText = "Update";
     textArea.value = commentContent;
     movieForm.setAttribute("action", `edit_comment/${movieSlug}/${commentId}`);
+    textArea.scrollIntoView();
 });
