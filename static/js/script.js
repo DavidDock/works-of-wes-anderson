@@ -47,9 +47,9 @@ $(".button-close").click(function() {
 // Taken and adapted from CI blog walkthrough //
 
 $(".btn-delete").click(function () {
-    var deleteConfirm = document.getElementById("deleteConfirm");
     let commentId = $(this).attr("comment_id");
     let movieSlug = $(this).attr("movie_slug");
-    deleteConfirm.href = `delete_comment/${movieSlug}/${commentId}`;
+    let deleteCon = $("#deleteConfirm");
+    deleteCon.attr('href', `delete_comment/${movieSlug}/${commentId}`);
     deleteModal.show();
 });
