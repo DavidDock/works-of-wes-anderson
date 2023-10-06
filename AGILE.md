@@ -20,6 +20,7 @@ The project's issues can be found [Here](https://github.com/DavidDock/works-of-w
 My working week is not always the same but I tried to stick to 10 day iterations allowing for 20 Story Points in each cycle.  
 I allocated Issues to my Kanban board for each iteration. I then completed the MoSCow prioritisation for these issues. I made sure must have issues made up no more than 60%, could have and should have about 20% each.  
 The project's Kanban board can be found [Here](https://github.com/users/DavidDock/projects/2)  
+My paln was to do 5 iterations before the project deadline.  
 
 ## Iteration 1  
 
@@ -64,7 +65,7 @@ The User Stories were added and prioritised as follows:
 
 Below is the Kanban board at the end of the iteration:  
 
-![Iteration-One-End](/documentation/agile/iteration-two-end.png)  
+![IterationTwo-End](/documentation/agile/iteration-two-end.png)  
 
 During this iteration I did not managed to complete all the could have issues, I did not complete "Member Registration" and "Log In and Out". I took longer than expected on some of the issues this time around. In particular I struggled with a bug regarding cloudinary convig settings which took a long time to solve.  
 
@@ -84,3 +85,24 @@ The User Stories were added and prioritised as follows:
 - User Story: Member Can Add A Comment - Should Have. Story points: 4
 - User Story: Member Can Edit Comments - Should Have. Story points: 4
 - User Story: Member Can Delete Comments - Could Have. Story Points: 4
+
+Below is the Kanban board at the end of the iteration:  
+
+![Iteration-Three-End](/documentation/agile/iteration-three-end.png)  
+
+During this iteration I completed all of the issues including the could haves. I took less time than expected on some of the issues this time around. I must admit I got a little ahead of myself and completed the user story "Favicon" before preparing the next iteration because it was such a quick task.
+
+## Iteration 4  
+
+Start: 8/10/23
+End: 15/10/23
+
+Below is the Kanban board at the start of the iteration:  
+![Iteration-Four](/documentation/agile/iteration-four.png)  
+The User Stories were added and prioritised as follows:
+
+- User Story: Error Pages - Must Have. Story points: 2
+- User Story: Rate Film By Category - Must Have. Story points: 4
+- User Story: Ability To Delete Score - Must Have. Story points: 4
+- User Story: View Average Scores - Must Have. Story points: 2
+- User Story: Testing - Could Have. Story points: 10
