@@ -6,7 +6,11 @@
 <!-- Whole film container -->
 <div class="container-fluid mx-auto">
     <div class="row film-container align-items-center p-1 mx-auto my-5">
+
+        <!-- film Info and poster flipper container-->
         <div class="col-lg-4 col-sm-8 col-md-6 mx-auto film-image-container py-lg-2 pt-4">
+
+            <!-- Poster side -->
             <button class="film-poster-container border-0 d-flex align-items-center default-1 justify-content-center {{ film.color_class }}-1 rounded flippers" aria-label="Press to see more film details">
 
                 <img class="icon bg-white bottom-left m-2 rounded" {% if "placeholder" in film.first_icon.url %}
@@ -21,6 +25,7 @@
                 <p class="sypnosis-button p-1 mt-3 bg-white text-center rounded text-dark">PRESS FOR SYNOPSIS</p>
             </button>
 
+            <!-- Film information side -->
             <div
                 class="film-info d-flex justify-content-around align-items-center default-2 rounded flex-column hidden {{ film.color_class }}-2">
                 <div class="close-cont bg-white p-0 invert-button rounded">
@@ -36,12 +41,16 @@
                         aria-label="Press to go to wikipedia link (opens in new tab)" target="blank">WIKIPEDIA</a>
                 </div>
             </div>
-            </div>
+
+        </div>
+
+            <!-- critic and member comment container -->
             <div class="col-lg-8 py-2">
-                <!-- critic and member comment container -->
                 <div class="row">
+
                     <!-- Critic comments container -->
                     <div>
+
                         <!-- Heading -->
                         <div class="d-flex bg-white rounded head mx-auto my-4"><img class="icon pb-lg-2"
                                 src="{% static 'images/typewriter.png' %}" alt="Icon of a typewriter" width="10" height="10">
@@ -49,7 +58,8 @@
                                 class="icon pb-2" src="{% static 'images/typewriter.png' %}" alt="Icon of a typewriter" width="10"
                                 height="10">
                         </div>
-            
+                        
+                        <!-- Critics Comments -->
                         <div
                             class="scroll-container-default scroll-container-{{ film.color_class }} scroll-container {% if not critic_comments %}justify-content-center{% endif %} rounded snaps-inline">
                             {% if not critic_comments %}
@@ -72,8 +82,8 @@
                                 </blockquote>
                             </figure>
                             {% endfor %}
-            
                         </div>
+
                     </div>
                     <!-- member comments container -->
                     <div>
@@ -84,7 +94,8 @@
                                 class="icon pb-lg-2" src="{% static 'images/writing.png' %}" alt="Icon of a letter" width="10"
                                 height="10">
                         </div>
-            
+                        
+                        <!-- Members Comments -->
                         <div
                             class="scroll-container br scroll-container-default scroll-container-{{ film.color_class }} {% if not member_comments %}justify-content-center{% endif %} {% if member_comments|length == 1 %}justify-content-center{% endif %} snaps-inline">
                             {% if not member_comments %}
@@ -111,29 +122,32 @@
 
                         </div>
                     </div>
+
                 </div>
             </div>
             
+    </div>
+</div>
+
+<!-- Trailer modal -->
+<div class="modal fade" id="videoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close btn button-close" data-bs-dismiss="modal"
+                    aria-label="Close">X</button>
             </div>
-            
-            <div class="modal fade" id="videoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="videoModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close btn button-close" data-bs-dismiss="modal"
-                                aria-label="Close">X</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="ratio ratio-16x9">
-                                <iframe id="iframe" title="YouTube video player" src="{{ film.trailer }}" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
+            <div class="modal-body">
+                <div class="ratio ratio-16x9">
+                    <iframe id="iframe" title="YouTube video player" src="{{ film.trailer }}" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
 {% block script %}
