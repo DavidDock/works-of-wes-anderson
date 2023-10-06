@@ -4,7 +4,6 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-
 <!-- About section -->
 <div class="row my-5">
     <section class="col-10 col-md-8 col-lg-6 mx-auto bg-white rounded pt-4">
@@ -136,3 +135,5 @@
 </div>
 
 {% endblock content %}
+{% block script %}
+<script src="{% static 'js/comments.js' %}"></script>{% endblock script %}
