@@ -1,5 +1,27 @@
 {% extends "base_error.html" %}
 {% block title %} 404 Error {% endblock title %}
 {% block content %}
-error 404
+
+<!-- Error section -->
+<div class="row my-5">
+    <section class="col-10 col-md-8 col-lg-6 mx-auto bg-white rounded pt-4">
+
+        <!-- Heading -->
+        <div class="d-flex justify-content-around">
+            <img class="icon mx-2" src="{% static 'images/error.png' %}"
+                alt="A computer with error message displayed" width="10" height="10" />
+            <h2 class="text-decoration-underline">'Page Not Found'</h2>
+            <img class="icon mx-2" src="{% static 'images/error.png' %}" alt="Another computer with error message displayed"
+                width="10" height="10" />
+        </div>
+
+        <!-- message and link home -->
+        <p class="p-4 text-center">
+            Sorry something went wrong. Return back <a class="nav-link" href="{% url 'home' %}"><img
+                    class="icon pb-2" src="{% static 'images/home.png' %}" alt="Home icon" width="10" height="10">
+                Home</span></a>
+        </p>
+    </section>
+</div>
+
 {% endblock content %}
