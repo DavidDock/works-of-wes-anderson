@@ -61,6 +61,14 @@ input[type='submit'] {
     background: rgb(251, 221, 87);
 }
 
+.info-message {
+    background: rgba(120, 152, 189);
+}
+
+.warning-message {
+    background: rgba(234, 40, 38);
+}
+
 .scroll-container-default::-webkit-scrollbar-track {
     background: rgb(164, 194, 97);
     border-radius: 5px;

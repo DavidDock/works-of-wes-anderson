@@ -64,11 +64,11 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 MESSAGE_TAGS = {
-    messages.DEBUG: 'darjeeling-2',
-    messages.INFO: 'darjeeling-2',
+    messages.DEBUG: 'info-message',
+    messages.INFO: 'info-message',
     messages.SUCCESS: 'default-1',
-    messages.WARNING: 'isle-of-dogs-1',
-    messages.ERROR: 'isle-of-dogs-1',
+    messages.WARNING: 'warning-message',
+    messages.ERROR: 'warning-message',
 }
 
 # Add cloudinary config to ensure hhtps instead of http
