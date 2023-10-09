@@ -16,7 +16,13 @@ input[type='submit'] {
     color: black;
 }
 
+.fit-content {
+    width: fit-content;
+}
 
+.fit-content-height {
+    height: fit-content;
+}
 
 /* icons and images*/
 
@@ -369,14 +375,6 @@ a {
 .invert-button:hover,
 .invert-button:focus {
     filter: invert();
-}
-
-.fit-content {
-    width: fit-content;
-}
-
-.fit-content-height {
-    height: fit-content;
 }
 
 /* css for film detail */
