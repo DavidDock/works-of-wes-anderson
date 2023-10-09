@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MaxValueValidator, MinValueValidator
 from cloudinary.models import CloudinaryField
 
 import cloudinary.uploader
@@ -40,6 +41,8 @@ class Film(models.Model):
 
         super().save(*args, **kwargs) """
 
+# Critic Comments Model
+
 
 class CriticComment(models.Model):
     film = models.ForeignKey(Film, on_delete=models.CASCADE,
@@ -49,6 +52,8 @@ class CriticComment(models.Model):
 
     def __str__(self):
         return f"Comment {self.content} by {self.critic}"
+
+# Critic Comments Model
 
 
 class MemberComment(models.Model):
@@ -67,3 +72,25 @@ class MemberComment(models.Model):
 
     def __str__(self):
         return f"Comment {self.content} by {self.name}"
+
+# Score Model
+
+
+class Score(models.Model):
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="scores")
+    film = models.ForeignKey(Film, on_delete=models.CASCADE,
+                             related_name="scores")
+    created_on = models.DateTimeField(auto_now_add=True)
+    style = models.IntegerField(default=5, validators=[
+                                MinValueValidator(1), MaxValueValidator(5)])
+    humour = models.IntegerField(default=5, validators=[
+                                 MinValueValidator(1), MaxValueValidator(5)])
+    story = models.IntegerField(default=5, validators=[
+                                MinValueValidator(1), MaxValueValidator(5)])
+
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Score"

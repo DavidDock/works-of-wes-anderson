@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Film, CriticComment, MemberComment
+from .models import Film, CriticComment, MemberComment, Score
 
 
 @admin.register(Film)
@@ -26,3 +26,10 @@ class MemberCommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
+
+
+@admin.register(Score)
+class ScoreAdmin(admin.ModelAdmin):
+
+    list_display = ('film', 'user')
+    search_fields = ['film']

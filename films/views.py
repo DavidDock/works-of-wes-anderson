@@ -53,12 +53,14 @@ def member_area(request, *args, **kwargs):
     Renders the Member Area page
     """
     all_comments = request.user.member_comments.all()
+    all_scores = request.user.scores.all()
 
     return render(
         request,
         "member_area.html",
         {
             "all_comments": all_comments,
+            "all_scores": all_scores,
             "comment_form": CommentForm()
         },
     )
