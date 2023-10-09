@@ -112,6 +112,15 @@
         </div>
 
     </div>
+{% for score in all_scores %}
+{% if score.film == movie %}
+{{ score.style }}
+{% endif %}
+{% if not score.film == movie %}
+Add score
+{% endif %}
+{% endfor %}
+
 </div>
 {% endfor %}
 
