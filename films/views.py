@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
-from .models import Film
+from .models import Film, Score
 from .forms import CommentForm, ScoreForm
 from django.contrib import messages
 
@@ -154,9 +154,14 @@ def add_score(request, *args, **kwargs):
         if score_form.is_valid():
             score_form.instance.user = user
             new_score = score_form.save(commit=False)
-            new_score.save()
-            messages.success(
-                request, "Your score has been added")
+            film = new_score.film
+            if Score.objects.filter(film=film, user=user).exists():
+                messages.error(
+                    request, "Please delete your previous rating for this film first")
+            else:
+                new_score.save()
+                messages.success(
+                    request, "Your score has been added")
         else:
             score_form = ScoreForm()
     else:
