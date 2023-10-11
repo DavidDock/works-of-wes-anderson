@@ -116,11 +116,10 @@
 {% if score.film == movie %}
 {{ score.style }}
 {% endif %}
-{% if not score.film == movie %}
-Add score
-{% endif %}
 {% endfor %}
-
+{% if movie.scores.film.title == movie.title %}
+{{ score.style }}
+{% endif %}
 </div>
 {% endfor %}
 

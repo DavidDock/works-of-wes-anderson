@@ -82,11 +82,18 @@ class Score(models.Model):
     film = models.ForeignKey(Film, on_delete=models.CASCADE,
                              related_name="scores")
     created_on = models.DateTimeField(auto_now_add=True)
-    style = models.IntegerField(default=5, validators=[
+    rating = (
+        (1, 1),
+        (2, 2),
+        (3, 3),
+        (4, 4),
+        (5, 5)
+    )
+    style = models.IntegerField(choices=rating, default=5, validators=[
                                 MinValueValidator(1), MaxValueValidator(5)])
-    humour = models.IntegerField(default=5, validators=[
+    humour = models.IntegerField(choices=rating, default=5, validators=[
                                  MinValueValidator(1), MaxValueValidator(5)])
-    story = models.IntegerField(default=5, validators=[
+    story = models.IntegerField(choices=rating, default=5, validators=[
                                 MinValueValidator(1), MaxValueValidator(5)])
 
     class Meta:
