@@ -25,16 +25,23 @@
 </div>
 
 <!--Score Form-->
-<form method="post" action="add_score" class="my-auto mx-2 d-flex">
+<div class="d-flex  mx-auto fit-content bg-white rounded p-2">
+    <img class="icon mx-4" src="{% static 'images/plus.png' %}" alt="An icon of a plus symbol" width="10" height="10" />
+    <h2 class="text-decoration-underline">'Add SCORE'</h2>
+    <img class="icon mx-4" src="{% static 'images/plus.png' %}" alt="An icon of a plus symbol" width="10" height="10" />
+</div>
+<form method="post" action="add_score" class="score-form mx-auto my-5 d-flex justify-content-center">
     {{ score_form | crispy }}
     {% csrf_token %}
-    <button type="submit"
-        class="mx-2 sign-button bg-white p-1 rounded border border-dark text-dark">Submit</button>
+    <button class="fit-content fit-content-height icon-button border-0 rounded p-0 bg-white mx-2 mt-4"
+        aria-label="Add score">
+        <img class="icon-button" src="{% static 'images/plus.png' %}" alt="Plus symbol" width="10" height="10">
+    </button>
 </form>
 
 <!-- Each Film -->
 {% for movie in films %}
-<div class="container my-4 d-flex flex-column align-items-center">
+<div class="container my-5 d-flex flex-column align-items-center">
     <!-- Heading -->
     <div class="py-1 px-1 d-flex rounded bg-white fit-content mb-4">
         <img class="icon mx-2" {% if "placeholder" in movie.first_icon.url %} src="{% static 'images/bandit.png' %}"
@@ -86,10 +93,10 @@
                     <div class="d-flex">
                         <button comment_id="{{ comment.id }}" movie_slug="{{ movie.slug }}" class="btn-delete fit-content fit-content-height icon-button bg-white border-0 rounded p-0"
                             aria-label="Press to open delete confirm window">
-                            <img class="icon" src="{% static 'images/bin.png' %}" alt="Rubbish Bin" width="10" height="10">
+                            <img class="icon-button" src="{% static 'images/bin.png' %}" alt="Rubbish Bin" width="10" height="10">
                         </button>
                         <button comment_id="{{ comment.id }}" movie_slug="{{ movie.slug }}" class="btn-edit fit-content fit-content-height ms-4 icon-button border-0 rounded p-0" aria-label="Edit comment">
-                            <img class="icon" src="{% static 'images/pencil.png' %}" alt="Pencil" width="10" height="10">
+                            <img class="icon-button" src="{% static 'images/pencil.png' %}" alt="Pencil" width="10" height="10">
                         </button>
                     </div>
                 </figure>
@@ -120,14 +127,22 @@
         </div>
 
     </div>
+
+<!-- Score for film -->
 {% for score in all_scores %}
 {% if score.film == movie %}
-{{ score.style }}
-{{ score.humour }}
-{{ score.story }}
-<a href="delete_score/{{ score.id }}" class="btn border border-dark normal-link btn-danger">Delete</a>
+<div class="container my-5">
+    <h3 class="rounded bg-white mx-auto fit-content">Your Score</h3>
+    <div class="d-flex justify-content-around">
+        <p class="bg-white">STYLE: {{ score.style }}/5</p>
+        <p class="bg-white">HUMOUR: {{ score.humour }}/5</p>
+        <p class="bg-white">STORY: {{ score.story }}/5</p>
+        <a href="delete_score/{{ score.id }}" class="btn border border-dark normal-link btn-danger">Delete</a>
+    </div>
+</div>
 {% endif %}
 {% endfor %}
+
 </div>
 {% endfor %}
 

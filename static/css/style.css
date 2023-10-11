@@ -36,6 +36,11 @@ input[type='submit'] {
     height: fit-content;
 }
 
+.icon-button {
+    width: 2.5rem;
+    height: fit-content;
+}
+
 .icon-logo {
     width: 4rem;
     height: fit-content;
@@ -542,6 +547,10 @@ figurecaption {
     outline: none;
     box-shadow: 0 5px 18px black;
     }
+
+.score-form div {
+    padding: 0 1rem 0 0;
+}    
 
 /* modal style */
 
