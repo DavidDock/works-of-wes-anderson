@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
+from django.db.models import Avg
 from .models import Film, Score
 from .forms import CommentForm, ScoreForm
 from django.contrib import messages
@@ -29,6 +30,15 @@ def film_detail(request, slug, *args, **kwargs):
     critic_comments = film.critic_comments.all()
     member_comments = film.member_comments.filter(
         approved=True).order_by("-created_on")
+    average_style = Score.objects.filter(
+        film=film).aggregate(Avg('style'))['style__avg']
+    average_style = round(average_style)
+    average_humour = Score.objects.filter(
+        film=film).aggregate(Avg('humour'))['humour__avg']
+    average_humour = round(average_humour)
+    average_story = Score.objects.filter(
+        film=film).aggregate(Avg('story'))['story__avg']
+    average_story = round(average_story)
 
     return render(
         request,
@@ -36,7 +46,10 @@ def film_detail(request, slug, *args, **kwargs):
         {
             "film": film,
             "critic_comments": critic_comments,
-            "member_comments": member_comments
+            "member_comments": member_comments,
+            "average_style": average_style,
+            "average_humour": average_humour,
+            "average_story": average_story
         }
     )
 
