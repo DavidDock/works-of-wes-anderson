@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from .models import Film
-from .forms import CommentForm
+from .forms import CommentForm, ScoreForm
 from django.contrib import messages
 
 
@@ -61,7 +61,8 @@ def member_area(request, *args, **kwargs):
         {
             "all_comments": all_comments,
             "all_scores": all_scores,
-            "comment_form": CommentForm()
+            "comment_form": CommentForm(),
+            "score_form": ScoreForm()
         },
     )
 

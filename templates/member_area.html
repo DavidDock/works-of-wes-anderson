@@ -24,6 +24,14 @@
     </section>
 </div>
 
+<!--Score Form-->
+<form method="post" action="" id="score-form-id" class="my-auto mx-2 d-flex">
+    {{ score_form | crispy }}
+    {% csrf_token %}
+    <button type="submit" id="subscore"
+        class="mx-2 sign-button bg-white p-1 rounded border border-dark text-dark">Submit</button>
+</form>
+
 <!-- Each Film -->
 {% for movie in films %}
 <div class="container my-4 d-flex flex-column align-items-center">
@@ -115,11 +123,10 @@
 {% for score in all_scores %}
 {% if score.film == movie %}
 {{ score.style }}
+{{ score.humour }}
+{{ score.story }}
 {% endif %}
 {% endfor %}
-{% if movie.scores.film.title == movie.title %}
-{{ score.style }}
-{% endif %}
 </div>
 {% endfor %}
 

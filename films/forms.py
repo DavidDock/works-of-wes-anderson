@@ -1,4 +1,4 @@
-from .models import MemberComment
+from .models import MemberComment, Score
 from django import forms
 
 
@@ -13,3 +13,10 @@ class CommentForm(forms.ModelForm):
         self.fields['content'].widget.attrs.update({
             'aria-label': 'Enter a comment'
         })
+
+
+class ScoreForm (forms.ModelForm):
+    class Meta:
+        model = Score
+        fields = ('film', 'style', 'humour', 'story',)
+
