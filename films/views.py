@@ -138,3 +138,28 @@ def edit_comment(request, slug, comment_id, *args, **kwargs):
             messages.add(request, message.ERROR, 'Error updating your comment, sorry.')
 
     return HttpResponseRedirect(reverse('member_area'))
+
+
+@login_required
+def add_score(request, *args, **kwargs):
+    """
+    Adds score
+    """
+
+    if request.method == "POST":
+
+        user = request.user
+
+        score_form = ScoreForm(data=request.POST)
+        if score_form.is_valid():
+            score_form.instance.user = user
+            new_score = score_form.save(commit=False)
+            new_score.save()
+            messages.success(
+                request, "Your score has been added")
+        else:
+            score_form = ScoreForm()
+    else:
+        score_form = ScoreForm()
+
+    return HttpResponseRedirect(reverse('member_area'))

@@ -25,10 +25,10 @@
 </div>
 
 <!--Score Form-->
-<form method="post" action="" id="score-form-id" class="my-auto mx-2 d-flex">
+<form method="post" action="add_score" class="my-auto mx-2 d-flex">
     {{ score_form | crispy }}
     {% csrf_token %}
-    <button type="submit" id="subscore"
+    <button type="submit"
         class="mx-2 sign-button bg-white p-1 rounded border border-dark text-dark">Submit</button>
 </form>
 
