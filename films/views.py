@@ -135,7 +135,7 @@ def edit_comment(request, slug, comment_id, *args, **kwargs):
             messages.success(
                 request, "Your comment has been updated and sent for approval")
         else:
-            messages.add(request, message.ERROR, 'Error updating your comment, sorry.')
+            messages.add_message(request, message.ERROR, 'Error updating your comment, sorry.')
 
     return HttpResponseRedirect(reverse('member_area'))
 
@@ -166,5 +166,23 @@ def add_score(request, *args, **kwargs):
             score_form = ScoreForm()
     else:
         score_form = ScoreForm()
+
+    return HttpResponseRedirect(reverse('member_area'))
+
+
+@login_required
+def delete_score(request, score_id, *args, **kwargs):
+    """
+    view to delete score
+    """
+    
+    score = Score.objects.filter(id=score_id).first()
+
+    if score.user == request.user:
+        score.delete()
+        messages.add_message(request, messages.SUCCESS, 'Score deleted')
+    else:
+        messages.add_message(request, messages.ERROR,
+                             "You can not delete someone else's score")
 
     return HttpResponseRedirect(reverse('member_area'))

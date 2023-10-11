@@ -13,4 +13,6 @@ urlpatterns = [
          views.edit_comment, name='edit_comment'),
     path('member-area/add_score',
          views.add_score, name='add_score'),
+    path('member-area/delete_score/<int:score_id>',
+         views.delete_score, name='delete_score'),
 ]
