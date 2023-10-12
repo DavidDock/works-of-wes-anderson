@@ -138,15 +138,27 @@
             <div class="d-flex justify-content-around text-center">
                 <div class="bg-white rounded p-1">
                     <img class="icon pb-lg-2" src="{% static 'images/style.png' %}" alt="Icon of a tuxedo" width="10" height="10">
-                    <p >STYLE:<br>{{ average_style }}/5</p>
+                    {% if average_style == none %}
+                    <p>No ratings yet</p>
+                    {% else %}
+                    <p >STYLE:<br>{{ average_style|floatformat }}/5</p>
+                    {% endif %}
                 </div>
                 <div class="bg-white rounded p-1">
                     <img class="icon pb-lg-2" src="{% static 'images/humour.png' %}" alt="Icon of comedy masks" width="10" height="10">
-                    <p>HUMOUR:<br>{{ average_humour }}/5</p>
+                    {% if average_humour == none %}
+                    <p>No ratings yet</p>
+                    {% else %}
+                    <p>HUMOUR:<br>{{ average_humour|floatformat }}/5</p>
+                    {% endif %}
                 </div>
                <div class="bg-white rounded p-1">
                     <img class="icon pb-lg-2" src="{% static 'images/story.png' %}" alt="Icon of a book" width="10" height="10">
-                    <p >STORY:<br>{{ average_story }}/5</p>
+                    {% if average_story == none %}
+                    <p>No ratings yet</p>
+                    {% else %}
+                    <p >STORY:<br>{{ average_story|floatformat }}/5</p>
+                    {% endif %}
                 </div>
             </div>
         </div>

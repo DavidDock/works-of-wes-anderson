@@ -33,13 +33,10 @@ def film_detail(request, slug, *args, **kwargs):
         approved=True).order_by("-created_on")
     average_style = Score.objects.filter(
         film=film).aggregate(Avg('style'))['style__avg']
-    average_style = round(average_style)
     average_humour = Score.objects.filter(
         film=film).aggregate(Avg('humour'))['humour__avg']
-    average_humour = round(average_humour)
     average_story = Score.objects.filter(
         film=film).aggregate(Avg('story'))['story__avg']
-    average_story = round(average_story)
 
     return render(
         request,
