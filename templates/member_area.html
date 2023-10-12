@@ -40,7 +40,7 @@
             All Wes Anderson films are great but this lets you rate the best aspects of his work.
         </p>
         <!-- form -->
-        <form method="post" action="add_score" class="score-form mx-auto d-sm-flex justify-content-center px-2">
+        <form method="post" action="add_score" class="score-form mx-auto d-sm-flex justify-content-center px-2 pt-2">
             {{ score_form | crispy }}
             {% csrf_token %}
             <button class="fit-content fit-content-height icon-button border-0 rounded p-0 bg-white mx-2 mt-4"
