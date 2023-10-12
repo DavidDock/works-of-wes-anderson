@@ -63,7 +63,7 @@
                         <div
                             class="scroll-container-default scroll-container-{{ film.color_class }} scroll-container {% if not critic_comments %}justify-content-center{% endif %} rounded snaps-inline">
                             {% if not critic_comments %}
-                            <figure class="dark-grey">
+                            <figure class="default-1 {{ film.color_class }}-1">
                                 <div class="rounded figure-heading">
                                     Critic
                                 </div>
@@ -73,7 +73,7 @@
                             </figure>
                             {% endif %}
                             {% for comment in critic_comments %}
-                            <figure class="dark-grey">
+                            <figure class="default-1 {{ film.color_class }}-1">
                                 <div class="rounded figure-heading">
                                     {{ comment.critic }}
                                 </div>

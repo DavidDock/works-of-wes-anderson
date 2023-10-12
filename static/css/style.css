@@ -583,7 +583,7 @@ blockquote::after {
 }
 
 @media (min-width: 768px) {
-    #full-width-snap {
+    .full-width-snap {
         width: 75%;
     }
 }
@@ -594,6 +594,6 @@ blockquote::after {
     }
 
     .scroll-container {
-        grid-auto-columns: 55%;
+        grid-auto-columns: 75%;
     }
 }
