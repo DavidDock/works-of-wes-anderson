@@ -17,7 +17,7 @@
         </div>
         <!-- Content -->
         <p class="p-4 text-center">
-            Welcolme {{ user.username }}, this is where you can keep track of your comments and scores. <br />
+            Welcolme {{ user.username }}, this is where you can keep track of your comments and scores. <br >
             This site is celebrating Wes Anderson's work so tell us what you love.
         </p>
     </section>
@@ -36,7 +36,7 @@
         </div>
         <!-- content -->
         <p class="p-4 text-center bg-white w-75 rounded mx-auto my-2">
-            This is where you can add category ratings to each film. <br />
+            This is where you can add category ratings to each film. <br>
             All Wes Anderson films are great but this lets you rate the best aspects of his work.
         </p>
         <!-- form -->
@@ -73,13 +73,13 @@
             <div id="full-width-snap"
                 class="scroll-container rounded scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline">
                 <figure class="default-2 {{ movie.color_class }}-2">
-                    <span class="rounded d-flex mx-auto figure-heading">
+                    <div class="rounded d-flex mx-auto figure-heading">
                         <img class="small-icon mx-2" src="{% static 'images/arrows.png' %}" alt="Arrows"
                             width="10" height="10" >
                         <p class="pt-1 text-center m-0 text-decoration-underline">Scroll for comments</p>
                         <img class="small-icon mx-2" src="{% static 'images/arrows.png' %}" alt="Another icon of arrows"
                             width="10" height="10" >
-                    </span>
+                    </div>
                     <p class="info-comment">
                         This is where your comments will be displayed. You can add as many comments as you like in the adjacent input area.
                     </p>
@@ -89,13 +89,13 @@
                 {% if comment.film == movie %}
                 <figure class="default-1 {{ movie.color_class }}-1">
                     {% if not comment.approved %}
-                    <span class="rounded text-muted figure-heading">
+                    <div class="rounded text-muted figure-heading">
                         **Pending Approval**
-                    </span>
+                    </div>
                     {% else %}
-                    <span class="rounded figure-heading">
+                    <div class="rounded figure-heading">
                         {{ comment.name }}
-                    </span>
+                    </div>
                     {% endif %}
                     <blockquote id="comment{{ comment.id }}" class="{% if not comment.approved %} text-muted {% endif %}">
                         {{ comment.content }}
@@ -116,9 +116,9 @@
                 {% endif %}
                 {% endfor %}
                 <figure class="default-1 {{ movie.color_class }}-1">
-                    <span class="rounded mx-auto text-decoration-underline figure-heading">
+                    <div class="rounded mx-auto text-decoration-underline figure-heading">
                        "Notes"
-                    </span>
+                    </div>
                     <p class="info-comment">
                         After approval your comments will be able to be seen in <a class="normal-link"
                             href="{% url 'film_detail' movie.slug %}"> {{movie.title}} </a>'s

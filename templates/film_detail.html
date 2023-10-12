@@ -64,9 +64,9 @@
                             class="scroll-container-default scroll-container-{{ film.color_class }} scroll-container {% if not critic_comments %}justify-content-center{% endif %} rounded snaps-inline">
                             {% if not critic_comments %}
                             <figure class="dark-grey">
-                                <span class="rounded figure-heading">
+                                <div class="rounded figure-heading">
                                     Critic
-                                </span>
+                                </div>
                                 <blockquote>
                                     No critic comments posted yet
                                 </blockquote>
@@ -74,9 +74,9 @@
                             {% endif %}
                             {% for comment in critic_comments %}
                             <figure class="dark-grey">
-                                <span class="rounded figure-heading">
+                                <div class="rounded figure-heading">
                                     {{ comment.critic }}
-                                </span>
+                                </div>
                                 <blockquote>
                                     {{ comment.content }}
                                 </blockquote>
@@ -100,9 +100,9 @@
                             class="scroll-container br scroll-container-default scroll-container-{{ film.color_class }} {% if not member_comments %}justify-content-center{% endif %} {% if member_comments|length == 1 %}justify-content-center{% endif %} snaps-inline">
                             {% if not member_comments %}
                             <figure class="default-2 {{ film.color_class }}-2">
-                                <span class="rounded figure-heading">
+                                <div class="rounded figure-heading">
                                     Member
-                                </span>
+                                </div>
                                 <blockquote>
                                     No member comments posted yet
                                 </blockquote>
@@ -111,9 +111,9 @@
 
                             {% for comment in member_comments %}
                             <figure class="default-2 {{ film.color_class }}-2">
-                                <span class="rounded figure-heading">
+                                <div class="rounded figure-heading">
                                     {{ comment.name }}
-                                </span>
+                                </div>
                                 <blockquote>
                                     {{ comment.content }}
                                 </blockquote>
