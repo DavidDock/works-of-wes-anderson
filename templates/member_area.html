@@ -104,11 +104,11 @@
                     <!-- delete and edit buttons -->
                     <div class="d-flex">
                         <button class="btn-delete fit-content fit-content-height icon-button bg-white border-0 rounded p-0"
-                            comment_id="{{ comment.id }}" movie_slug="{{ movie.slug }}" aria-label="Press to open delete confirm window">
+                            value="{{ comment.id }}" name="{{ movie.slug }}" aria-label="Press to open delete confirm window">
                             <img class="icon-button" src="{% static 'images/bin.png' %}" alt="Rubbish Bin" width="10" height="10">
                         </button>
                         <button class="btn-edit fit-content fit-content-height ms-4 icon-button border-0 rounded p-0"
-                            comment_id="{{ comment.id }}" movie_slug="{{ movie.slug }}" aria-label="Edit comment">
+                            value="{{ comment.id }}" name="{{ movie.slug }}" aria-label="Edit comment">
                             <img class="icon-button" src="{% static 'images/pencil.png' %}" alt="Pencil" width="10" height="10">
                         </button>
                     </div>

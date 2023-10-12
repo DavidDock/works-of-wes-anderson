@@ -11,8 +11,8 @@ for (let x of commentTextAreas) {
 // Taken and adapted from CI blog walkthrough //
 
 $(".btn-delete").click(function () {
-    let commentId = $(this).attr("comment_id");
-    let movieSlug = $(this).attr("movie_slug");
+    let commentId = $(this).attr("value");
+    let movieSlug = $(this).attr("name");
     let deleteCon = $("#deleteConfirm");
     deleteCon.attr('href', `delete_comment/${movieSlug}/${commentId}`);
     deleteModal.show();
@@ -22,8 +22,8 @@ $(".btn-delete").click(function () {
 // Taken and adapted from CI blog walkthrough //
 
 $(".btn-edit").click(function () {
-    let commentId = $(this).attr("comment_id");
-    let movieSlug = $(this).attr("movie_slug");
+    let commentId = $(this).attr("value");
+    let movieSlug = $(this).attr("name");
     let subCom = document.getElementById(`${movieSlug}subcom`);
     let movieForm = document.getElementById(`${movieSlug}form`);
     let textArea = movieForm.getElementsByTagName("textarea")[0];
