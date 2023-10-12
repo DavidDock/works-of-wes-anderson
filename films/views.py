@@ -79,10 +79,10 @@ def member_area(request, *args, **kwargs):
 
 
 @login_required
-def add_comment(request, slug, *args, **kwargs):
+def add_comment(request, *args, **kwargs):
     """
     Add comment view
-    Takes in slug from url and data from form
+    Takes in data from form
     If valid adds comment
     Gives relevant message
     Returns to member area
@@ -90,8 +90,6 @@ def add_comment(request, slug, *args, **kwargs):
 
     if request.method == "POST":
 
-        queryset = Film.objects.all()
-        film = get_object_or_404(queryset, slug=slug)
         user = request.user
 
         comment_form = CommentForm(data=request.POST)
@@ -99,7 +97,6 @@ def add_comment(request, slug, *args, **kwargs):
             comment_form.instance.user = user
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
-            comment.film = film
             comment.save()
             messages.success(
                 request, "Your comment has been sent for approval")

@@ -5,7 +5,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('film/<slug:slug>/', views.film_detail, name='film_detail'),
     path('member-area/', views.member_area, name='member_area'),
-    path('member-area/add_comment/<slug:slug>',
+    path('member-area/add_comment',
          views.add_comment, name='add_comment'),
     path('member-area/delete_comment/<slug:slug>/<int:comment_id>',
          views.delete_comment, name='delete_comment'),
