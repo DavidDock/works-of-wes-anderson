@@ -22,7 +22,7 @@
                 <img src="{{ film.poster.url }}" alt="Poster for {{ film.title }}" width="100" height="100"
                     class="h-auto p-2 film-img rounded m-2 m-md-4">
 
-                <span class="sypnosis-button p-1 mt-3 bg-white text-center rounded text-dark">PRESS FOR SYNOPSIS</span>
+                <span class="sypnosis-button p-1 my-2 bg-white text-center rounded text-dark">PRESS FOR SYNOPSIS</span>
             </button>
 
             <!-- Film information side -->
@@ -44,12 +44,12 @@
 
         </div>
 
-            <!-- critic and member comment container -->
-            <div class="col-lg-8 py-2">
-                <div class="row">
+        <!-- critic and member comment container -->
+        <div class="col-lg-8 py-2">
+            <div class="row">
 
-                    <!-- Critic comments container -->
-                    <div>
+                <!-- Critic comments container -->
+                <div>
 
                         <!-- Heading -->
                         <div class="d-flex bg-white rounded head mx-auto my-4"><img class="icon pb-lg-2"
@@ -124,8 +124,33 @@
                     </div>
 
                 </div>
+        </div>
+         
+        <!-- Ratings container -->
+        <div class="mt-4">
+            <!-- Heading -->
+            <div class="d-flex bg-white rounded head mx-auto my-4"><img class="icon pb-lg-2"
+                    src="{% static 'images/abacus.png' %}" alt="Icon of a abacus" width="10" height="10">
+                <h2 class="ps-2 pe-2 text-center text-decoration-underline fs-5">Average<br>Member Ratings</h2><img class="icon pb-2"
+                    src="{% static 'images/abacus.png' %}" alt="Icon of a abacus" width="10" height="10">
             </div>
-            
+            <!-- average scores -->
+            <div class="d-flex justify-content-around text-center">
+                <div class="bg-white rounded p-1">
+                    <img class="icon pb-lg-2" src="{% static 'images/style.png' %}" alt="Icon of a tuxedo" width="10" height="10">
+                    <p >STYLE:<br>{{ average_style }}/5</p>
+                </div>
+                <div class="bg-white rounded p-1">
+                    <img class="icon pb-lg-2" src="{% static 'images/humour.png' %}" alt="Icon of comedy masks" width="10" height="10">
+                    <p>HUMOUR:<br>{{ average_humour }}/5</p>
+                </div>
+               <div class="bg-white rounded p-1">
+                    <img class="icon pb-lg-2" src="{% static 'images/story.png' %}" alt="Icon of a book" width="10" height="10">
+                    <p >STORY:<br>{{ average_story }}/5</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 

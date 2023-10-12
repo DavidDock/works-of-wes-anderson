@@ -484,6 +484,7 @@ blockquote {
     background-color: white;
     width: fit-content;
     border-radius: 5px;
+    overflow-wrap: anywhere;
 
 }
 
@@ -504,8 +505,9 @@ blockquote::after {
 
 .figure-heading {
     background-color: white;
-        padding: 0.5rem;
-        width: fit-content;
+    padding: 0.5rem;
+    width: fit-content;
+    overflow-wrap: anywhere;
 }
 
 .full-width-snap {
