@@ -72,18 +72,49 @@
         <div class="col-lg-6 p-0 m-0">
             <div
                 class="scroll-container rounded scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline full-width-snap">
+                <!-- infomation -->
                 <figure class="default-2 {{ movie.color_class }}-2">
                     <div class="rounded d-flex mx-auto figure-heading">
                         <img class="small-icon mx-2" src="{% static 'images/arrows.png' %}" alt="Arrows"
                             width="10" height="10" >
-                        <p class="pt-1 text-center m-0 text-decoration-underline">Scroll for comments</p>
+                        <p class="pt-1 text-center m-0 text-decoration-underline">Scroll</p>
                         <img class="small-icon mx-2" src="{% static 'images/arrows.png' %}" alt="Another icon of arrows"
                             width="10" height="10" >
                     </div>
                     <p class="info-comment">
-                        This is where your comments will be displayed. You can add as many comments as you like in the adjacent input area.
+                        This is where  all your comments and your rating (if you have made one yet) for {{ movie.title }} will be displayed.<br> Please scroll to view.
                     </p>
                 </figure>
+                {% for score in all_scores %}
+                {% if score.film == movie %}
+                <!-- Rating -->
+                <figure class="default-2 {{ movie.color_class }}-1">
+                    <div class="rounded d-flex mx-auto figure-heading">
+                        <img class="small-icon mx-2" src="{% static 'images/abacus.png' %}" alt="An abacus" width="10" height="10">
+                        <p class="pt-1 text-center m-0 text-decoration-underline">Your Rating</p>
+                        <img class="small-icon mx-2" src="{% static 'images/abacus.png' %}" alt="Another icon of an abacus" width="10"
+                            height="10">
+                    </div>
+                    <div class="info-comment w-100">
+                        <div class="d-flex p-2">
+                            <img class="icon pe-2" src="{% static 'images/style.png' %}" alt="Icon of a tuxedo" width="10" height="10">
+                            <p class="pt-2">STYLE: {{ score.style }}/5</p>
+                        </div>
+                        <div class="d-flex p-2">
+                            <img class="icon pe-2" src="{% static 'images/humour.png' %}" alt="Icon of comedy masks" width="10" height="10">
+                            <p>HUMOUR: {{ score.humour }}/5</p>
+                        </div>
+                        <div class="d-flex p-2">
+                            <img class="icon pe-2" src="{% static 'images/story.png' %}" alt="Icon of a book" width="10" height="10">
+                            <p>STORY: {{ score.story }}/5</p>
+                        </div>
+                    </div>
+                    <a href="delete_score/{{ score.id }}"
+                        class="fit-content fit-content-height icon-button bg-white border-0 rounded p-0"><img
+                            class="icon-button" src="{% static 'images/bin.png' %}" alt="Rubbish Bin" width="10" height="10"></a>
+                </figure>
+                {% endif %}
+                {% endfor %}
                 <!-- for each movie comment -->
                 {% for comment in all_comments %}
                 {% if comment.film == movie %}
@@ -115,6 +146,7 @@
                 </figure>
                 {% endif %}
                 {% endfor %}
+                <!-- notes -->
                 <figure class="default-1 {{ movie.color_class }}-1">
                     <div class="rounded mx-auto text-decoration-underline figure-heading">
                        "Notes"
@@ -122,7 +154,17 @@
                     <p class="info-comment">
                         After approval your comments will be able to be seen in <a class="normal-link"
                             href="{% url 'film_detail' movie.slug %}"> {{movie.title}} </a>'s
-                        detail page. Thank you for contributing to the website.
+                        detail page.<br> Thank you for contributing to the website.
+                    </p>
+                </figure>
+                <!-- Appendix-->
+                <figure class="default-1 {{ movie.color_class }}-2">
+                    <div class="rounded mx-auto text-decoration-underline figure-heading">
+                        "Appendix"
+                    </div>
+                    <p class="info-comment">
+                        You can add as many comments as you like and delete or edit them at any time.<br>
+                        You can only add one rating but can delete it at any time.
                     </p>
                 </figure>
             </div>
@@ -140,21 +182,6 @@
         </div>
 
     </div>
-
-<!-- Score for film -->
-{% for score in all_scores %}
-{% if score.film == movie %}
-<div class="container my-5">
-    <h3 class="rounded bg-white mx-auto fit-content">Your Score</h3>
-    <div class="d-flex justify-content-around">
-        <p class="bg-white">STYLE: {{ score.style }}/5</p>
-        <p class="bg-white">HUMOUR: {{ score.humour }}/5</p>
-        <p class="bg-white">STORY: {{ score.story }}/5</p>
-        <a href="delete_score/{{ score.id }}" class="btn border border-dark normal-link btn-danger">Delete</a>
-    </div>
-</div>
-{% endif %}
-{% endfor %}
 
 </div>
 {% endfor %}
