@@ -1,7 +1,7 @@
 /* Whole Site Styles */
 * {
     box-sizing: border-box;
-    font-family: Special Elite;
+    font-family: "Special Elite";
 }
 
 body {
@@ -221,7 +221,7 @@ input[type='submit'] {
 }
 
 .aquatic-2 {
-    background: rgba(155, 277, 249);
+    background: rgba(155, 255, 249);
 }
 
 .scroll-container-aquatic::-webkit-scrollbar-track {
@@ -230,7 +230,7 @@ input[type='submit'] {
 }
 
 .scroll-container-aquatic::-webkit-scrollbar-thumb {
-    background: rgba(161, 201, 194);
+    background: rgba(155, 255, 249);
     border-radius: 5px;
 }
 
@@ -377,13 +377,6 @@ a {
     cursor: pointer;
 }
 
-.invert-button:hover,
-.invert-button:focus {
-    filter: invert();
-}
-
-/* css for film detail */
-
 /* poster container */
 
 .film-image-container {
@@ -435,7 +428,7 @@ a {
     left: 0px;
 }
 
-/* scroll container */
+/* scroll container learnt from https://www.youtube.com/watch?v=3yfswsnD2sw */
 
 ::-webkit-scrollbar-track {
     background: rgb(164, 194, 97);
