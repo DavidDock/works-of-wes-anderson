@@ -456,6 +456,8 @@ a {
     margin: 0 auto
 }
 
+
+
 .scroll-container::-webkit-scrollbar {
     height: 0.5rem;
 }
@@ -506,7 +508,7 @@ blockquote::after {
         width: fit-content;
 }
 
-#full-width-snap {
+.full-width-snap {
     grid-auto-columns: 95%;
     width: 95%;
 }
