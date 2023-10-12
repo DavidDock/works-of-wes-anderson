@@ -548,6 +548,11 @@ figurecaption {
     box-shadow: 0 5px 18px black;
     }
 
+.select.form-control:focus {
+    outline: none;
+    box-shadow: 0 5px 18px black;
+}
+
 .score-form div {
     padding: 0 1rem 0 0;
 }    

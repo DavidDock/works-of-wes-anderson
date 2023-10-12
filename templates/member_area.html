@@ -17,27 +17,39 @@
         </div>
         <!-- Content -->
         <p class="p-4 text-center">
-            Welcolme {{ user.username }}, this is your area where you can keep track of your comments and scores. <br />
-            This site is celebrating Wes Anderson's work so tell us what you love about each film or maybe a favorite
-            part. <br />
+            Welcolme {{ user.username }}, this is where you can keep track of your comments and scores. <br />
+            This site is celebrating Wes Anderson's work so tell us what you love.
         </p>
     </section>
 </div>
 
 <!--Score Form-->
-<div class="d-flex  mx-auto fit-content bg-white rounded p-2">
-    <img class="icon mx-4" src="{% static 'images/plus.png' %}" alt="An icon of a plus symbol" width="10" height="10" />
-    <h2 class="text-decoration-underline">'Add SCORE'</h2>
-    <img class="icon mx-4" src="{% static 'images/plus.png' %}" alt="An icon of a plus symbol" width="10" height="10" />
+<div class="row">
+    <section class="default-1 col-10 col-md-8 col-lg-6 mx-auto rounded px-1 py-4">
+        <!-- heading -->
+        <div class="d-flex justify-content fit-content rounded bg-white mx-auto py-2">
+            <img class="icon mx-2" src="{% static 'images/rating.png' %}" alt="An icon of a thumbs up and stars" width="10"
+                height="10" />
+            <h2 class="fs-4 text-center">Add Rating</h2>
+            <img class="icon mx-2" src="{% static 'images/rating.png' %}" alt="Another icon of a thumbs up and stars" width="10"
+                height="10" />
+        </div>
+        <!-- content -->
+        <p class="p-4 text-center bg-white w-75 rounded mx-auto my-2">
+            This is where you can add category ratings to each film. <br />
+            All Wes Anderson films are great but this lets you rate the best aspects of his work.
+        </p>
+        <!-- form -->
+        <form method="post" action="add_score" class="score-form mx-auto d-sm-flex justify-content-center px-2">
+            {{ score_form | crispy }}
+            {% csrf_token %}
+            <button class="fit-content fit-content-height icon-button border-0 rounded p-0 bg-white mx-2 mt-4"
+                aria-label="Add score">
+                <img class="icon-button" src="{% static 'images/plus.png' %}" alt="Plus symbol" width="10" height="10">
+            </button>
+        </form>
+    </section>
 </div>
-<form method="post" action="add_score" class="score-form mx-auto my-5 d-flex justify-content-center">
-    {{ score_form | crispy }}
-    {% csrf_token %}
-    <button class="fit-content fit-content-height icon-button border-0 rounded p-0 bg-white mx-2 mt-4"
-        aria-label="Add score">
-        <img class="icon-button" src="{% static 'images/plus.png' %}" alt="Plus symbol" width="10" height="10">
-    </button>
-</form>
 
 <!-- Each Film -->
 {% for movie in films %}

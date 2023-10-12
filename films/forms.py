@@ -19,4 +19,3 @@ class ScoreForm (forms.ModelForm):
     class Meta:
         model = Score
         fields = ('film', 'style', 'humour', 'story',)
-
