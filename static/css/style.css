@@ -585,6 +585,7 @@ blockquote::after {
 @media (min-width: 768px) {
     .full-width-snap {
         width: 75%;
+        grid-auto-columns: 75%;
     }
 }
 

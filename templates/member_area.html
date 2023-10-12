@@ -23,34 +23,68 @@
     </section>
 </div>
 
-<!--Score Form-->
-<div class="row">
-    <section class="default-1 col-10 col-md-8 col-lg-6 mx-auto rounded px-1 py-4">
-        <!-- heading -->
-        <div class="d-flex justify-content fit-content rounded bg-white mx-auto py-2">
-            <img class="icon mx-2" src="{% static 'images/rating.png' %}" alt="An icon of a thumbs up and stars" width="10"
-                height="10" >
-            <h2 class="fs-4 text-center">Add Rating</h2>
-            <img class="icon mx-2" src="{% static 'images/rating.png' %}" alt="Another icon of a thumbs up and stars" width="10"
-                height="10" >
+<!--forms container-->
+<div class="row align-items-center">
+    <!--Score Form-->
+    <div class="col-md-6">
+        <div class="row mb-4">
+            <section class="default-1 col-10 mx-auto rounded px-1 py-4">
+                <!-- heading -->
+                <div class="d-flex justify-content fit-content rounded bg-white mx-auto py-2">
+                    <img class="icon mx-2" src="{% static 'images/rating.png' %}" alt="An icon of a thumbs up and stars"
+                        width="10" height="10">
+                    <h2 class="fs-4 text-center">Add Rating</h2>
+                    <img class="icon mx-2" src="{% static 'images/rating.png' %}"
+                        alt="Another icon of a thumbs up and stars" width="10" height="10">
+                </div>
+                <!-- content -->
+                <p class="p-4 text-center bg-white w-75 rounded mx-auto my-2">
+                    This is where you can add category ratings to each film. <br>
+                    All Wes Anderson films are great but this lets you rate the best aspects of his work.
+                </p>
+                <!-- form -->
+                <form method="post" action="add_score" class="score-form mx-auto px-2 pt-2">
+                    {{ score_form | crispy }}
+                    {% csrf_token %}
+                    <button class="fit-content fit-content-height icon-button border-0 rounded p-0 bg-white mx-2 mt-4"
+                        aria-label="Add score">
+                        <img class="icon-button" src="{% static 'images/thumbs.png' %}" alt="Thumbs up symbol" width="10"
+                            height="10">
+                    </button>
+                </form>
+            </section>
         </div>
-        <!-- content -->
-        <p class="p-4 text-center bg-white w-75 rounded mx-auto my-2">
-            This is where you can add category ratings to each film. <br>
-            All Wes Anderson films are great but this lets you rate the best aspects of his work.
-        </p>
-        <!-- form -->
-        <form method="post" action="add_score" class="score-form mx-auto d-sm-flex justify-content-center px-2 pt-2">
-            {{ score_form | crispy }}
-            {% csrf_token %}
-            <button class="fit-content fit-content-height icon-button border-0 rounded p-0 bg-white mx-2 mt-4"
-                aria-label="Add score">
-                <img class="icon-button" src="{% static 'images/thumbs.png' %}" alt="Plus symbol" width="10" height="10">
-            </button>
-        </form>
-    </section>
+    </div>
+    <!--Comment Form-->
+    <div class="col-md-6">
+        <div class="row">
+            <section class="default-2 col-10 mx-auto rounded px-1 py-4">
+                <!-- heading -->
+                <div class="d-flex justify-content fit-content rounded bg-white mx-auto py-2">
+                    <img class="icon mx-2" src="{% static 'images/writing.png' %}" alt="An icon of a letter" width="10"
+                        height="10">
+                    <h2 class="fs-4 text-center">Add Comment</h2>
+                    <img class="icon mx-2" src="{% static 'images/writing.png' %}" alt="Another icon of a letter" width="10"
+                        height="10">
+                </div>
+                <!-- content -->
+                <p class="p-4 text-center bg-white w-75 rounded mx-auto my-2">
+                    This is where you can add your comments each film. <br>
+                </p>
+                <!-- form -->
+                <form method="post" action="" class="mx-auto px-2 pt-2">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button class="fit-content fit-content-height icon-button border-0 rounded p-0 bg-white mx-2 mt-4"
+                        aria-label="Add comment">
+                        <img class="icon-button" src="{% static 'images/submit.png' %}" alt="Letter being submited"
+                            width="10" height="10">
+                    </button>
+                </form>
+            </section>
+        </div>
+    </div>
 </div>
-
 <!-- Each Film -->
 {% for movie in films %}
 <div class="container my-5 d-flex flex-column align-items-center">
