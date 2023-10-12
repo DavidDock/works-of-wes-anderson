@@ -10,10 +10,10 @@
         <!-- Heading -->
         <div class="d-flex justify-content-around">
             <img class="icon mx-2" src="{% static 'images/member.png' %}"
-                alt="A small icon of a cross keys member medal" width="10" height="10" />
+                alt="A small icon of a cross keys member medal" width="10" height="10" >
             <h2 class="text-decoration-underline">'About'</h2>
             <img class="icon mx-2" src="{% static 'images/member.png' %}"
-                alt="Another icon of a cross keys member medal" width="10" height="10" />
+                alt="Another icon of a cross keys member medal" width="10" height="10" >
         </div>
         <!-- Content -->
         <p class="p-4 text-center">
@@ -29,10 +29,10 @@
         <!-- heading -->
         <div class="d-flex justify-content fit-content rounded bg-white mx-auto py-2">
             <img class="icon mx-2" src="{% static 'images/rating.png' %}" alt="An icon of a thumbs up and stars" width="10"
-                height="10" />
+                height="10" >
             <h2 class="fs-4 text-center">Add Rating</h2>
             <img class="icon mx-2" src="{% static 'images/rating.png' %}" alt="Another icon of a thumbs up and stars" width="10"
-                height="10" />
+                height="10" >
         </div>
         <!-- content -->
         <p class="p-4 text-center bg-white w-75 rounded mx-auto my-2">
@@ -58,11 +58,11 @@
     <div class="py-1 px-1 d-flex rounded bg-white fit-content mb-4">
         <img class="icon mx-2" {% if "placeholder" in movie.first_icon.url %} src="{% static 'images/bandit.png' %}"
             alt="Icon of a bandit hat " width="10" height="10" {% endif %} src="{{ movie.first_icon.url }}"
-            alt="First icon of {{ movie.title }}" width="10" height="10" />
+            alt="First icon of {{ movie.title }}" width="10" height="10" >
         <h2 class="m-0 text-decoration-underline text-center">{{ movie.title }}</h2>
         <img class="icon mx-2" {% if "placeholder" in movie.second_icon.url %} src="{% static 'images/backpack.png' %}"
             alt="Icon of a backpack " width="10" height="10" {% endif %} src="{{ movie.second_icon.url }}"
-            alt="Second icon of {{ movie.title }}" width="10" height="10" />
+            alt="Second icon of {{ movie.title }}" width="10" height="10" >
     </div>
     
     <!-- comments and form -->
@@ -75,10 +75,10 @@
                 <figure class="default-2 {{ movie.color_class }}-2">
                     <span class="rounded d-flex mx-auto figure-heading">
                         <img class="small-icon mx-2" src="{% static 'images/arrows.png' %}" alt="Arrows"
-                            width="10" height="10" />
+                            width="10" height="10" >
                         <p class="pt-1 text-center m-0 text-decoration-underline">Scroll for comments</p>
                         <img class="small-icon mx-2" src="{% static 'images/arrows.png' %}" alt="Another icon of arrows"
-                            width="10" height="10" />
+                            width="10" height="10" >
                     </span>
                     <p class="info-comment">
                         This is where your comments will be displayed. You can add as many comments as you like in the adjacent input area.
