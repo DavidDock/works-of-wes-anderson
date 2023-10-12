@@ -73,13 +73,13 @@
             <div id="full-width-snap"
                 class="scroll-container rounded scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline">
                 <figure class="default-2 {{ movie.color_class }}-2">
-                    <figurecaption class="rounded d-flex mx-auto">
+                    <span class="rounded d-flex mx-auto figure-heading">
                         <img class="small-icon mx-2" src="{% static 'images/arrows.png' %}" alt="Arrows"
                             width="10" height="10" />
                         <p class="pt-1 text-center m-0 text-decoration-underline">Scroll for comments</p>
                         <img class="small-icon mx-2" src="{% static 'images/arrows.png' %}" alt="Another icon of arrows"
                             width="10" height="10" />
-                    </figurecaption>
+                    </span>
                     <p class="info-comment">
                         This is where your comments will be displayed. You can add as many comments as you like in the adjacent input area.
                     </p>
@@ -89,13 +89,13 @@
                 {% if comment.film == movie %}
                 <figure class="default-1 {{ movie.color_class }}-1">
                     {% if not comment.approved %}
-                    <figurecaption class="rounded text-muted">
+                    <span class="rounded text-muted figure-heading">
                         **Pending Approval**
-                    </figurecaption class="rounded">
+                    </span>
                     {% else %}
-                    <figurecaption class="rounded">
+                    <span class="rounded figure-heading">
                         {{ comment.name }}
-                    </figurecaption class="rounded">
+                    </span>
                     {% endif %}
                     <blockquote id="comment{{ comment.id }}" class="{% if not comment.approved %} text-muted {% endif %}">
                         {{ comment.content }}
@@ -103,11 +103,12 @@
 
                     <!-- delete and edit buttons -->
                     <div class="d-flex">
-                        <button comment_id="{{ comment.id }}" movie_slug="{{ movie.slug }}" class="btn-delete fit-content fit-content-height icon-button bg-white border-0 rounded p-0"
-                            aria-label="Press to open delete confirm window">
+                        <button class="btn-delete fit-content fit-content-height icon-button bg-white border-0 rounded p-0"
+                            comment_id="{{ comment.id }}" movie_slug="{{ movie.slug }}" aria-label="Press to open delete confirm window">
                             <img class="icon-button" src="{% static 'images/bin.png' %}" alt="Rubbish Bin" width="10" height="10">
                         </button>
-                        <button comment_id="{{ comment.id }}" movie_slug="{{ movie.slug }}" class="btn-edit fit-content fit-content-height ms-4 icon-button border-0 rounded p-0" aria-label="Edit comment">
+                        <button class="btn-edit fit-content fit-content-height ms-4 icon-button border-0 rounded p-0"
+                            comment_id="{{ comment.id }}" movie_slug="{{ movie.slug }}" aria-label="Edit comment">
                             <img class="icon-button" src="{% static 'images/pencil.png' %}" alt="Pencil" width="10" height="10">
                         </button>
                     </div>
@@ -115,9 +116,9 @@
                 {% endif %}
                 {% endfor %}
                 <figure class="default-1 {{ movie.color_class }}-1">
-                    <figurecaption class="rounded mx-auto text-decoration-underline">
+                    <span class="rounded mx-auto text-decoration-underline figure-heading">
                        "Notes"
-                    </figurecaption class="rounded">
+                    </span>
                     <p class="info-comment">
                         After approval your comments will be able to be seen in <a class="normal-link"
                             href="{% url 'film_detail' movie.slug %}"> {{movie.title}} </a>'s
