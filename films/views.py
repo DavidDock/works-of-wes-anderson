@@ -22,7 +22,8 @@ def home(request, *args, **kwargs):
 
 def film_detail(request, slug, *args, **kwargs):
     """
-    Renders the Film Detail Page
+    Renders the Film Detail Page with films comments and average scores
+    Takes in slug from url
     """
 
     queryset = Film.objects.all()
@@ -63,7 +64,7 @@ https://docs.djangoproject.com/en/4.2/topics/auth/default/
 @login_required
 def member_area(request, *args, **kwargs):
     """
-    Renders the Member Area page
+    Renders the Member Area page with all user comments, scores and forms
     """
     all_comments = request.user.member_comments.all()
     all_scores = request.user.scores.all()
@@ -83,7 +84,11 @@ def member_area(request, *args, **kwargs):
 @login_required
 def add_comment(request, slug, *args, **kwargs):
     """
-    Adds comment
+    Add comment view
+    Takes in slug from url and data from form
+    If valid adds comment
+    Gives relevant message
+    Returns to member area
     """
 
     if request.method == "POST":
@@ -99,7 +104,8 @@ def add_comment(request, slug, *args, **kwargs):
             comment = comment_form.save(commit=False)
             comment.film = film
             comment.save()
-            messages.success(request, "Your comment has been sent for approval")
+            messages.success(
+                request, "Your comment has been sent for approval")
         else:
             comment_form = CommentForm()
     else:
@@ -111,7 +117,11 @@ def add_comment(request, slug, *args, **kwargs):
 @login_required
 def delete_comment(request, slug, comment_id, *args, **kwargs):
     """
-    view to delete comment
+    View to delete comment
+    Takes in slug and comment id from url
+    If correct user it deletes comment
+    Sends relevant message
+    Returns to member area
     """
     queryset = Film.objects.all()
     film = get_object_or_404(queryset, slug=slug)
@@ -130,7 +140,11 @@ def delete_comment(request, slug, comment_id, *args, **kwargs):
 @login_required
 def edit_comment(request, slug, comment_id, *args, **kwargs):
     """
-    Edits comment
+    Edits comment view
+    Takes slug and comment id from url
+    Edits comment if valid and changes approved to false
+    Sends relevant message
+    Returns to member area
     """
 
     if request.method == "POST":
@@ -148,7 +162,8 @@ def edit_comment(request, slug, comment_id, *args, **kwargs):
             messages.success(
                 request, "Your comment has been updated and sent for approval")
         else:
-            messages.add_message(request, message.ERROR, 'Error updating your comment, sorry.')
+            messages.add_message(request, messages.ERROR,
+                                 'Error updating your comment, sorry.')
 
     return HttpResponseRedirect(reverse('member_area'))
 
@@ -156,7 +171,12 @@ def edit_comment(request, slug, comment_id, *args, **kwargs):
 @login_required
 def add_score(request, *args, **kwargs):
     """
-    Adds score
+    Add score view
+    If method is post it gets form details
+    Checks if user already has score for film
+    Adds score if appropriate
+    Sends relevant message
+    Returns to member area
     """
 
     if request.method == "POST":
@@ -170,7 +190,7 @@ def add_score(request, *args, **kwargs):
             film = new_score.film
             if Score.objects.filter(film=film, user=user).exists():
                 messages.error(
-                    request, "Please delete your previous rating for this film first")
+                    request, "Please delete your previous rating")
             else:
                 new_score.save()
                 messages.success(
@@ -186,9 +206,11 @@ def add_score(request, *args, **kwargs):
 @login_required
 def delete_score(request, score_id, *args, **kwargs):
     """
-    view to delete score
+    View to delete score
+    Takes in score id from url
+    Deletes score if its users score
+    Returns to member page
     """
-    
     score = Score.objects.filter(id=score_id).first()
 
     if score.user == request.user:
