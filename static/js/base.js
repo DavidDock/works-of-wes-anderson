@@ -13,5 +13,5 @@ $(".toggle").click(function () {
         $(this).attr("src", "/static/images/envelope-open.png");
     } else if ($(this).attr("src") === "/static/images/envelope-open.png") {
         $(this).attr("src", "/static/images/envelope.png");
-    };
+    }
 });

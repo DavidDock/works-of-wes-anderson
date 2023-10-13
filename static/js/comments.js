@@ -5,7 +5,7 @@ var commentTextAreas = document.getElementsByTagName("textarea");
 
 for (let x of commentTextAreas) {
     x.value = "";
-};
+}
 
 // script for deleting comment in modal //
 // Taken and adapted from CI blog walkthrough //
