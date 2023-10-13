@@ -9,7 +9,7 @@ urlpatterns = [
          views.add_comment, name='add_comment'),
     path('member-area/delete_comment/<slug:slug>/<int:comment_id>',
          views.delete_comment, name='delete_comment'),
-    path('member-area/edit_comment/<slug:slug>/<int:comment_id>',
+    path('member-area/edit_comment/<int:comment_id>',
          views.edit_comment, name='edit_comment'),
     path('member-area/add_score',
          views.add_score, name='add_score'),

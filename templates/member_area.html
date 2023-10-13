@@ -63,22 +63,21 @@
                 <div class="d-flex justify-content fit-content rounded bg-white mx-auto py-2">
                     <img class="icon mx-2" src="{% static 'images/writing.png' %}" alt="An icon of a letter" width="10"
                         height="10">
-                    <h2 class="fs-4 text-center">Add Comment</h2>
+                    <h2 id="add-update-comment" class="fs-4 text-center">Add Comment</h2>
                     <img class="icon mx-2" src="{% static 'images/writing.png' %}" alt="Another icon of a letter" width="10"
                         height="10">
                 </div>
                 <!-- content -->
-                <p class="p-4 text-center bg-white w-75 rounded mx-auto my-2">
+                <p id="comment-form-info" class="p-4 text-center bg-white w-75 rounded mx-auto my-2">
                     This is where you can add your comments each film. <br>
                 </p>
                 <!-- form -->
-                <form method="post" action="add_comment" class="mx-auto px-2 pt-2">
+                <form method="post" action="add_comment" id="comment-form-id" class="mx-auto px-2 pt-2">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button class="fit-content fit-content-height icon-button border-0 rounded p-0 bg-white mx-2 mt-4"
+                    <button type="submit" id="subcom" class="sign-button fit-content fit-content-height border-0 rounded p-1 bg-white mx-2 mt-4"
                         aria-label="Add comment">
-                        <img class="icon-button" src="{% static 'images/submit.png' %}" alt="Letter being submited"
-                            width="10" height="10">
+                        Submit
                     </button>
                 </form>
             </section>
@@ -99,11 +98,11 @@
             alt="Second icon of {{ movie.title }}" width="10" height="10" >
     </div>
     
-    <!-- comments and form -->
+    <!-- comments -->
     <div class="container-fluid row align-items-center w-100 p-0 m-0">
 
         <!-- comments -->
-        <div class="col-lg-6 p-0 m-0">
+        <div class="col-lg-10 p-0 m-0">
             <div
                 class="scroll-container rounded scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline full-width-snap">
                 <!-- infomation -->
@@ -204,7 +203,7 @@
             </div>
         </div>
 
-        <!-- comment form for each film -->
+        <!-- comment form for each film
         <div class="col-lg-6 p-0 m-0">
         
             <form method="post" action="add_comment/{{ movie.slug }}" id="{{ movie.slug }}form" class="my-4 mx-2 comment-form">
@@ -214,7 +213,7 @@
             </form>
         
         </div>
-
+        -->
     </div>
 
 </div>

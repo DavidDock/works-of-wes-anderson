@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.db.models import Avg
-from .models import Film, Score
+from .models import Film, Score, MemberComment
 from .forms import CommentForm, ScoreForm
 from django.contrib import messages
 
@@ -132,10 +132,10 @@ def delete_comment(request, slug, comment_id, *args, **kwargs):
 
 
 @login_required
-def edit_comment(request, slug, comment_id, *args, **kwargs):
+def edit_comment(request, comment_id, *args, **kwargs):
     """
     Edits comment view
-    Takes slug and comment id from url
+    Takes comment id from url and form data
     Edits comment if valid and changes approved to false
     Sends relevant message
     Returns to member area
@@ -143,14 +143,11 @@ def edit_comment(request, slug, comment_id, *args, **kwargs):
 
     if request.method == "POST":
 
-        queryset = Film.objects.all()
-        film = get_object_or_404(queryset, slug=slug)
-        comment = film.member_comments.filter(id=comment_id).first()
+        comment = MemberComment.objects.filter(id=comment_id).first()
 
         comment_form = CommentForm(data=request.POST, instance=comment)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
-            comment.film = film
             comment.approved = False
             comment.save()
             messages.success(
