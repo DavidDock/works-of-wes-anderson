@@ -32,11 +32,11 @@ def film_detail(request, slug, *args, **kwargs):
     member_comments = film.member_comments.filter(
         approved=True).order_by("-created_on")
     average_style = Score.objects.filter(
-        film=film).aggregate(Avg('style'))['style__avg']
+        movie=film).aggregate(Avg('style'))['style__avg']
     average_humour = Score.objects.filter(
-        film=film).aggregate(Avg('humour'))['humour__avg']
+        movie=film).aggregate(Avg('humour'))['humour__avg']
     average_story = Score.objects.filter(
-        film=film).aggregate(Avg('story'))['story__avg']
+        movie=film).aggregate(Avg('story'))['story__avg']
 
     return render(
         request,
@@ -178,8 +178,8 @@ def add_score(request, *args, **kwargs):
         if score_form.is_valid():
             score_form.instance.user = user
             new_score = score_form.save(commit=False)
-            film = new_score.film
-            if Score.objects.filter(film=film, user=user).exists():
+            film = new_score.movie
+            if Score.objects.filter(movie=film, user=user).exists():
                 messages.error(
                     request, "Please delete your previous rating")
             else:

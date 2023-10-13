@@ -31,5 +31,5 @@ class MemberCommentAdmin(admin.ModelAdmin):
 @admin.register(Score)
 class ScoreAdmin(admin.ModelAdmin):
 
-    list_display = ('film', 'user')
-    search_fields = ['film']
+    list_display = ('movie', 'user')
+    search_fields = ['movie']

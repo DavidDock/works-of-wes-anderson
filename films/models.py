@@ -79,8 +79,8 @@ class MemberComment(models.Model):
 class Score(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="scores")
-    film = models.ForeignKey(Film, on_delete=models.CASCADE,
-                             related_name="scores")
+    movie = models.ForeignKey(Film, on_delete=models.CASCADE,
+                              related_name="scores")
     created_on = models.DateTimeField(auto_now_add=True)
     rating = (
         (1, 1),

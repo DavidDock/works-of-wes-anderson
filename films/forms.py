@@ -15,4 +15,4 @@ class CommentForm(forms.ModelForm):
 class ScoreForm (forms.ModelForm):
     class Meta:
         model = Score
-        fields = ('film', 'style', 'humour', 'story',)
+        fields = ('movie', 'style', 'humour', 'story',)
