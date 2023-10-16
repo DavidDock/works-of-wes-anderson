@@ -23,15 +23,20 @@ $(".btn-delete").click(function () {
 
 $(".btn-edit").click(function () {
     let commentId = $(this).attr("value");
-    //let movieSlug = $(this).attr("name");//
+    let FilmId = $(this).attr("name");
+    let MovieTitle = $(this).attr("title");
     let subCom = document.getElementById("subcom");
     let movieForm = document.getElementById("comment-form-id");
     let textArea = movieForm.getElementsByTagName("textarea")[0];
     let commentContent = document.getElementById(`comment${commentId}`).innerText;
     let addUpdateComment = document.getElementById("add-update-comment");
     let CommentFormInfo = document.getElementById("comment-form-info");
+    let formIdChoice = document.getElementById("id_film");
+    let formIdSelect = formIdChoice.getElementsByTagName("option")[0];
+    formIdSelect.setAttribute("value", `${FilmId}`);
+    formIdSelect.innerText = `${MovieTitle}`;
     addUpdateComment.innerText = "Edit Comment";
-    CommentFormInfo.innerText = "You can edit your comment and even change the film if you would like";
+    CommentFormInfo.innerText = "Please edit your comment";
     subCom.innerText = "Update";
     textArea.value = commentContent;
     movieForm.setAttribute("action", `edit_comment/${commentId}`);
