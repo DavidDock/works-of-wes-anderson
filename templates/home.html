@@ -20,7 +20,12 @@
             filmmaker.<br >
             You can find details of each of his feature films along with positive
             comments by critics.<br >
-            Become a member to share your opinion and rate each of the film's
+            {% if user.is_authenticated %}
+            Go to your <a class="normal-link" href="{% url 'member_area' %}"> member area </a>
+            {% else %}
+            Become a <a class="normal-link" href="{% url 'account_signup' %}"> member </a>
+            {% endif %}
+             to share your opinion and rate each of the film's
             qualities.<br >
             We hope this website reminds you how wonderful Wes Anderson is.
         </p>

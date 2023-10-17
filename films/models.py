@@ -27,20 +27,6 @@ class Film(models.Model):
     def __str__(self):
         return self.title
 
-    """ def save(self, *args, **kwargs):
-
-        data = BytesIO(self.poster.read())
-        upload = cloudinary.uploader.upload(data, secure=True)
-        self.poster = upload['secure_url']
-        icondata = BytesIO(self.first_icon.read())
-        uploadicon = cloudinary.uploader.upload(icondata, secure=True)
-        self.first_icon = uploadicon['secure_url']
-        icondata_two = BytesIO(self.second_icon.read())
-        uploadicon_two = cloudinary.uploader.upload(icondata_two, secure=True)
-        self.second_icon = uploadicon_two['secure_url']
-
-        super().save(*args, **kwargs) """
-
 # Critic Comments Model
 
 
