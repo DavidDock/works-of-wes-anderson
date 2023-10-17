@@ -95,7 +95,7 @@ During this iteration I completed all of the issues including the could haves. I
 ## Iteration 4  
 
 Start: 8/10/23
-End: 15/10/23
+End: 17/10/23
 
 Below is the Kanban board at the start of the iteration:  
 ![Iteration-Four](/documentation/agile/iteration-four.png)  
@@ -106,3 +106,23 @@ The User Stories were added and prioritised as follows:
 - User Story: Ability To Delete Score - Must Have. Story points: 4
 - User Story: View Average Scores - Must Have. Story points: 2
 - User Story: Testing - Could Have. Story points: 10
+
+Below is the Kanban board at the end of the iteration:  
+
+![Iteration-Four-End](/documentation/agile/iteration-four-end.png)  
+
+During this iteration I did not compelete the Testing user story so this is still in progress. Initial testing highlighted a number of issues that had to be fixed. In particular HTML testing showed that having multiple forms in the member area caused duplicate ID errors which caused me to re-think and implement a new layout of the member area.
+
+## Iteration 5  
+
+Start: 17/10/23
+End: 27/10/23
+
+Below is the Kanban board at the start of the iteration:  
+![Iteration-Five](/documentation/agile/iteration-five.png)  
+The User Stories were added and prioritised as follows:
+
+- User Story: Testing - Must Have. Story points: 10
+- User Story: Documentation - Must Have. Story points: 10  
+
+These are the last two issues needed to complete the MVP milestone so both issues need to be competed before project submission.  
