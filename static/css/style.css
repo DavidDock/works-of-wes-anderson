@@ -377,6 +377,12 @@ a {
     cursor: pointer;
 }
 
+.no-blue-focus:focus {
+    border: black;
+    outline: none;
+    box-shadow: 0 5px 18px black;
+}
+
 /* poster container */
 
 .film-image-container {

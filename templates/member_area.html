@@ -108,7 +108,7 @@
                     <div class="rounded d-flex mx-auto figure-heading">
                         <img class="small-icon mx-2" src="{% static 'images/arrows.png' %}" alt="Arrows"
                             width="10" height="10" >
-                        <p class="pt-1 text-center m-0 text-decoration-underline">Scroll</p>
+                        <p class="pt-1 text-center m-0"><strong>Scroll</strong></p>
                         <img class="small-icon mx-2" src="{% static 'images/arrows.png' %}" alt="Another icon of arrows"
                             width="10" height="10" >
                     </div>
@@ -122,7 +122,7 @@
                 <figure class="default-2 {{ movie.color_class }}-1">
                     <div class="rounded d-flex mx-auto figure-heading">
                         <img class="small-icon mx-2" src="{% static 'images/abacus.png' %}" alt="An abacus" width="10" height="10">
-                        <p class="pt-1 text-center m-0 text-decoration-underline">Your Rating</p>
+                        <p class="pt-1 text-center m-0"><strong>Your Rating</strong></p>
                         <img class="small-icon mx-2" src="{% static 'images/abacus.png' %}" alt="Another icon of an abacus" width="10"
                             height="10">
                     </div>
@@ -179,8 +179,8 @@
                 {% endfor %}
                 <!-- notes -->
                 <figure class="default-1 {{ movie.color_class }}-1">
-                    <div class="rounded mx-auto text-decoration-underline figure-heading">
-                       "Notes"
+                    <div class="rounded mx-auto figure-heading">
+                       <strong>"Notes"</strong>
                     </div>
                     <p class="info-comment">
                         After approval your comments will be able to be seen in <a class="normal-link"
@@ -190,8 +190,8 @@
                 </figure>
                 <!-- Appendix-->
                 <figure class="default-1 {{ movie.color_class }}-2">
-                    <div class="rounded mx-auto text-decoration-underline figure-heading">
-                        "Appendix"
+                    <div class="rounded mx-auto figure-heading">
+                        <strong>"Appendix"</strong>
                     </div>
                     <p class="info-comment">
                         You can add as many comments as you like. You can also delete or edit them at any time.<br>
@@ -210,15 +210,15 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h3 class="modal-title fs-5" id="deleteModalLabel">Delete comment?</h3>
+                <button type="button" class="btn-close no-blue-focus" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 Are you sure you want to delete your comment? This cannot be undone.
             </div>
             <div class="modal-footer">
-                <button type="button" class="me-2 btn border border-dark normal-link" data-bs-dismiss="modal">Close</button>
-                <a id="deleteConfirm" href="#" class="me-2 btn border border-dark normal-link btn-danger">Delete</a>
+                <button type="button" class="me-2 btn border border-dark normal-link no-blue-focus" data-bs-dismiss="modal">Close</button>
+                <a id="deleteConfirm" href="#" class="me-2 btn border border-dark normal-link btn-danger no-blue-focus">Delete</a>
             </div>
         </div>
     </div>

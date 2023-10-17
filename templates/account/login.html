@@ -16,8 +16,8 @@
         <img class="icon mx-2" src="{% static 'images/login.png' %}" alt="A small icon of some keys" width="10"
             height="10" >
     </div>
-    <p class="text-center m-0">{% blocktrans %}If you are not a member, then register
-        <a class="normal-link" href="{{ signup_url }}">here</a> first.{% endblocktrans %}
+    <p class="text-center m-0">{% blocktrans %}If you are not a member, then
+        <a class="normal-link" href="{{ signup_url }}">register</a> first.{% endblocktrans %}
     </p>
 
     <form class="login my-4 d-flex flex-column align-items-center" method="POST" action="{% url 'account_login' %}">
