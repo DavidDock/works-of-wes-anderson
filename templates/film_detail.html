@@ -168,12 +168,12 @@
         </div>
 
         <!-- link to either member area or register -->
-        <div class="d-flex bg-white rounded head mx-auto my-4"><img class="icon pb-lg-2" src="{% static 'images/abacus.png' %}"
+        <div class="d-flex bg-white rounded head mx-auto mt-5"><img class="icon pb-lg-2" src="{% static 'images/abacus.png' %}"
                 alt="Icon of a abacus" width="10" height="10">
-            <p class="ps-2 pe-2 text-center">Add your rating and comments {% if user.is_authenticated %}
-                in your <a class="normal-link" href="{% url 'member_area' %}">member area </a>
+            <p class="ps-2 pe-2 text-center">Contribute<br>Add your rating and comments {% if user.is_authenticated %}
+                in your <a class="normal-link" href="{% url 'member_area' %}">Member Area</a>
                 {% else %}
-                by becoming a <a class="normal-link" href="{% url 'account_signup' %}"> member </a>
+                by becoming a <a class="normal-link" href="{% url 'account_signup' %}"> Member</a>
                 {% endif %}</p><img class="icon pb-2" src="{% static 'images/writing.png' %}" alt="Icon of a letter" width="10"
                 height="10">
         </div>
