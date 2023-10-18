@@ -7,6 +7,7 @@
 <!-- About section -->
 <div class="row my-5">
     <section class="col-10 col-md-8 col-lg-6 mx-auto bg-white rounded pt-4">
+
         <!-- Heading -->
         <div class="d-flex justify-content-around">
             <img class="icon mx-2" src="{% static 'images/member.png' %}"
@@ -15,20 +16,24 @@
             <img class="icon mx-2" src="{% static 'images/member.png' %}"
                 alt="Another icon of a cross keys member medal" width="10" height="10" >
         </div>
+
         <!-- Content -->
         <p class="p-4 text-center">
             Welcolme {{ user.username }}, this is where you can keep track of your comments and scores. <br >
             This site is celebrating Wes Anderson's work so tell us what you love.
         </p>
+
     </section>
 </div>
 
 <!--forms container-->
 <div class="row align-items-center mb-4">
+
     <!--Score Form-->
     <div class="col-md-6 mb-4 mb-md-0">
         <div class="row">
             <section class="default-1 col-10 mx-auto rounded px-1 py-4">
+
                 <!-- heading -->
                 <div class="d-flex justify-content fit-content rounded bg-white mx-auto py-2">
                     <img class="icon mx-2" src="{% static 'images/rating.png' %}" alt="An icon of a thumbs up and stars"
@@ -37,11 +42,13 @@
                     <img class="icon mx-2" src="{% static 'images/rating.png' %}"
                         alt="Another icon of a thumbs up and stars" width="10" height="10">
                 </div>
+
                 <!-- content -->
                 <p class="p-4 text-center bg-white w-75 rounded mx-auto my-2">
                     Please add ratings for each film. <br>
                     All Wes Anderson films are great but this lets you rate your favorite aspects of his work.
                 </p>
+                
                 <!-- form -->
                 <form method="post" action="add_score" class="score-form mx-auto px-2 pt-2">
                     {{ score_form | crispy }}
@@ -55,10 +62,12 @@
             </section>
         </div>
     </div>
+
     <!--Comment Form-->
     <div class="col-md-6">
         <div class="row">
             <section class="default-2 col-10 mx-auto rounded px-1 py-4">
+
                 <!-- heading -->
                 <div class="d-flex justify-content fit-content rounded bg-white mx-auto py-2">
                     <img class="icon mx-2" src="{% static 'images/writing.png' %}" alt="An icon of a letter" width="10"
@@ -67,10 +76,12 @@
                     <img class="icon mx-2" src="{% static 'images/writing.png' %}" alt="Another icon of a letter" width="10"
                         height="10">
                 </div>
+
                 <!-- content -->
                 <p id="comment-form-info" class="p-4 text-center bg-white w-75 rounded mx-auto my-2">
                     Add your comments for each film here. <br>
                 </p>
+
                 <!-- form -->
                 <form method="post" action="add_comment" id="comment-form-id" class="mx-auto px-2 pt-2">
                     {{ comment_form | crispy }}
@@ -84,9 +95,11 @@
         </div>
     </div>
 </div>
+
 <!-- Each Film -->
 {% for movie in films %}
 <div class="container my-5 d-flex flex-column align-items-center">
+
     <!-- Heading -->
     <div class="py-1 px-1 d-flex rounded bg-white fit-content mb-4">
         <img class="icon mx-2" {% if "placeholder" in movie.first_icon.url %} src="{% static 'images/bandit.png' %}"
@@ -103,6 +116,7 @@
         <div class="col-lg-10 p-0 m-0">
             <div
                 class="scroll-container rounded scroll-container-default scroll-container-{{ movie.color_class }} snaps-inline full-width-snap">
+
                 <!-- infomation -->
                 <figure class="default-2 {{ movie.color_class }}-2">
                     <div class="rounded d-flex mx-auto figure-heading">
@@ -116,13 +130,14 @@
                         This is where  all your comments and your rating (if you have made one yet) for {{ movie.title }} will be displayed.<br> Please scroll to view.
                     </p>
                 </figure>
+
                 {% for score in all_scores %}
                 {% if score.movie == movie %}
                 <!-- Rating -->
                 <figure class="default-2 {{ movie.color_class }}-1">
                     <div class="rounded d-flex mx-auto figure-heading">
                         <img class="small-icon mx-2" src="{% static 'images/abacus.png' %}" alt="An abacus" width="10" height="10">
-                        <p class="pt-1 text-center m-0"><strong>Your Rating</strong></p>
+                        <p class="pt-1 text-center m-0">Your Rating</p>
                         <img class="small-icon mx-2" src="{% static 'images/abacus.png' %}" alt="Another icon of an abacus" width="10"
                             height="10">
                     </div>
@@ -146,6 +161,7 @@
                 </figure>
                 {% endif %}
                 {% endfor %}
+
                 <!-- for each movie comment -->
                 {% for comment in all_comments %}
                 {% if comment.film == movie %}
@@ -177,10 +193,11 @@
                 </figure>
                 {% endif %}
                 {% endfor %}
+
                 <!-- notes -->
                 <figure class="default-1 {{ movie.color_class }}-1">
                     <div class="rounded mx-auto figure-heading">
-                       <strong>"Notes"</strong>
+                        "Notes"
                     </div>
                     <p class="info-comment">
                         After approval your comments will be able to be seen in <a class="normal-link"
@@ -188,10 +205,11 @@
                         detail page.<br> Thank you for contributing to the website.
                     </p>
                 </figure>
+
                 <!-- Appendix-->
                 <figure class="default-1 {{ movie.color_class }}-2">
                     <div class="rounded mx-auto figure-heading">
-                        <strong>"Appendix"</strong>
+                        "Appendix"
                     </div>
                     <p class="info-comment">
                         You can add as many comments as you like. You can also delete or edit them at any time.<br>
