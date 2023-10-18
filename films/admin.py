@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import Film, CriticComment, MemberComment, Score
 
+# Admin display for models
+
 
 @admin.register(Film)
 class FilmAdmin(admin.ModelAdmin):

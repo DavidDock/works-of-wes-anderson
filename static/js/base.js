@@ -1,4 +1,4 @@
-// messages taken from CI walkthrough//
+// messages function taken from CI walkthrough//
 
 setTimeout(function () {
     let messages = document.getElementById('msg');

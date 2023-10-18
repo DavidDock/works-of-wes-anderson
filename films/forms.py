@@ -1,6 +1,8 @@
 from .models import MemberComment, Score
 from django import forms
 
+# Comment form
+
 
 class CommentForm(forms.ModelForm):
     class Meta:
@@ -10,6 +12,8 @@ class CommentForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(CommentForm, self).__init__(*args, **kwargs)
         self.fields['content'].label = " add comment (max length - 300)"
+
+# Score form
 
 
 class ScoreForm (forms.ModelForm):
