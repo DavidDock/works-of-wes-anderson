@@ -603,4 +603,8 @@ blockquote::after {
     .scroll-container {
         grid-auto-columns: 75%;
     }
+
+    .lg-width {
+        width: 75%;
+    }
 }
