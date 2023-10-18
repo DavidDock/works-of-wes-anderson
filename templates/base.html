@@ -43,6 +43,7 @@
                 <h1 class="logo-text">Works of Wes Anderson</h1>
             </a>
 
+            <!-- button for hanburger menu -->
             <button class="navbar-toggler px-2" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -52,7 +53,8 @@
                     <span class="menu text-dark">Menu</span>
                 </span>
             </button>
-
+            
+            <!-- Nav links -->
             <div class="collapse navbar-collapse justify-content-end bg-white" id="navbarNavAltMarkup">
                 <div class="navbar-nav d-flex align-items-start">
                     <!-- highlighting active learnt from: https://valerymelou.com/blog/2020-05-04-how-to-highlight-active-links-in-your-django-website -->
@@ -61,7 +63,8 @@
                         href="{% url 'home' %}"><img class="icon pb-2" src="{% static 'images/home.png' %}"
                             alt="Home icon" width="10" height="10">
                         Home</a>
-
+                    
+                    <!-- Movie dropdown menu -->
                     <div class="dropdown my-auto">
                         <button type="button" class="dropdown-toggle p-0 text-left text-dark" data-bs-toggle="dropdown">
                             <img class="icon pb-2" src="{% static 'images/movies.png' %}" alt="Movie reel icon"
@@ -82,6 +85,7 @@
                             {% endfor %}
                         </ul>
                     </div>
+                    
                     {% if user.is_authenticated %}
                     {% url 'member_area' as url %}
                     <a class="nav-link {% if request.path == url %}active{% endif %}" href="{% url 'member_area' %}"><img class="icon pb-2" src="{% static 'images/member.png' %}"
