@@ -31,9 +31,10 @@
                 <div class="close-cont bg-white p-0 rounded">
                     <button class="close m-0 icon-button rounded border-0">X</button>
                 </div>
-            
+
                 <p class="blurb h-auto w-75 bg-white text-center m-auto p-2 p-sm-4 rounded">{{ film.sypnosis }}
                 </p>
+
                 <div class="d-flex p-1 m-0 align-items-center justify-content-center">
                     <button class="trailer bg-white p-1 rounded border-0 text-dark" data-bs-toggle="modal"
                         aria-label="Press to open trailer window" data-bs-target="#videoModal">TRAILER</button>
@@ -134,6 +135,7 @@
                 <h2 class="ps-2 pe-2 text-center text-decoration-underline fs-5">Average<br>Member Ratings</h2><img class="icon pb-2"
                     src="{% static 'images/abacus.png' %}" alt="Icon of a abacus" width="10" height="10">
             </div>
+
             <!-- average scores -->
             <div class="d-flex justify-content-around text-center">
                 <div class="bg-white rounded p-1">
@@ -141,28 +143,31 @@
                     {% if average_style == none %}
                     <p>No ratings yet</p>
                     {% else %}
-                    <p >STYLE:<br>{{ average_style|floatformat }}/5</p>
+                    <p >STYLE:<br>{{ average_style|floatformat:0 }}/5</p>
                     {% endif %}
                 </div>
+
                 <div class="bg-white rounded p-1">
                     <img class="icon pb-lg-2" src="{% static 'images/humour.png' %}" alt="Icon of comedy masks" width="10" height="10">
                     {% if average_humour == none %}
                     <p>No ratings yet</p>
                     {% else %}
-                    <p>HUMOUR:<br>{{ average_humour|floatformat }}/5</p>
+                    <p>HUMOUR:<br>{{ average_humour|floatformat:0 }}/5</p>
                     {% endif %}
                 </div>
+
                <div class="bg-white rounded p-1">
                     <img class="icon pb-lg-2" src="{% static 'images/story.png' %}" alt="Icon of a book" width="10" height="10">
                     {% if average_story == none %}
                     <p>No ratings yet</p>
                     {% else %}
-                    <p >STORY:<br>{{ average_story|floatformat }}/5</p>
+                    <p >STORY:<br>{{ average_story|floatformat:0 }}/5</p>
                     {% endif %}
                 </div>
             </div>
         </div>
-        <!-- link to either member area or register-->
+
+        <!-- link to either member area or register -->
         <div class="d-flex bg-white rounded head mx-auto my-4"><img class="icon pb-lg-2" src="{% static 'images/abacus.png' %}"
                 alt="Icon of a abacus" width="10" height="10">
             <p class="ps-2 pe-2 text-center">Add your rating and comments {% if user.is_authenticated %}
@@ -172,6 +177,7 @@
                 {% endif %}</p><img class="icon pb-2" src="{% static 'images/writing.png' %}" alt="Icon of a letter" width="10"
                 height="10">
         </div>
+        
     </div>
 </div>
 
