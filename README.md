@@ -1,5 +1,7 @@
 # Works Of Wes Anderson  
 
+![Responsive](/documentation/design/responsive.png)
+
 Visit the deployed site: [Works-Of-Wes-Anderson](https://works-of-wes-anderson-b656acb2e110.herokuapp.com/)
 
 Works Of Wes Anderson is a website made to celebrate the films of Wes Anderson.  
@@ -23,8 +25,23 @@ Members can sign in, have their say and rate the qualities of each film.
       - [Member Area](#member-area)
     - [Languages Used](#languages-used)
     - [Model Structure](#model-structure)
+      - [Film model](#film-model)
+      - [Critic Comment Model](#critic-comment-model)
+      - [Member Comment Model](#member-comment-model)
+      - [Score Model](#score-model)
   - [Agile Methodology](#agile-methodology)
   - [Features](#features)
+    - [Nav Bar](#nav-bar)
+    - [Footer](#footer)
+    - [Home](#home)
+    - [Film Detail](#film-detail-1)
+    - [Member Area](#member-area-1)
+      - [Each Film](#each-film)
+      - [Add Comment](#add-comment)
+      - [Rating](#rating)
+      - [Edit/Delete Comment](#editdelete-comment)
+    - [Log In/Out/Register](#log-inoutregister)
+    - [Error Pages](#error-pages)
     - [Favicon](#favicon)
     - [Accessibility](#accessibility)
     - [Future Implementations](#future-implementations)
@@ -92,17 +109,65 @@ Each film has one image, it's poster. A more unique poster was chosen to add int
 
 ### Languages Used
 
-### Model Structure
+### Model Structure  
 
-![Model-Diagram](/documentation/design/works-of-wes-anderson-database-diagram.png)
+Below is the model structure of the website.  
+
+![Model-Diagram](/documentation/design/works-of-wes-anderson-database-diagram.png)  
+
+#### Film model  
+
+This is for the Admin to add a new Wes Anderson film.  
+All fields are required except the color class and icons. If these are not given default colors and icons will be used.  
+The Trailer link was taken from the film's Youtube embed link and the posters from The [The-Poster-DB](https://theposterdb.com/).  
+
+#### Critic Comment Model  
+
+This is for the Admin to add critic comments for each film, it has a film field as a foriegn key for the film commented on.  
+
+#### Member Comment Model  
+
+This is for a member to add a comment for each film, it has foriegn keys for each film and user.  
+Each comment has an approved setting which is set to false until the admin approves it.  
+
+#### Score Model  
+
+This is for a member to add a rating for each film, it has foriegn keys for each film and user.  
+Each category of rating has a choice of 1-5.  
 
 ## Agile Methodology
 
-Please refer to [AGILE.MD](AGILE.md)
+Please refer to [AGILE.MD](AGILE.md)  
 
 ## Features
 
-### Favicon
+### Nav Bar
+
+### Footer
+
+### Home
+
+### Film Detail
+
+### Member Area
+
+#### Each Film
+
+#### Add Comment
+
+#### Rating
+
+#### Edit/Delete Comment
+
+### Log In/Out/Register
+
+### Error Pages
+
+### Favicon  
+
+A Favicon was created for this website at [Favicon.io](https://favicon.io/).
+
+![Responsive](/documentation/design/favicon-example.png)
 
 ### Accessibility
 
