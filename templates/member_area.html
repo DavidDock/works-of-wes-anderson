@@ -86,8 +86,7 @@
                 <form method="post" action="add_comment" id="comment-form-id" class="mx-auto px-2 pt-2">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" id="subcom" class="sign-button fit-content fit-content-height border-0 rounded p-1 bg-white mx-2 mt-4 text-dark"
-                        aria-label="Add comment">
+                    <button type="submit" id="subcom" class="sign-button fit-content fit-content-height border-0 rounded p-1 bg-white mx-2 mt-4 text-dark">
                         Submit
                     </button>
                 </form>
@@ -181,11 +180,11 @@
 
                     <!-- delete and edit buttons -->
                     <div class="d-flex">
-                        <button class="btn-delete fit-content fit-content-height icon-button bg-white border-0 rounded p-0"
+                        <button type="button" class="btn-delete fit-content fit-content-height icon-button bg-white border-0 rounded p-0"
                             value="{{ comment.id }}" name="{{ movie.slug }}" aria-label="Press to open delete confirm window">
                             <img class="icon-button" src="{% static 'images/bin.png' %}" alt="Rubbish Bin" width="10" height="10">
                         </button>
-                        <button class="btn-edit fit-content fit-content-height ms-4 icon-button border-0 rounded p-0"
+                        <button type="button" class="btn-edit fit-content fit-content-height ms-4 icon-button border-0 rounded p-0"
                             value="{{ comment.id }}" name="{{ movie.id }}" title="{{ movie.title }}" aria-label="Edit comment">
                             <img class="icon-button" src="{% static 'images/pencil.png' %}" alt="Pencil" width="10" height="10">
                         </button>
