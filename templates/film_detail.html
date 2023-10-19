@@ -11,7 +11,7 @@
         <div class="col-lg-4 col-sm-8 col-md-6 mx-auto film-image-container py-lg-2 pt-4">
 
             <!-- Poster side -->
-            <button class="film-poster-container border-0 d-flex align-items-center default-1 justify-content-center {{ film.color_class }}-1 rounded flippers" aria-label="Press to see more film details">
+            <button class="film-poster-container border-0 d-flex align-items-center default-1 justify-content-center {{ film.color_class }}-1 rounded flippers" aria-label="Press for sypnosis and {{ film.title }} information.">
 
                 <img class="icon bg-white bottom-left m-2 rounded" {% if "placeholder" in film.first_icon.url %}
                     src="{% static 'images/backpack.png' %}" alt="Icon of a backpack " width="10" height="10" {% endif %}
