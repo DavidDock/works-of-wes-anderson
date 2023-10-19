@@ -258,11 +258,17 @@ No problems found, see results below.
 
 [JS Hint](https://jshint.com/) was used to test the javascript code.
 
-The validation was completed to all the javascript written for this site. Only the relevant javascript needed was linked to the template.  
-The warnings given regarding an undefined variable "bootstrap", which is an external libary used.  
-See the results blow.
+The validation was completed on all the javascript written for this website. Only the relevant javascript needed is linked to the template that needs it.  
+I wanted to try new learning in this project by using JQuery when I could but vanilla javascript was used too when needed. These functions work well but I am aware that the script could possibly be streamlined, this can be looked at at a future date.  
+The warnings given are referencing an undefined variable "bootstrap", which is an external libary used.  
+See the results and manual testing below.
 
-### base.js
+### base.js  
+
+This comprises of two functions:  
+
+* The first being to timeout the messages. I have manually tested this on all messages and it works well.
+* The second function was made to add style to the bootstrap hamburger menu and change the hamburger to an envelope to open and close on click. I have manually tested this many times and it works well.
 
 <details><summary>Validator</summary>
 
@@ -271,12 +277,23 @@ See the results blow.
 
 ### comments.js
 
+This has three functions:
+
+* The first one makes sure the text area on the form is clear once the page is loaded. This has been manually tested and works well.
+* The second function is activated when the 'delete' button is pressed on any comment. It makes the 'delete confirm' button on the modal have the correct href with relevent comment id and slug. This has been manually tested and works well.
+* The last function is activated when the 'edit' button is pressed on any comment. It changes relevent text on the form, puts the form to the correct film value and gives the action the comment id so when the submit button is pressed it goes to the correct view. This has been manually tested and works well.
+
 <details><summary>Validator</summary>
 
 ![Comments Javascript](documentation/testing/comments-js.png)
 </details>
 
 ### film.js
+
+Here there are two functions:
+
+* The toggle function hides and shows the film information or film poster when the relevent button is pressed. This has been manually tested and works well.
+* The other function makes sure the youtube video stops playing when the close button on the modal is pressed. This has also been tested manually and works well.
 
 <details><summary>Validator</summary>
 
