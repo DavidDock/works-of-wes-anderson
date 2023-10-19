@@ -11,7 +11,7 @@ class CommentForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(CommentForm, self).__init__(*args, **kwargs)
-        self.fields['content'].label = " add comment (max length - 300)"
+        self.fields['content'].label = " add comment (max length - 250)"
 
 # Score form
 
