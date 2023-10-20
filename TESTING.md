@@ -9,6 +9,7 @@
 * [Lighthouse](#lighthouse)
 * [Wave](#wave)
 * [Manual Testing](#manual-testing)
+* [Other Bugs And Errors](#other-bugs-and-errors)
 
 ## User Story Testing  
 
@@ -261,14 +262,14 @@ No problems found, see results below.
 The validation was completed on all the javascript written for this website. Only the relevant javascript needed is linked to the template that needs it.  
 I wanted to try new learning in this project by using JQuery when I could but vanilla javascript was used too when needed. These functions work well but I am aware that the script could possibly be streamlined, this can be looked at at a future date.  
 The warnings given are referencing an undefined variable "bootstrap", which is an external libary used.  
-See the results and manual testing below.
+See the results functionality and manual testing below.
 
 ### base.js  
 
 This comprises of two functions:  
 
-* The first being to timeout the messages. I have manually tested this on all messages and it works well.
-* The second function was made to add style to the bootstrap hamburger menu and change the hamburger to an envelope to open and close on click. I have manually tested this many times and it works well.
+* The first being to timeout the messages. I have manually tested this on all messages and it gives the required timeout result.
+* The second function was made to add style to the bootstrap hamburger menu and change the hamburger to an envelope to open and close on click. Manually tested by pressing navbar toggle button and getting the required result.
 
 <details><summary>Validator</summary>
 
@@ -279,9 +280,9 @@ This comprises of two functions:
 
 This has three functions:
 
-* The first one makes sure the text area on the form is clear once the page is loaded. This has been manually tested and works well.
-* The second function is activated when the 'delete' button is pressed on any comment. It makes the 'delete confirm' button on the modal have the correct href with relevent comment id and slug. This has been manually tested and works well.
-* The last function is activated when the 'edit' button is pressed on any comment. It changes relevent text on the form, puts the form to the correct film value and gives the action the comment id so when the submit button is pressed it goes to the correct view. This has been manually tested and works well.
+* The first one makes sure the text area on the form is clear once the page is loaded. Manually tested by visiting the member area after editing a comment and all text areas are empty.
+* The second function is activated when the 'delete' button is pressed on any comment. It makes the 'delete confirm' button on the modal have the correct href with relevent comment id and slug. Manually tested by pressing the delete buttons, all above above expected outcomes met and works well.
+* The last function is activated when the 'edit' button is pressed on any comment. It changes relevent text on the form, puts the form to the correct film value and gives the action the comment id so when the submit button is pressed it goes to the correct view. Manually tested by pressing the edits buttons, all above expected above outcomes met and works well.
 
 <details><summary>Validator</summary>
 
@@ -292,8 +293,8 @@ This has three functions:
 
 Here there are two functions:
 
-* The toggle function hides and shows the film information or film poster when the relevent button is pressed. This has been manually tested and works well.
-* The other function makes sure the youtube video stops playing when the close button on the modal is pressed. This has also been tested manually and works well.
+* The toggle function hides and shows the film information or film poster when the relevent button is pressed. Manually tested by pressing the toggle button and all above expected outcomes met.
+* The other function makes sure the youtube video stops playing when the close button on the modal is pressed. Manualy tested by playing trailer and closing, expected outcome of video stopping met.
 
 <details><summary>Validator</summary>
 
@@ -304,9 +305,41 @@ Here there are two functions:
 
 ### Problems/Bugs highlighted and how they were fixed  
 
+* Trailing / on images - Removed to fix issues.
+* Multi ID error on full-width-snap-container css ID - Changed to class to fix.
+* 'Figurecaption' incorrectly used - Changed to resolve error.
+* 'Div' element within 'button' - Changed to span fix error.
+* 'frameboarder and aria-labeldby' not needed in iframe - Removed to fix error.
+* Attribute 'comment-id' not avaliable for button element - Tis was changed to the attribute 'name'.
+
 ### Final Test Results
 
+<details><summary>Home</summary>
+
+![HTML Validator Home](documentation/testing/html-home.png)
+</details>
+
+<details><summary>Film</summary>
+
+![HTML Validator Film](documentation/testing/html-film.png)
+</details>
+
+<details><summary>Member</summary>
+
+![HTML Validator Member](documentation/testing/html-member.png)
+</details>
+
+<details><summary>Error</summary>
+
+![HTML Validator Error](documentation/testing/html-error.png)
+</details>
+
 ## CSS Validator  
+
+<details><summary>Validator</summary>
+
+![CSS Validator](documentation/testing/css-validator.png)
+</details>
 
 ### Problems/Bugs highlighted and how they were fixed  
 
@@ -316,12 +349,78 @@ Here there are two functions:
 
 ### Problems/Bugs highlighted and how they were fixed  
 
-### Final Test Results
+* To improve the performance score each image height and width was added.
+* Unnecessary aria labels were removed to improve accessibility scores.
+
+### Final Test Results  
+
+Below are the results of the desktop tests. The mobile results are the same but with lower performance scores due to the time the images take to render.  
+
+<details><summary>Home</summary>
+
+![Lighthouse Home](documentation/testing/lighthouse-home.png)
+</details>
+
+<details><summary>Film</summary>
+
+![Lighthouse Film](documentation/testing/lighthouse-film.png)
+</details>
+
+<details><summary>Member</summary>
+
+![Lighthouse Member](documentation/testing/lighthouse-member.png)
+</details>
+
+<details><summary>Login</summary>
+
+![Lighthouse Login](documentation/testing/lighthouse-login.png)
+</details>
+
+<details><summary>Logout</summary>
+
+![Lighthouse Logout](documentation/testing/lighthouse-logout.png)
+</details>
+
+<details><summary>Register</summary>
+
+![Lighthouse Signup](documentation/testing/lighthouse-signup.png)
+</details>
 
 ## Wave  
 
 ### Problems/Bugs highlighted and how they were fixed
 
-### Final Test Results
+* Wave suggested underlined text be removed to avoid confusion with link text.  
+  Underlined text was removed as per suggestion.  
+* The heading of the delete modal skipped the heading level so was altered to fix the issue.
+* In the signup template a broken link was found to the login area- this was fixed.
 
-## Manual Testing
+### Final Test Results  
+
+No errors found after final testing.  
+There are alerts regarding Redundant links.  
+I have considered removing the links mentioned but I have decided to keep them.  
+I feel The Logo 'home' link is needed especially in mobile devices when the toggle nav is closed. Extra links to signing up/member-area were added to encourage the user becoming a member and showing the benifits of registering.  
+
+<details><summary>Alert</summary>
+
+![Wave Alerts](documentation/testing/wave-alert.png)
+</details>  
+
+## Manual Testing  
+
+## Other Bugs and Errors  
+
+* Images added in the film model CloudinaryField produced an error found in dev tools console stating the image was HTTP instead of the prefered HTTPS.  
+This automatically should have been converted to a HTTPS image acording to the cloudinary documention but was not.  
+The fix was eventually found in the cloudinary documentation - 'cloudinary.convig secure=true' was added in settings.py which resolved the issue.  
+* Once the trailer is played in the film detail page there is a console error due to the embeded Youtube video that can not be fixed at this time. It refers to "ensure CORS response header values are valid". I have researched this and the issue seems to be between Google and Youtube so I am unable to fix this error. This error does not effect the functionality of the site but I plan to research this error more at a future date. This error does not occur if I remove the Youtube iframe. The error can be found below.
+  <details><summary>CORS Error</summary>
+
+  ![CORS Error](documentation/testing/cors-error.png)
+  </details>
+* Linked to the above issue, there are two issues in dev-tools relating to the embeded Youtube iframe form field in the film detail page. This seems to be an external issue with Youtube's iframe. I researched for a fix to this but I could not find one, I will re visit this in the future to see if there is a work around. This error does not occur if I remove the Youtube iframe.
+  <details><summary>Youtube Form</summary>
+
+  ![Youtube Form](documentation/testing/youtube-form.png)
+  </details>
