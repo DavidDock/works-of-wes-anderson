@@ -230,8 +230,8 @@ The use of context-processors was Learnt from https://djangocentral.com/how-to-c
 
 The use of scroll containers was learnt from <https://www.youtube.com/watch?v=3yfswsnD2sw>  
 
-For highlighting active links -: https://valerymelou.com/blog/2020-05-04-how-to-highlight-active-links-in-your-django-website
+For highlighting active links learnt from https://valerymelou.com/blog/2020-05-04-how-to-highlight-active-links-in-your-django-website
 
-Reading the official documentaion for each libary was useful for many elements of the site.
+Reading the official documentaion for each libary used was useful for many elements of the website.
 
 ## Content and Media

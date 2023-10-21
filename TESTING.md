@@ -14,7 +14,9 @@
 
 ## User Story Testing  
 
-### 15 Site Admin
+### 15 Site Admin  
+
+As Site Admin I am able to access the admin page so I can create, edit and delete relevant items
 
 #### Acceptance Criteria
 
@@ -22,19 +24,23 @@ The admin page is visible when Admin is logged in
 
 #### Results  
 
-Admin page visible - pass
+The acceptance criteria was met allowing site admin to easily view, create and edit all relevant items once logged in as admin and on the /admin url.
 
-### 16 Home Page
+### 16 Home Page  
 
-#### Acceptance Criteria
+As a Site User I can see an About message on the landing page so I clearly know what to expect from the website.
+
+#### Acceptance Criteria  
 
 The about message is displayed on the Home/Landing page
 
 #### Results  
 
-About message visable and also differs for exisiting user - pass
+The acceptance criteria was met allowing the user to view the about message on the home page. The message is clear and also provides a link to become a member or go to the member area depending on if the user is logged in or not.
 
-### 17 Initial Navigation Bar
+### 17 Initial Navigation Bar  
+
+As a Site User I can clearly see how to navigate the site so I can find what I'm looking for.
 
 #### Acceptance Criteria
 
@@ -45,12 +51,11 @@ About message visable and also differs for exisiting user - pass
 
 #### Results  
 
-* The navigation is visible with all links relevant to member loggin or not - pass
-* The logo and home is linked to home page - pass
-* The home link is active - pass
-* the footer is present - pass
+All acceptance criteria was met. The navigation bar is clear and allows the user to easily navigate the website and letting them know what page is active. It is responsive to different devices with a hamburger toggle for smaller devices which works well and is clear.
 
-### 18 Add Film Information
+### 18 Add Film Information  
+
+As Site Admin I can create different Films profiles so the website can display their information
 
 #### Acceptance Criteria
 
@@ -58,19 +63,23 @@ The ability for site Admin to create new Film objects on Admin site
 
 #### Results
 
-The admin can add a new film - pass
+The Admin can easily add a new film whilst in the admin area.
 
-### 19 View Films On About Page
+### 19 View Films On About Page  
+
+As a Site User I want to see all the Films on the about page so I know what films there are and can select one to see detail
 
 #### Acceptance Criteria
 
-You can see each film poster on the about page
+You can see each film poster on the about page.
 
 #### Results
 
-Each poster is displayed on about page - pass
+Each film poster is clearly displayed on the about page for the user to see.
 
-### 20 Film Detail Page
+### 20 Film Detail Page  
+
+As a Site User I would like to see a page for each film so I can see film information
 
 #### Acceptance Criteria
 
@@ -79,10 +88,11 @@ Each poster is displayed on about page - pass
 
 #### Results
 
-* Each poster link goes to the relevant film detail page - pass
-* Each Film shows relevent information - pass
+The user can navigate to each film detail page easily by pressing the link in the nav bar or on the poster in the about page. All the film details can be seen in the relevent film detail page.
 
-### 21 Critic Comments
+### 21 Critic Comments  
+
+As a Site User I want to see what the critics comments so I can have further information.
 
 #### Acceptance Criteria
 
@@ -90,19 +100,23 @@ You can see all critic comments about each film
 
 #### Results  
 
-All critics comments can be seen on the relevent film detail page - pass
+The user can view all critics comments on the relevent film detail page.
 
-### 22 Member Registration
+### 22 Member Registration  
+
+As a Site User I can register as a member so I can interact with the site content.
 
 #### Acceptance Criteria
 
-A user can register an account
+A user can register an account.
 
 #### Results
 
-A user can register an account, added to the database - pass
+A User can easily register by going to the sign up area and creating an account. The registration form is clear, easy to use and understand. The registration link is only visible if the user is not logged in to make navigation clearer.
 
-### 23 Log In and Log Out
+### 23 Log In and Log Out  
+
+As a Site User I want to log in and out so I can interact with the site content.
 
 #### Acceptance Criteria
 
@@ -110,9 +124,11 @@ A user can log in and log out
 
 #### Results
 
-A user can login and logout -pass
+A user can login and logout easliy when going to the relevent page. Only the relevent links are visible whether the user is already logged in or not.
 
-### 24 View Member Comments
+### 24 View Member Comments  
+
+As a Site User I would like to be able to view members comments so I can see peoples opinions/appreciation for the films.
 
 #### Acceptance Criteria
 
@@ -120,9 +136,11 @@ All authorised member comments are displayed on each film detail
 
 #### Results
 
-Once a comment is authorised by admin it is visible in the film detail area - pass
+Once a comment is authorised by admin it is visible in the relevant film detail area.
 
-### 25 Member Area Page
+### 25 Member Area Page  
+
+As a Logged in member I would like to have an area where I can see all my comments.
 
 #### Acceptance Criteria
 
@@ -130,9 +148,11 @@ Be able to view a member area page where only logged in members can visit
 
 #### Results
 
-If you are a member you can log in and go to a member area - pass
+If the user is a member they can log in and go to the member area. This link is only visible to logged in members and is clear to navigate to.
 
-### 26 Member Can Add Comment
+### 26 Member Can Add Comment  
+
+As a Logged in Member I would like to add comments for each film so that I can share my thoughts.
 
 #### Acceptance Criteria
 
@@ -143,12 +163,11 @@ If you are a member you can log in and go to a member area - pass
 
 #### Results
 
-* You can add a comment for any film you like in a form in the membe area - pass
-* If the user posts a comment it gets sent for approval and message sent to the user - pass
-* Once the comment is sent for aproval it can be seen in the member area wit awaiting approval style added to it -pass
-* Admin able to aprove comment - pass
+All acceptance criteria is met. The process of adding a comment is clear with simple instruction and a straight forward form to fill in. Once a comment is added to the database a clear message is given to the user and the comment can be seen in the member area under the film the comment was made in. This comment is labeled with pending approval until the admin approves the comment.
 
-### 27 Member Can Edit Comments
+### 27 Member Can Edit Comments  
+
+As a Logged in Member I would like to edit my comments so I can amend mistakes and change my opinion.
 
 #### Acceptance Criteria
 
@@ -159,12 +178,11 @@ If you are a member you can log in and go to a member area - pass
 
 #### Results
 
-* If user presses edit, the form ppultes correctly - pass
-* When comment is edited the message reads awiting approval - pass
-* Admin can see edited comment - pass
-* User can see pending approval message and styles in member area - pass
+All acceptance criteria is met. If the user presses the edit button the form scrolls into view, popultes correctly and changes instruction message. This all makes the process of editing the comment straight forward.
 
-### 28 Member Can Delete Comments
+### 28 Member Can Delete Comments  
+
+As a Logged in Member I would like to delete my comment if I want my comment removed.
 
 #### Acceptance Criteria
 
@@ -176,12 +194,11 @@ If you are a member you can log in and go to a member area - pass
 
 #### Results  
 
-* User presses confim button and comment deleted - pass
-* A message is asked when delete button is pressed and confirm modal is opened - pass
-* A message is given when delete is confirmed - pass
-* The comment cant be seen in the member area, film area or admin and database - pass 
+All acceptance criteria is met. Once the delete button is pressed all instructions are clear and functionality works well.
 
-### 29 Member Can Rate File By Category
+### 29 Member Can Rate File By Category  
+
+As a Logged in Member I would like to rate each film by category to contribute to the sites content and share opinion.
 
 #### Acceptance Criteria
 
@@ -192,10 +209,10 @@ If you are a member you can log in and go to a member area - pass
 
 #### Results  
 
-* The rating can be added and seen in the member area and added to the database - pass
-* A successful messge is sent when a valid score is sent - pass
 
-### 30 Ability For Member To Delete Score
+### 30 Ability For Member To Delete Score  
+
+As a Logged in Member I would like to be able to delete my score in case I change my mind.
 
 #### Acceptance Criteria
 
@@ -206,10 +223,9 @@ If you are a member you can log in and go to a member area - pass
 
 #### Results
 
-* The User can delete a score with confimation message from website and databae - pass
-* It was decided that no confirmation question was nedded to impove ux
+### 31 View Average Scores  
 
-### 31 View Average Scores
+As a Site User I would like to see average score for each category so I know other members opinions.
 
 #### Acceptance Criteria
 
@@ -217,7 +233,9 @@ Can see average score for Comedy, Style and Story for each film in film_detail.h
 
 #### Results
 
-### 37 Favicon
+### 37 Favicon  
+
+As a user I would like to easily identify the websites tab so I can access it quickly.
 
 #### Acceptance Criteria
 
@@ -225,9 +243,11 @@ Favicon visible
 
 #### Results
 
-Favicon visible - pass
+The favicon is clear to see and relevant to the website.
 
-### 38 Error Pages
+### 38 Error Pages  
+
+As a Developer I would like the user to see custom error pages to provide good user experience.
 
 #### Acceptance Criteria
 
@@ -236,7 +256,7 @@ Favicon visible - pass
 
 #### Results  
 
-Error pages created and shown for relevant error with link to home page - pass
+There are error pages made for relevant errors with a link back to home page to ensure a good user experience.
 
 ## Browser Testing
 
@@ -259,7 +279,7 @@ Responsiveness was tested throughout the development by using dev tools on every
 I focused on whether the site works on small devices of 300px wide and also the larger breakpoint of 1024px plus wide. This website is fully responsive on all devices.  
 The use of bootstap responsive classes were used on most of the features to ensure responsivness but the odd media query was added when needed.  
 As well as using [responsivedesignchecker.com](https://www.responsivedesignchecker.com
-) on avaliable pages the reponsivness was tested on various mobile phone and laptop.  
+) on avaliable pages the reponsivness was tested on various mobile phones, laptop and an Ipad.  
 Lots of adjustments throughtout development were made to ensure responsive design.  
 
 ## Python Validator
