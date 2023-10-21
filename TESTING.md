@@ -14,7 +14,7 @@
 
 ## User Story Testing  
 
-### 15 Site Admin  
+### Site Admin (#15)  
 
 As Site Admin I am able to access the admin page so I can create, edit and delete relevant items
 
@@ -26,7 +26,7 @@ The admin page is visible when Admin is logged in
 
 The acceptance criteria was met allowing site admin to easily view, create and edit all relevant items once logged in as admin and on the /admin url.
 
-### 16 Home Page  
+### Home Page (#16)  
 
 As a Site User I can see an About message on the landing page so I clearly know what to expect from the website.
 
@@ -38,7 +38,7 @@ The about message is displayed on the Home/Landing page
 
 The acceptance criteria was met allowing the user to view the about message on the home page. The message is clear and also provides a link to become a member or go to the member area depending on if the user is logged in or not.
 
-### 17 Initial Navigation Bar  
+### Initial Navigation Bar (#17)
 
 As a Site User I can clearly see how to navigate the site so I can find what I'm looking for.
 
@@ -53,7 +53,7 @@ As a Site User I can clearly see how to navigate the site so I can find what I'm
 
 All acceptance criteria was met. The navigation bar is clear and allows the user to easily navigate the website and letting them know what page is active. It is responsive to different devices with a hamburger toggle for smaller devices which works well and is clear.
 
-### 18 Add Film Information  
+### Add Film Information (#18)
 
 As Site Admin I can create different Films profiles so the website can display their information
 
@@ -65,7 +65,7 @@ The ability for site Admin to create new Film objects on Admin site
 
 The Admin can easily add a new film whilst in the admin area.
 
-### 19 View Films On About Page  
+### View Films On About Page (#19)
 
 As a Site User I want to see all the Films on the about page so I know what films there are and can select one to see detail
 
@@ -77,7 +77,7 @@ You can see each film poster on the about page.
 
 Each film poster is clearly displayed on the about page for the user to see.
 
-### 20 Film Detail Page  
+### Film Detail Page (#20)
 
 As a Site User I would like to see a page for each film so I can see film information
 
@@ -90,7 +90,7 @@ As a Site User I would like to see a page for each film so I can see film inform
 
 The user can navigate to each film detail page easily by pressing the link in the nav bar or on the poster in the about page. All the film details can be seen in the relevent film detail page.
 
-### 21 Critic Comments  
+### Critic Comments (#21)
 
 As a Site User I want to see what the critics comments so I can have further information.
 
@@ -102,7 +102,7 @@ You can see all critic comments about each film
 
 The user can view all critics comments on the relevent film detail page.
 
-### 22 Member Registration  
+### Member Registration (#22)
 
 As a Site User I can register as a member so I can interact with the site content.
 
@@ -114,7 +114,7 @@ A user can register an account.
 
 A User can easily register by going to the sign up area and creating an account. The registration form is clear, easy to use and understand. The registration link is only visible if the user is not logged in to make navigation clearer.
 
-### 23 Log In and Log Out  
+### Log In and Log Out (#23)
 
 As a Site User I want to log in and out so I can interact with the site content.
 
@@ -126,7 +126,7 @@ A user can log in and log out
 
 A user can login and logout easliy when going to the relevent page. Only the relevent links are visible whether the user is already logged in or not.
 
-### 24 View Member Comments  
+### View Member Comments (#24)  
 
 As a Site User I would like to be able to view members comments so I can see peoples opinions/appreciation for the films.
 
@@ -138,7 +138,7 @@ All authorised member comments are displayed on each film detail
 
 Once a comment is authorised by admin it is visible in the relevant film detail area.
 
-### 25 Member Area Page  
+### Member Area Page (#25)
 
 As a Logged in member I would like to have an area where I can see all my comments.
 
@@ -150,7 +150,7 @@ Be able to view a member area page where only logged in members can visit
 
 If the user is a member they can log in and go to the member area. This link is only visible to logged in members and is clear to navigate to.
 
-### 26 Member Can Add Comment  
+### Member Can Add Comment (#26)
 
 As a Logged in Member I would like to add comments for each film so that I can share my thoughts.
 
@@ -165,7 +165,7 @@ As a Logged in Member I would like to add comments for each film so that I can s
 
 All acceptance criteria is met. The process of adding a comment is clear with simple instruction and a straight forward form to fill in. Once a comment is added to the database a clear message is given to the user and the comment can be seen in the member area under the film the comment was made in. This comment is labeled with pending approval until the admin approves the comment.
 
-### 27 Member Can Edit Comments  
+### Member Can Edit Comments (#27)
 
 As a Logged in Member I would like to edit my comments so I can amend mistakes and change my opinion.
 
@@ -180,7 +180,7 @@ As a Logged in Member I would like to edit my comments so I can amend mistakes a
 
 All acceptance criteria is met. If the user presses the edit button the form scrolls into view, popultes correctly and changes instruction message. This all makes the process of editing the comment straight forward.
 
-### 28 Member Can Delete Comments  
+### Member Can Delete Comments (#28)
 
 As a Logged in Member I would like to delete my comment if I want my comment removed.
 
@@ -196,7 +196,7 @@ As a Logged in Member I would like to delete my comment if I want my comment rem
 
 All acceptance criteria is met. Once the delete button is pressed all instructions are clear and functionality works well.
 
-### 29 Member Can Rate File By Category  
+### Member Can Rate File By Category (#29)
 
 As a Logged in Member I would like to rate each film by category to contribute to the sites content and share opinion.
 
@@ -211,7 +211,7 @@ As a Logged in Member I would like to rate each film by category to contribute t
 
 All acceptance criteria is met. The form in the member area is easy to use and all functionality works well. The users score can be clearly seen in the relevant film section of the member area. Only one rating per film can be added and a message is given to the user if they try to add another.
 
-### 30 Ability For Member To Delete Score  
+### Ability For Member To Delete Score (#30)
 
 As a Logged in Member I would like to be able to delete my score in case I change my mind.
 
@@ -226,7 +226,7 @@ As a Logged in Member I would like to be able to delete my score in case I chang
 
 I decedided not to ask for confirmation after the delete button is pressed, I felt that this was not needed as it is easy to add another score and it makes for a smoother user experience. All the other acceptance criteria is met and works well.
 
-### 31 View Average Scores  
+### View Average Scores (#31)
 
 As a Site User I would like to see average score for each category so I know other members opinions.
 
@@ -238,7 +238,7 @@ Can see average score for Comedy, Style and Story for each film in film_detail.h
 
 The user can clearly see the average member ratings in the relevant film detail page, this number is rounded to the nearest whole number.
 
-### 37 Favicon  
+### Favicon (#37)  
 
 As a user I would like to easily identify the websites tab so I can access it quickly.
 
@@ -250,7 +250,7 @@ Favicon visible
 
 The favicon is clear to see and relevant to the website.
 
-### 38 Error Pages  
+### Error Pages (#38)
 
 As a Developer I would like the user to see custom error pages to provide good user experience.
 
