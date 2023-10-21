@@ -23,13 +23,15 @@ Members can sign in, have their say and rate the qualities of each film.
       - [Home Page](#home-page)
       - [Film Detail](#film-detail)
       - [Member Area](#member-area)
-    - [Languages Used](#languages-used)
     - [Model Structure](#model-structure)
       - [Film model](#film-model)
       - [Critic Comment Model](#critic-comment-model)
       - [Member Comment Model](#member-comment-model)
       - [Score Model](#score-model)
   - [Agile Methodology](#agile-methodology)
+  - [Technologies Used](#technologies-used)
+    - [Languages Used](#languages-used)
+    - [Frameworks Libaries and Programs Used](#frameworks-libaries-and-programs-used)
   - [Features](#features)
     - [Nav Bar](#nav-bar)
     - [Footer](#footer)
@@ -53,7 +55,7 @@ Members can sign in, have their say and rate the qualities of each film.
   - [Credits](#credits)
     - [Learning](#learning)
     - [New learning](#new-learning)
-  - [Content and Media](#content-and-media)
+  - [Media](#media)
 
 ## User Experience
 
@@ -107,8 +109,6 @@ Each film has one image, it's poster. A more unique poster was chosen to add int
 
 ![Member-Area-Wireframe](/documentation/design/member-area.png)
 
-### Languages Used
-
 ### Model Structure  
 
 Below is the model structure of the website.  
@@ -119,7 +119,7 @@ Below is the model structure of the website.
 
 This is for the Admin to add a new Wes Anderson film.  
 All fields are required except the color class and icons. If these are not given default colors and icons will be used.  
-The Trailer link was taken from the film's Youtube embed link and the posters from The [The-Poster-DB](https://theposterdb.com/).  
+The Trailer link was taken from the film's Youtube embed link, the posters from The [The-Poster-DB](https://theposterdb.com/) and icons from [The-Noun-Project](https://thenounproject.com/).
 
 #### Critic Comment Model  
 
@@ -138,6 +138,31 @@ Each category of rating has a choice of 1-5.
 ## Agile Methodology
 
 Please refer to [AGILE.MD](AGILE.md)  
+
+## Technologies Used  
+
+### Languages Used  
+
+- HTML
+- CSS
+- Javascript
+- Python
+
+### Frameworks Libaries and Programs Used  
+
+- Git - Used for version control
+- GitHub - Used to store the repository and GitHub projects for the Kanban board
+- Django - Used as the framework
+- Codeanywhere - Used as the development environment
+- Bootstrap - Used to help build a responsive website
+- Jquery - Used to help create the javascript functions
+- Django allauth - Used for account registration
+- Django crispy forms - Used to display forms
+- Cloudinary - Used to store and serve images
+- [ElephantSQL](https://www.elephantsql.com/) - Used for the database
+- [Google Fonts](https://fonts.google.com/) - Used for the font
+- [balsamiq](https://balsamiq.com/) - Used to create wireframes
+- [lucid](https://lucid.app/) - To create model diagrams
 
 ## Features
 
@@ -169,9 +194,19 @@ A Favicon was created for this website at [Favicon.io](https://favicon.io/).
 
 ![Responsive](/documentation/design/favicon-example.png)
 
-### Accessibility
+### Accessibility  
 
-### Future Implementations
+- The accessibility of the website was tested by both Wave and Lighthouse (score of 100), please see the [TESTING page](TESTING.md) page for details.  
+- All the images have relevant alt descriptions.  
+- The link to wikipedia opens in a new tab.
+- The buttons have clear hover effects and also have a focus effect for keyboard users.
+
+### Future Implementations  
+
+This is the first release of this website that meets the scope of this project. As seen in the [AGILE page](AGILE.md) and the project [Issues](https://github.com/DavidDock/works-of-wes-anderson/issues) there are remaing issues for future implementations.  
+I would like to improve the benefits to becoming a member. At the moment the benefits are being able to contribute to the website and make your opinion known by commenting and rating a film.  
+I would like the member to feel more connected to the website by being able to create a profile with added functionality like naming and changing their favorite film and having a watch list of Wes Anderson films and also have the ability to view other members profile.  
+Another fantasic idea given to me by my mentor was adding a quiz to the website. I think that this idea would take the website to the next level.
 
 ## Deployment  
 
@@ -222,16 +257,23 @@ Please refer to [TESTING.MD](TESTING.md)
 
 ### Learning  
 
-The code used for this project was taught to me by code insitute. The Code Insitutes project run through 'I think therefoe i blog' helped me greatly with the concepts needed in my project.
+The code used for this project was taught to me by code insitute. The Code Insitutes project run through 'I think therefor i blog' helped me greatly with the development of my project.
 
 ### New learning  
 
-The use of context-processors was Learnt from https://djangocentral.com/how-to-create-custom-context-processors-in-django/
+The use of context-processors was Learnt from [djangocentral.com](https://djangocentral.com/how-to-create-custom-context-processors-in-django/)
 
-The use of scroll containers was learnt from <https://www.youtube.com/watch?v=3yfswsnD2sw>  
+The use of scroll containers was learnt from [Kevin Powell](https://www.youtube.com/watch?v=3yfswsnD2sw)  
 
-For highlighting active links learnt from https://valerymelou.com/blog/2020-05-04-how-to-highlight-active-links-in-your-django-website
+For highlighting active links learnt from [valerymelou.com](https://valerymelou.com/blog/2020-05-04-how-to-highlight-active-links-in-your-django-website)
 
-Reading the official documentaion for each libary used was useful for many elements of the website.
+Reading the official documentaion for django and cloudinary was useful for many elements of this website including having a min and max validation for the model.
 
-## Content and Media
+## Media
+
+- [Tinypng.com/](https://tinypng.com/) - Used to compress images
+- [Cloudconvert.com](https://cloudconvert.com/webp-converter) - Used to convert images to webp
+- [Favicon.io](https://favicon.io/) - Used to generate favicon
+- [Amiresponsive](https://ui.dev/amiresponsive) - Used to see site on different devices and get image for the top of this README
+- [The-Noun-Project](https://thenounproject.com/) - Used for the icons
+- [The-Poster-DB](https://theposterdb.com/) - Used for the film posters
