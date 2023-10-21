@@ -222,6 +222,16 @@ Please refer to [TESTING.MD](TESTING.md)
 
 ### Learning  
 
-### New learning
+The code used for this project was taught to me by code insitute. The Code Insitutes project run through 'I think therefoe i blog' helped me greatly with the concepts needed in my project.
+
+### New learning  
+
+The use of context-processors was Learnt from https://djangocentral.com/how-to-create-custom-context-processors-in-django/
+
+The use of scroll containers was learnt from <https://www.youtube.com/watch?v=3yfswsnD2sw>  
+
+For highlighting active links -: https://valerymelou.com/blog/2020-05-04-how-to-highlight-active-links-in-your-django-website
+
+Reading the official documentaion for each libary was useful for many elements of the site.
 
 ## Content and Media
