@@ -209,6 +209,7 @@ As a Logged in Member I would like to rate each film by category to contribute t
 
 #### Results  
 
+All acceptance criteria is met. The form in the member area is easy to use and all functionality works well. The users score can be clearly seen in the relevant film section of the member area. Only one rating per film can be added and a message is given to the user if they try to add another.
 
 ### 30 Ability For Member To Delete Score  
 
@@ -223,6 +224,8 @@ As a Logged in Member I would like to be able to delete my score in case I chang
 
 #### Results
 
+I decedided not to ask for confirmation after the delete button is pressed, I felt that this was not needed as it is easy to add another score and it makes for a smoother user experience. All the other acceptance criteria is met and works well.
+
 ### 31 View Average Scores  
 
 As a Site User I would like to see average score for each category so I know other members opinions.
@@ -231,7 +234,9 @@ As a Site User I would like to see average score for each category so I know oth
 
 Can see average score for Comedy, Style and Story for each film in film_detail.html
 
-#### Results
+#### Results  
+
+The user can clearly see the average member ratings in the relevant film detail page, this number is rounded to the nearest whole number.
 
 ### 37 Favicon  
 
