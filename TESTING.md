@@ -405,7 +405,10 @@ Here there are two functions:
 * 'Figurecaption' incorrectly used - Changed to resolve error.
 * 'Div' element within 'button' - Changed to span fix error.
 * 'frameboarder and aria-labeldby' not needed in iframe - Removed to fix error.
-* Attribute 'comment-id' not avaliable for button element - Tis was changed to the attribute 'name'.
+* Attribute 'comment-id' not avaliable for button element - This was changed to the attribute 'name'.
+* Multi ID error on all forms in member area - This was caused by the use of crispy forms and the initial design of the member area.  
+Initially there were forms for 'add/edit comment' and 'add rating' for each film but because the cripsy form IDs were the same it produced errors.  
+This issue was fixed by changing the design of the members area by using one form for adding/editing a comment and one for adding a rating with the user being able to pick the film. This actually improves the user experience as the amount of forms that were in the member area looked a bit much.
 
 ### Final Test Results
 
@@ -416,17 +419,17 @@ Here there are two functions:
 
 <details><summary>Film</summary>
 
-![HTML Validator Film](documentation/testing/html-film.png)
+![HTML Validator Film Detail](documentation/testing/html-film.png)
 </details>
 
 <details><summary>Member</summary>
 
-![HTML Validator Member](documentation/testing/html-member.png)
+![HTML Validator Member Area](documentation/testing/html-member.png)
 </details>
 
 <details><summary>Error</summary>
 
-![HTML Validator Error](documentation/testing/html-error.png)
+![HTML Validator Error Pages](documentation/testing/html-error.png)
 </details>
 
 ## CSS Validator  
@@ -435,10 +438,6 @@ Here there are two functions:
 
 ![CSS Validator](documentation/testing/css-validator.png)
 </details>
-
-### Problems/Bugs highlighted and how they were fixed  
-
-### Final Test Results
 
 ## Lighthouse  
 

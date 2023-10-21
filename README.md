@@ -45,6 +45,7 @@ Members can sign in, have their say and rate the qualities of each film.
     - [Log In/Out/Register](#log-inoutregister)
     - [Error Pages](#error-pages)
     - [Favicon](#favicon)
+    - [Scroll Container](#scroll-container)
     - [Accessibility](#accessibility)
     - [Future Implementations](#future-implementations)
   - [Deployment](#deployment)
@@ -192,7 +193,13 @@ Please refer to [AGILE.MD](AGILE.md)
 
 A Favicon was created for this website at [Favicon.io](https://favicon.io/).
 
-![Responsive](/documentation/design/favicon-example.png)
+![Responsive](/documentation/design/favicon-example.png)  
+
+### Scroll Container  
+
+The horizontal scroll container is used throughout this website containing the comments and having custom scroll bar colors matching the relevant film.  
+This feature was choson as it fits in well with the newspaper/retro style. I also feel that it works well on mobile devices as peolple are used to swiping and scrolling whilst using other popular social media websites.  
+It has been mentioned that this typle of horizontal scroll isn't usually used with website content and it might not apeal everyone. I can see this point of view but decided to stick with the initial style choice and kept them in.
 
 ### Accessibility  
 
