@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block title %} Register {% endblock title %}
 
 {% load i18n %}
@@ -20,14 +21,14 @@
     <p class="text-center m-0">{% blocktrans %}Registered? Then please <a class="normal-link" href="{{ login_url }}">Log
             In</a>.{%endblocktrans %}</p>
 
-    <form class="signup my-4 d-flex flex-column align-items-center" id="signup_form" method="post"
+    <form class="my-4 d-flex flex-column align-items-center" id="signup_form" method="post"
         action="{% url 'account_signup' %}">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form | crispy }}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button class="sign-button bg-white p-1 rounded border border-dark text-dark" type="submit">{% trans "Register" %}</button>
+        <button class="sign-button bg-white p-1 rounded border border-dark text-dark mt-2 mx-auto" type="submit">{% trans "Register" %}</button>
     </form>
 
 </div>

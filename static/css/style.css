@@ -523,8 +523,7 @@ blockquote::after {
 
 /* login and register page */
 
-.login input,
-.signup input {
+.login input {
     display: block;
 }
 
@@ -532,11 +531,8 @@ blockquote::after {
     display: inline-block;
 }
 
-.signup ul {
-    list-style-type: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+#hint_id_password1 {
+    display: none;
 }
 
 /* form style */
