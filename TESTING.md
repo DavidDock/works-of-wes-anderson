@@ -163,7 +163,7 @@ As a Logged in Member I would like to add comments for each film so that I can s
 
 #### Results
 
-All acceptance criteria is met. The process of adding a comment is clear with simple instruction and a straight forward form to fill in. Once a comment is added to the database a clear message is given to the user and the comment can be seen in the member area under the film the comment was made in. This comment is labeled with pending approval until the admin approves the comment.
+All acceptance criteria is met. The process of adding a comment is clear with simple instruction with a straight forward form to fill in. Once a comment is added to the database a clear message is given to the user and the comment can be seen in the member area in the relevant film section. This comment is labeled with pending approval until the admin approves the comment.
 
 ### Member Can Edit Comments (#27)
 
@@ -194,7 +194,7 @@ As a Logged in Member I would like to delete my comment if I want my comment rem
 
 #### Results  
 
-All acceptance criteria is met. Once the delete button is pressed all instructions are clear and functionality works well.
+All acceptance criteria is met. Once the delete button is pressed a modal opens to ask for delete confirmation, all instructions are clear and functionality works well.
 
 ### Member Can Rate File By Category (#29)
 
@@ -377,7 +377,7 @@ This has three functions:
 
 * The first one makes sure the text area on the form is clear once the page is loaded. Manually tested by visiting the member area after editing a comment and all text areas are empty.
 * The second function is activated when the 'delete' button is pressed on any comment. It makes the 'delete confirm' button on the modal have the correct href with relevent comment id and slug. Manually tested by pressing the delete buttons, all above above expected outcomes met and works well.
-* The last function is activated when the 'edit' button is pressed on any comment. It changes relevent text on the form, puts the form to the correct film value and gives the action the comment id so when the submit button is pressed it goes to the correct view. Manually tested by pressing the edits buttons, all above expected above outcomes met and works well.
+* The last function is activated when the 'edit' button is pressed on any comment. The screen scrolls to the edit form, it changes relevent text on the form, puts the form to the correct film value and gives the action the comment id so when the submit button is pressed it goes to the correct view. Manually tested by pressing the edits buttons, all above expected above outcomes met and works well.
 
 <details><summary>Validator</summary>
 
@@ -414,13 +414,13 @@ There is one function:
 * Trailing / on images - Removed to fix issues.
 * Multi ID error on full-width-snap-container css ID - Changed to class to fix.
 * 'Figurecaption' incorrectly used - Changed to resolve error.
-* 'Div' element within 'button' - Changed to span fix error.
+* 'Div' element within 'button' - Changed to span to fix error.
 * 'frameboarder and aria-labeldby' not needed in iframe - Removed to fix error.
 * Attribute 'comment-id' not avaliable for button element - This was changed to the attribute 'name'.
 * Multi ID error on all forms in member area - This was caused by the use of crispy forms and the initial design of the member area.  
 Initially there were forms for 'add/edit comment' and 'add rating' for each film but because the cripsy form IDs were the same it produced errors.  
 This issue was fixed by changing the design of the members area by using one form for adding/editing a comment and one for adding a rating with the user being able to pick the film. This actually improves the user experience as the amount of forms that were in the member area looked a bit much.
-* Elementt 'ul' not allowed as child of 'small' - This error is in the signup template. It is caused by the password helper text given by the allauth.account.forms SignupForm(BaseSignupForm) which is then converted with crispy forms and uses 'small' instead of a sutable element like 'div'.  
+* Element 'ul' not allowed as child of 'small' - This error is in the signup template. It is caused by the password helper text given by the allauth.account.forms SignupForm(BaseSignupForm) which is then converted with crispy forms and uses 'small' instead of a sutable element like 'div'.  
 I have researched and found that this is a new error that others have seen too, it is caused by the new helper text in the most recent release of allauth ('django-allauth==0.57.0').  
 After the dom is loaded I tried changing this element to a 'div' by a javascript function I created which worked but I decided the helper text wasn't actually required so I just removed the 'small' element with remove() javascript function.  
 Because the element is still there when the page initially loads the error is still there if put through a html validator but I copied the code directly after the js function is called and the error and element is gone and no errors were present.

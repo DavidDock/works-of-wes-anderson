@@ -171,7 +171,7 @@ Please refer to [AGILE.MD](AGILE.md)
 
 ### Navigation Bar  
 
-- The navigation bar has the websites logo which links back to the home page.  
+- The navigation bar contains a logo for the website which links back to the home page.  
 - There is a hamburger dropdown menu on small devices which has been customised to an envelope opening and closing to fit in with the websites styling.  
 - The navigation bar has links to all relevant pages whether the user is loggin or out.  
 - There is a dropdown menu containing a link to each film with an icon for each film.
@@ -195,27 +195,60 @@ Please refer to [AGILE.MD](AGILE.md)
 
 ### Film Detail  
 
+- The poster for the film is clearly displayed with icons relating to the film or default icons.  
+- The color theme is the one chosen in the color class model relevant to the film or the default colors.
+- The user can press the poster to see the film sypnosis and links to the films wiki page and a trailer that opens in a modal.
+- Relevant critic comments for the film can be seen for the film.
+- All the approved member comments can be seen for the relevant film.
+- The average member rating can be seen for three categories and it changes when a member adds a rating.
+- There is a Link to the member area if the user is logged in or to sign up if the user is logged out to encourage the user to contribute to the website.
+
 ![Film Detail](/documentation/features/film-detail-large.png)  
 
 ![Film Detail Sypnosis](/documentation/features/film-detail-flip.png)  
 
 ![Film Detail Trailer](/documentation/features/film-detail-trailer.png)
 
-### Member Area
+### Member Area  
+
+- The member area is only avaliable to registered members.  
+- It contains an about statement at the top of the page providing information about the member area.  
+- There are two forms for the member to add/edit a comment and add a rating.  
+- Each film has information with a link to the relevant film detail page, the members comments and rating.  
 
 #### Each Film  
+
+- The film title is displayed with the relevant icons and colors.
+- Information about this section is provided inside three slides and a link to the relevant film detail page is provided.  
+- The members score (if they have one) is shown with a delete button underneath.  
+- All the members comments are displayed (if they have made any). Pending comments are styled differently and labled 'pending approval'. There is a delete and edit button for each comment.  
 
 ![Member Area Film Section](/documentation/features/member-film.png)
 
 #### Add Comment and Rating  
 
+- The two forms are displayed at the top of the page with a paragraph about the form.  
+- The comment form lets the user choose the film and add a comment to the length of 250 characters.  
+- After the comment is added it is sent for approval and the user is informed of this by a message that pops up. It is then displayed in the relevant film section and after the administrator approves this comment it will be seen in the film detail page.
+- The rating form lets the user choose the film and add a rating for Style, Humour and Story. The ratings are 1-5 and the default is set to 5.  
+- After the user adds a rating a message pops up telling them that this has been added and the score will appear in the relvant film section and the average score will be updated in the film detail page.  
+- If the user already has a rating for the film they attempted to rate a message pops up saying they need to delete the previous rating before adding another and no additional rating will be added.
+
 ![Add Comment and Rating](/documentation/features/add-comment-rating.png)
 
 #### Edit Comment  
 
+- If the user chooses to edit a comment they can press the edit button under the relevant comment.  
+- When this is pressed the add comment form turns into the edit comment form with all relvant information, and fields updated.  
+- Once the comment is updated the user is notified by a message that it has been sent for approval. The updated comment will be in the relevant film section labeled 'pending approval' and removed from the film detail page (if the original comment was approved) until the administration approved the comment.
+
 ![Edit Comment](/documentation/features/edit-comment-small.png)
 
 #### Delete Comment and Rating  
+
+- The user can delete their comments or rating by pressing the delete button.  
+- If the user presses the delete button on the comment they will be asked for confirmation in a modal just incase they did it by mistake.  
+- Once the comment or rating is deleted a message will pop up confirming deletion and the comment/rating will be removed from the website.  
 
 ![Delete Comment and Rating](/documentation/features/delete-comment-rating.png)  
 
@@ -254,7 +287,7 @@ It has been mentioned that this typle of horizontal scroll isn't usually used wi
 
 This is the first release of this website that meets the scope of this project. As seen in the [AGILE page](AGILE.md) and the project [Issues](https://github.com/DavidDock/works-of-wes-anderson/issues) there are remaing issues for future implementations.  
 I would like to improve the benefits to becoming a member. At the moment the benefits are being able to contribute to the website and make your opinion known by commenting and rating a film.  
-I would like the member to feel more connected to the website by being able to create a profile with added functionality like naming and changing their favorite film and having a watch list of Wes Anderson films and also have the ability to view other members profile.  
+I would like the member to feel more connected to the website by being able to create a profile with added functionality like naming and changing their favorite film, having a watch list of Wes Anderson films and also have the ability to view other members profiles.  
 Another fantasic idea given to me by my mentor was adding a quiz to the website. I think that this idea would take the website to the next level.
 
 ## Deployment  
@@ -323,6 +356,6 @@ Reading the official documentaion for django and cloudinary was useful for many 
 - [Tinypng.com/](https://tinypng.com/) - Used to compress images
 - [Cloudconvert.com](https://cloudconvert.com/webp-converter) - Used to convert images to webp
 - [Favicon.io](https://favicon.io/) - Used to generate favicon
-- [Amiresponsive](https://ui.dev/amiresponsive) - Used to see site on different devices and get image for the top of this README
+- [Amiresponsive](https://ui.dev/amiresponsive) - Used to see site on different devices and create the image for the top of this README
 - [The-Noun-Project](https://thenounproject.com/) - Used for the icons
 - [The-Poster-DB](https://theposterdb.com/) - Used for the film posters

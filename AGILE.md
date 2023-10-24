@@ -20,7 +20,7 @@ The project's issues can be found [Here](https://github.com/DavidDock/works-of-w
 My working week is not always the same but I tried to stick to 10 day iterations allowing for 20 Story Points in each cycle.  
 I allocated Issues to my Kanban board for each iteration. I then completed the MoSCow prioritisation for these issues. I made sure must have issues made up no more than 60%, could have and should have about 20% each.  
 The project's Kanban board can be found [Here](https://github.com/users/DavidDock/projects/2)  
-My paln was to do 5 iterations before the project deadline.  
+My plan was to do 5 iterations before the project deadline.  
 
 ## Iteration 1  
 
@@ -131,4 +131,5 @@ Below is the Kanban board at the end of the iteration:
 
 ![Iteration-Five-End](/documentation/agile/iteration-five-end.png)  
 
+The MVP milestone has been completed.  
 The testing and documentation were completed in this iteration, to a good standard and in time for project end. There are some more [issues](https://github.com/DavidDock/works-of-wes-anderson/issues) that can be completed in future releases of the website. It would also be nice to implement automated testing on the project in the future.  
