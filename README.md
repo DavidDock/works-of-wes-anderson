@@ -39,9 +39,9 @@ Members can sign in, have their say and rate the qualities of each film.
     - [Film Detail](#film-detail-1)
     - [Member Area](#member-area-1)
       - [Each Film](#each-film)
-      - [Add Comment](#add-comment)
-      - [Rating](#rating)
-      - [Edit/Delete Comment](#editdelete-comment)
+      - [Add Comment and Rating](#add-comment-and-rating)
+      - [Edit Comment](#edit-comment)
+      - [Delete Comment and Rating](#delete-comment-and-rating)
     - [Log In/Out/Register](#log-inoutregister)
     - [Error Pages](#error-pages)
     - [Favicon](#favicon)
@@ -155,6 +155,7 @@ Please refer to [AGILE.MD](AGILE.md)
 - GitHub - Used to store the repository and GitHub projects for the Kanban board
 - Django - Used as the framework
 - Codeanywhere - Used as the development environment
+- Jinja - Template engine for Python
 - Bootstrap - Used to help build a responsive website
 - Jquery - Used to help create the javascript functions
 - Django allauth - Used for account registration
@@ -167,27 +168,51 @@ Please refer to [AGILE.MD](AGILE.md)
 
 ## Features
 
-### Nav Bar
+### Nav Bar  
 
-### Footer
+![Navigation Bar Large](/documentation/features/nav-large.png)  
 
-### Home
+![Navigation Bar Small](/documentation/features/nav-small-open.png)
 
-### Film Detail
+### Footer  
+
+![Footer](/documentation/features/footer.png)
+
+### Home  
+
+![Home](/documentation/features/home-medium.png)
+
+### Film Detail  
+
+![Film Detail](/documentation/features/film-detail-large.png)
 
 ### Member Area
 
-#### Each Film
+#### Each Film  
 
-#### Add Comment
+![Member Area Film Section](/documentation/features/member-film.png)
 
-#### Rating
+#### Add Comment and Rating  
 
-#### Edit/Delete Comment
+![Add Comment and Rating](/documentation/features/add-comment-rating.png)
 
-### Log In/Out/Register
+#### Edit Comment  
 
-### Error Pages
+![Edit Comment](/documentation/features/edit-comment-small.png)
+
+#### Delete Comment and Rating  
+
+![Delete Comment and Rating](/documentation/features/delete-comment-rating.png)  
+
+![Delete Comment Modal](/documentation/features/delete-modal.png)
+
+### Log In/Out/Register  
+
+![Register](/documentation/features/register-small.png)
+
+### Error Pages  
+
+![Error Pages](/documentation/features/error-small.png)
 
 ### Favicon  
 
