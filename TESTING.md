@@ -394,6 +394,17 @@ Here there are two functions:
 <details><summary>Validator</summary>
 
 ![Film Detail Javascript](documentation/testing/film-js.png)
+</details>  
+
+### register.js
+
+There is one function:
+
+* The remove function removes an unwanted allauth/crispy form element
+
+<details><summary>Validator</summary>
+
+![Register Javascript](documentation/testing/register-js.png)
 </details>
 
 ## HTML Validator
@@ -409,6 +420,10 @@ Here there are two functions:
 * Multi ID error on all forms in member area - This was caused by the use of crispy forms and the initial design of the member area.  
 Initially there were forms for 'add/edit comment' and 'add rating' for each film but because the cripsy form IDs were the same it produced errors.  
 This issue was fixed by changing the design of the members area by using one form for adding/editing a comment and one for adding a rating with the user being able to pick the film. This actually improves the user experience as the amount of forms that were in the member area looked a bit much.
+* Elementt 'ul' not allowed as child of 'small' - This error is in the signup template. It is caused by the password helper text given by the allauth.account.forms SignupForm(BaseSignupForm) which is then converted with crispy forms and uses 'small' instead of a sutable element like 'div'.  
+I have researched and found that this is a new error that others have seen too, it is caused by the new helper text in the most recent release of allauth ('django-allauth==0.57.0').  
+After the dom is loaded I tried changing this element to a 'div' by a javascript function I created which worked but I decided the helper text wasn't actually required so I just removed the 'small' element with remove() javascript function.  
+Because the element is still there when the page initially loads the error is still there if put through a html validator but I copied the code directly after the js function is called and the error and element is gone and no errors were present.
 
 ### Final Test Results
 
@@ -430,6 +445,21 @@ This issue was fixed by changing the design of the members area by using one for
 <details><summary>Error</summary>
 
 ![HTML Validator Error Pages](documentation/testing/html-error.png)
+</details>  
+
+<details><summary>Register</summary>
+
+![HTML Validator Register](documentation/testing/html-register.png)
+</details>  
+
+<details><summary>Login</summary>
+
+![HTML Validator Logout](documentation/testing/html-login.png)
+</details>  
+
+<details><summary>Logout</summary>
+
+![HTML Validator Logout](documentation/testing/html-logout.png)
 </details>
 
 ## CSS Validator  
@@ -502,6 +532,13 @@ I feel The Logo 'home' link is needed especially in mobile devices when the togg
 </details>  
 
 ## Manual Testing  
+
+A full range of manual tests were planned, completed and documented by using the spreadsheet below:  
+
+![Manual Testing 1](documentation/testing/manual-testing-1.png)
+![Manual Testing 2](documentation/testing/manual-testing-2.png)
+![Manual Testing 3](documentation/testing/manual-testing-3.png)
+![Manual Testing 4](documentation/testing/manual-testing-4.png)
 
 ## Other Bugs and Errors  
 
