@@ -43,6 +43,7 @@ Members can sign in, have their say and rate the qualities of each film.
       - [Edit Comment](#edit-comment)
       - [Delete Comment and Rating](#delete-comment-and-rating)
     - [Log In/Out/Register](#log-inoutregister)
+    - [Messages](#messages)
     - [Error Pages](#error-pages)
     - [Favicon](#favicon)
     - [Scroll Container](#scroll-container)
@@ -209,6 +210,8 @@ Please refer to [AGILE.MD](AGILE.md)
 ### Log In/Out/Register  
 
 ![Register](/documentation/features/register-small.png)
+
+### Messages
 
 ### Error Pages  
 
