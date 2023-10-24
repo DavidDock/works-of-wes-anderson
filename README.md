@@ -33,7 +33,7 @@ Members can sign in, have their say and rate the qualities of each film.
     - [Languages Used](#languages-used)
     - [Frameworks Libaries and Programs Used](#frameworks-libaries-and-programs-used)
   - [Features](#features)
-    - [Nav Bar](#nav-bar)
+    - [Navigation Bar](#navigation-bar-1)
     - [Footer](#footer)
     - [Home](#home)
     - [Film Detail](#film-detail-1)
@@ -169,7 +169,12 @@ Please refer to [AGILE.MD](AGILE.md)
 
 ## Features
 
-### Nav Bar  
+### Navigation Bar  
+
+- The navigation bar has the websites logo which links back to the home page.  
+- There is a hamburger dropdown menu on small devices which has been customised to an envelope opening and closing to fit in with the websites styling.  
+- The navigation bar has links to all relevant pages whether the user is loggin or out.  
+- There is a dropdown menu containing a link to each film with an icon for each film.
 
 ![Navigation Bar Large](/documentation/features/nav-large.png)  
 
@@ -177,15 +182,24 @@ Please refer to [AGILE.MD](AGILE.md)
 
 ### Footer  
 
+- This is provided to add structure to the website.
+
 ![Footer](/documentation/features/footer.png)
 
 ### Home  
+
+- There is a message informing the user what the website is all about and telling the user obout the benefits of becoming a member, along with a link to either the register page or member page depending if they are logged in or out.  
+- Each poster is displayed with a link on click to each film detail page.
 
 ![Home](/documentation/features/home-medium.png)
 
 ### Film Detail  
 
-![Film Detail](/documentation/features/film-detail-large.png)
+![Film Detail](/documentation/features/film-detail-large.png)  
+
+![Film Detail Sypnosis](/documentation/features/film-detail-flip.png)  
+
+![Film Detail Trailer](/documentation/features/film-detail-trailer.png)
 
 ### Member Area
 

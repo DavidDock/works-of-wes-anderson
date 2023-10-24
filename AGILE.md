@@ -126,3 +126,9 @@ The User Stories were added and prioritised as follows:
 - User Story: Documentation - Must Have. Story points: 10  
 
 These are the last two issues needed to complete the MVP milestone so both issues need to be competed before project submission.  
+
+Below is the Kanban board at the end of the iteration:  
+
+![Iteration-Five-End](/documentation/agile/iteration-five-end.png)  
+
+The testing and documentation were completed in this iteration, to a good standard and in time for project end. There are some more [issues](https://github.com/DavidDock/works-of-wes-anderson/issues) that can be completed in future releases of the website. It would also be nice to implement automated testing on the project in the future.  
